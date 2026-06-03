@@ -23,6 +23,7 @@ class GPT2Model(GPTPreTrainedModel):
     self.config = config
 
     # Embedding layers.
+    # 这里的 hidden_size 就是 embedding 的维度，embedding 事实上就是一个表，shape 为 (vocab_size, hidden_size)
     self.word_embedding = nn.Embedding(config.vocab_size, config.hidden_size, padding_idx=config.pad_token_id)
     self.pos_embedding = nn.Embedding(config.max_position_embeddings, config.hidden_size)
     self.embed_dropout = nn.Dropout(config.hidden_dropout_prob)
@@ -44,22 +45,25 @@ class GPT2Model(GPTPreTrainedModel):
     self.init_weights()
 
   def embed(self, input_ids):
+    # 这里需要说明一下，input_ids 是一个张量，第一维代表的是有多少个 sentences，第二维
+    # 则是每个 sentence 的长度（严谨来说应该是 token 的数量，由最长的句子决定；短句子可以用 padding 补齐）
+    # 所以 input_shape 是 [batch_size, seq_len]
     input_shape = input_ids.size()
     seq_length = input_shape[1]
 
     inputs_embeds = None
 
-    ### YOUR CODE HERE
-    raise NotImplementedError
 
 
     pos_ids = self.position_ids[:, :seq_length]
     pos_embeds = None
 
-    ### TODO: Use pos_ids to get position embedding from self.pos_embedding into pos_embeds.
-    ###       Then, add two embeddings together; then apply dropout and return.
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    inputs_embeds = self.word_embedding(input_ids)  # [batch_size, seq_length, hidden_size]
+    pos_embeds = self.pos_embedding(pos_ids)        # [1, seq_length, hidden_size]
+    combined = inputs_embeds + pos_embeds            
+    # 注意需要 dropout
+    return self.embed_dropout(combined)
+
 
 
   def encode(self, hidden_states, attention_mask):
