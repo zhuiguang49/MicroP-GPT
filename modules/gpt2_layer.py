@@ -30,8 +30,9 @@ class GPT2Layer(nn.Module):
         IN THIS FUNCTION.
     """
     ### YOUR CODE HERE
-    raise NotImplementedError
-
+    output = dense_layer(output)
+    output = dropout(output)
+    return output + input
 
   def forward(self, hidden_states, attention_mask):
     """
@@ -41,7 +42,28 @@ class GPT2Layer(nn.Module):
            - Apply dropout, residual connection, and layer normalization according to the plot in the assignment. (Use self.add)
            - A feed-forward layer that applies transformations to further refine the hidden states.
     """
+    # 首先实现 masked_self_attention 层的前向传播，包含三个部分，preNorm，attention, add
+    # preNorm
+    normed_hidden_states = self.attention_layer_norm(hidden_states)
+    # attention
+    attention_output = self.self_attention(normed_hidden_states, attention_mask)
+    # add
+    attention_sublayer_output = self.add(hidden_states, attention_output, self.attention_dense, self.attention_dropout)
 
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    # 接着实现 FFN 子层的前向传播，同样包含三个部分，preNorm, feedForward, add
+    # preNorm
+    normed_ffn_input = self.out_layer_norm(attention_sublayer_output)
+    
+    # feedForward
+    # interm_dense 是一个全连接层（就是一个 Wx+ b），将维度从 768 维扩展到 3072 维
+    ffn_output = self.interm_dense(normed_ffn_input) # 768->3072
+    # GELU 激活函数
+    ffn_output = self.interm_af(ffn_output)
+    # out_dense 也是一个全连接层，将维度从 3072 维压缩到 768 维
+    ffn_output = self.out_dense(ffn_output)  # 3072->768
+    # 这样先升维再降维的操作可以增加模型的表达能力，4 倍也是 Transformer 论文中的经典设计 
 
+
+    # add
+    ffn_sublayer_output = self.add(attention_sublayer_output, ffn_output, self.out_dense, self.out_dropout)
+    return ffn_sublayer_output
