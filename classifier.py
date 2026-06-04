@@ -48,26 +48,42 @@ class GPT2SentimentClassifier(torch.nn.Module):
     # Pretrain mode does not require updating GPT paramters.
     assert config.fine_tune_mode in ["last-linear-layer", "full-model"]
     for param in self.gpt.parameters():
+      # 根据配置 `config.fine_tune_mode` 决定是否冻结 GPT-2 的参数
       if config.fine_tune_mode == 'last-linear-layer':
         param.requires_grad = False
       elif config.fine_tune_mode == 'full-model':
         param.requires_grad = True
 
-    ### TODO: Create any instance variables you need to classify the sentiment of BERT embeddings.
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    # 定义一个 Classification head，将 GPT-2 的输出映射到 5 个类别的得分
+    self.classification_head = torch.nn.Linear(config.hidden_size, self.num_labels)
 
 
   def forward(self, input_ids, attention_mask):
     '''Takes a batch of sentences and returns logits for sentiment classes'''
+    
+    # 前向传播，输入 input_ids 和 attention_mask（这是用于忽略 padding 的）
+    # 我们首先将输入传入 self.gpt，返回上下文 embeddings；
+    # GPT-2 输出的是序列中每个 token 的 hiddden state，对于分类位置，我们通常
+    # 取最后一个 token 的 hidden state 作为句子的表示
 
-    ### TODO: The final GPT contextualized embedding is the hidden state of the last token.
-    ###       HINT: You should consider what is an appropriate return value given that
-    ###       the training loop currently uses F.cross_entropy as the loss function.
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    # 输出 logits（未归一化的分数），形状为 (batch_size, num_labels)，用于计算交叉熵损失
+    outputs = self.gpt(input_ids, attention_mask)
+    last_hidden_state = outputs.last_hidden_state  # (batch_size, seq_len, hidden_size)
+
+    # 提取最后一个非 padding token 的 hidden state 作为句子的表示
+    # torch.sum 得到该句子中真实的 token 的数量，然后 -1 得到最后一个 token 的索引
+    sequence_lengths = torch.sum(attention_mask, dim=1) - 1  # (batch_size,)
+    batch_size = last_hidden_state.shape[0]
+    batch_indices = torch.arange(batch_size, device=last_hidden_state.device)
+    # 从 last_hidden_state 中取出每个句子的最后一个 token 的 hidden state，形状为 (batch_size, hidden_size)
+    last_token_hidden_states = last_hidden_state[batch_indices, sequence_lengths,:]
+
+    logits = self.classification_head(last_token_hidden_states)
+
+    return logits
 
 
+# SentimentDataset 和 SentimentTestDataset 负责将原始的文本数据转换为模型可接受的 Tensor 格式
 
 class SentimentDataset(Dataset):
   def __init__(self, dataset, args):
@@ -171,6 +187,7 @@ def load_data(filename, flag='train'):
     return data
 
 
+# 用于验证集评估，将模型设置为 eval() 模式（关闭 dropout）
 # Evaluate the model on dev examples.
 def model_eval(dataloader, model, device):
   model.eval()  # Switch to eval model, will turn off randomness like dropout.
@@ -201,6 +218,7 @@ def model_eval(dataloader, model, device):
   return acc, f1, y_pred, y_true, sents, sent_ids
 
 
+# 用于测试集评估，不计算指标，只返回预测结果
 # Evaluate the model on test examples.
 def model_test_eval(dataloader, model, device):
   model.eval()  # Switch to eval model, will turn off randomness like dropout.
