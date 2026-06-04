@@ -59,10 +59,6 @@ class GPT2Layer(nn.Module):
     ffn_output = self.interm_dense(normed_ffn_input) # 768->3072
     # GELU 激活函数
     ffn_output = self.interm_af(ffn_output)
-    # out_dense 也是一个全连接层，将维度从 3072 维压缩到 768 维
-    ffn_output = self.out_dense(ffn_output)  # 3072->768
-    # 这样先升维再降维的操作可以增加模型的表达能力，4 倍也是 Transformer 论文中的经典设计 
-
 
     # add
     ffn_sublayer_output = self.add(attention_sublayer_output, ffn_output, self.out_dense, self.out_dropout)
