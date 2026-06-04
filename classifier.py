@@ -68,7 +68,7 @@ class GPT2SentimentClassifier(torch.nn.Module):
 
     # 输出 logits（未归一化的分数），形状为 (batch_size, num_labels)，用于计算交叉熵损失
     outputs = self.gpt(input_ids, attention_mask)
-    last_hidden_state = outputs.last_hidden_state  # (batch_size, seq_len, hidden_size)
+    last_hidden_state = outputs['last_hidden_state']  # (batch_size, seq_len, hidden_size)
 
     # 提取最后一个非 padding token 的 hidden state 作为句子的表示
     # torch.sum 得到该句子中真实的 token 的数量，然后 -1 得到最后一个 token 的索引
