@@ -59,6 +59,6 @@ class GPT2Layer(nn.Module):
     ffn_output = self.interm_dense(normed_ffn_input) # 768->3072
     # GELU 激活函数
     ffn_output = self.interm_af(ffn_output)
-    # add
+    # add（add 里面就包括了 outdense，所以不需要在 GELU 之后再添加一次 outdense，否则会造成维度错误）
     ffn_sublayer_output = self.add(attention_sublayer_output, ffn_output, self.out_dense, self.out_dropout)
     return ffn_sublayer_output

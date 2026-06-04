@@ -30,8 +30,10 @@ class AdamW(Optimizer):
         loss = None
         if closure is not None:
             loss = closure()
-
+        
+        # 遍历所有参数组
         for group in self.param_groups:
+            # 遍历参数组中的参数
             for p in group["params"]:
                 if p.grad is None:
                     continue
@@ -39,12 +41,52 @@ class AdamW(Optimizer):
                 if grad.is_sparse:
                     raise RuntimeError("Adam does not support sparse gradients, please consider SparseAdam instead")
 
+
+                # 获取参数状态，self.state 是一个字典，存储着每个参数的优化状态；对于 AdamW
+                # 我们会存储一阶矩估计和二阶矩估计、以及当前 step
                 # State should be stored in this dictionary.
                 state = self.state[p]
 
+                # 从参数组中读取参数
                 # Access hyperparameters from the `group` dictionary.
                 alpha = group["lr"]
+                beta1, beta2 = group["betas"]
+                eps = group["eps"]
+                weight_decay = group["weight_decay"]
 
+                # 首先初始化状态，如果 state 字典为空，我们就需要初始化 step, 一阶矩估计、二阶矩估计
+                if len(state) == 0: 
+                    state["step"] = 0
+                    state["exp_avg"] = torch.zeros_like(p.data)
+                    state["exp_avg_sq"] = torch.zeros_like(p.data)
+
+                exp_avg, exp_avg_sq = state["exp_avg"], state["exp_avg_sq"]
+                state["step"] += 1
+                t = state["step"]
+
+                # 更新一阶矩和二阶矩
+                exp_avg.mul_(beta1).add_(grad, alpha=(1 - beta1))
+                exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=1 - beta2)
+
+                # 显式的偏差修正
+                bias_correction1 = 1 - beta1 ** t
+                bias_correction2 = 1 - beta2 ** t
+                step_size = alpha * math.sqrt(bias_correction2) / bias_correction1
+
+                # 更新参数
+                denom = exp_avg_sq.sqrt().add_(eps)
+                p.data.addcdiv_(exp_avg, denom, value=-step_size)
+
+                # 参数衰减
+                if weight_decay > 0:
+                    p.data.add_(p.data, alpha=-weight_decay * alpha) 
+
+                ''' 项目指导中有写一个高效版的的算法，合并了偏差修正和步长计算
+                # 根据项目指导中写的高效版的算法，计算步长，具体公式为 $$\text{step\_size} \leftarrow \alpha \cdot \frac{\sqrt{1 - \beta_2^t}}{1 - \beta_1^t}$$
+                step_size = alpha * math.sqrt(1 - beta2 ** t) / (1 - beta1 ** t)
+                # 更新参数，具体公式为 $$\theta_t \leftarrow \theta_{t-1} - \text{step\_size} \cdot \frac{m_t}{\sqrt{v_t} + \epsilon}$$
+                p.data.addcdiv_(exp_avg, exp_avg_sq.sqrt().add_(eps), value=-step_size)
+                '''
 
                 ### TODO: Complete the implementation of AdamW here, reading and saving
                 ###       your state in the `state` dictionary above.
@@ -61,7 +103,7 @@ class AdamW(Optimizer):
                 ###
                 ###       Refer to the default project handout for more details.
                 ### YOUR CODE HERE
-                raise NotImplementedError
+                
 
 
         return loss
