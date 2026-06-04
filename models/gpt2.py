@@ -53,8 +53,6 @@ class GPT2Model(GPTPreTrainedModel):
 
     inputs_embeds = None
 
-
-
     pos_ids = self.position_ids[:, :seq_length]
     pos_embeds = None
 
@@ -70,13 +68,15 @@ class GPT2Model(GPTPreTrainedModel):
     """
     hidden_states: the output from the embedding layer [batch_size, seq_len, hidden_size]
     attention_mask: [batch_size, seq_len]
+    把 embedding 层的输出逐层喂给所有 Transformer Block，得到最终的 hidden state
     """
     # Get the extended attention mask for self-attention.
     # Returns extended_attention_mask of size [batch_size, 1, 1, seq_len].
     # Distinguishes between non-padding tokens (with a value of 0) and padding tokens
     # (with a value of a large negative number).
+    # 构造 attention_mask
     extended_attention_mask: torch.Tensor = get_extended_attention_mask(attention_mask, self.dtype)
-
+    # 逐层 forward
     # Pass the hidden states through the encoder layers.
     for i, layer_module in enumerate(self.gpt_layers):
       # Feed the encoding from the last bert_layer to the next.
@@ -109,20 +109,23 @@ class GPT2Model(GPTPreTrainedModel):
 
       return hidden_state(s) * E^T
     """
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    return hidden_state @ self.word_embedding.weight.T
 
-
+  
+  # 把 HuggingFace 训练好的 GPT-2 预训练权重搬过来
   @classmethod
   def from_pretrained(cls, model='gpt2', d=768, l=12, num_heads=12):
+    # 加载预训练权重
     gpt_model = OpenAIGPT2Model.from_pretrained(model).eval()
     our_model = GPT2Model(GPT2Config(hidden_size=d, num_hidden_layers=l,num_attention_heads=num_heads,
                                      intermediate_size=d*3)).eval()
 
     # Load word and positional embeddings.
+    # 搬运 embedding 权重
     our_model.word_embedding.load_state_dict(gpt_model.wte.state_dict())
     our_model.pos_embedding.load_state_dict(gpt_model.wpe.state_dict())
 
+    # 复制 Q,K,V 权重
     for i in range(l):
       l = our_model.gpt_layers[i]
       # Remap the Q,K,V weights from a conv1d to 3 linear projections
