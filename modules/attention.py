@@ -39,7 +39,15 @@ class CausalSelfAttention(nn.Module):
   def attention(self, key, query, value, attention_mask):
     # 首先计算 Query 和 Key 的点积，得到注意力分数(注意要用 scaled dot-product attention)
     attention_scores = torch.matmul(query, key.transpose(-1,-2)) / self.attention_head_size ** 0.5
-    # 接着实施掩码，函数已经传入了 attention_mask，直接和 attention_scores 相加即可
+    
+    # Causal mask 则对应的是 decoder 只能看当前时间步及之前的位置，不能查看未来，causal mask 是一个上三角为 0，下三角
+    # 为 -10000 的矩阵
+    seq_len = query.size(-2)
+    causal_mask = torch.triu(torch.ones(seq_len, seq_len, device=query.device, dtype=torch.bool), diagonal=1)
+    attention_scores.masked_fill_(causal_mask, -10000.0)
+
+    # 接着实施 padding mask，函数已经传入了 attention_mask，直接和 attention_scores 相加即可（padding mask
+    # 是为了防止 token 关注 padding 未知）
     masked_attention_scores = attention_scores + attention_mask
     # 然后对相似度分数应用 softmax 得到 attention 概率，
     attention_probs = F.softmax(masked_attention_scores, dim = -1)

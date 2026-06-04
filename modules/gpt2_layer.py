@@ -59,7 +59,6 @@ class GPT2Layer(nn.Module):
     ffn_output = self.interm_dense(normed_ffn_input) # 768->3072
     # GELU 激活函数
     ffn_output = self.interm_af(ffn_output)
-
     # add
     ffn_sublayer_output = self.add(attention_sublayer_output, ffn_output, self.out_dense, self.out_dropout)
     return ffn_sublayer_output
