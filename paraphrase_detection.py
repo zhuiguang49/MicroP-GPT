@@ -29,6 +29,7 @@ from datasets import (
 )
 from evaluation import model_eval_paraphrase, model_test_paraphrase
 from models.gpt2 import GPT2Model
+from logging_utils import ExperimentLogger
 
 from optimizer import AdamW
 
@@ -158,8 +159,20 @@ def train(args):
   optimizer = AdamW(model.parameters(), lr=lr, weight_decay=0.)
   best_dev_acc = 0
 
+  # 初始化实验日志
+  logger = ExperimentLogger(
+    experiment_name=args.exp_name,
+    task="paraphrase",
+    method="full_finetune",  # 后续 LoRA 时改为 "lora"
+    output_dir="logs"
+  )
+  logger.log_config(vars(args))
+  logger.log_model_info(model)
+  logger.log_training_start()
+
   # Run for the specified number of epochs.
   for epoch in range(args.epochs):
+    logger.log_epoch_start()
     model.train()
     train_loss = 0
     num_batches = 0
@@ -196,7 +209,24 @@ def train(args):
       best_dev_acc = dev_acc
       save_model(model, optimizer, args, args.filepath)
 
-    print(f"Epoch {epoch}: train loss :: {train_loss :.3f}, dev acc :: {dev_acc :.3f}")
+    print(f"Epoch {epoch}: train loss :: {train_loss :.3f}, dev acc :: {dev_acc :.3f}, dev f1 :: {dev_f1 :.3f}")
+
+    # 记录当前 epoch 的指标
+    logger.log_epoch_metrics(epoch, {
+      "train_loss": train_loss,
+      "dev_acc": dev_acc,
+      "dev_f1": dev_f1,
+      "best_dev_acc": best_dev_acc,
+    })
+
+  # 训练结束，记录最终结果
+  logger.log_training_end()
+  logger.log_final_results({
+    "best_dev_acc": best_dev_acc,
+    "final_dev_f1": dev_f1,
+  })
+  logger.save()
+  logger.print_summary()
 
 
 @torch.no_grad()
@@ -255,6 +285,8 @@ def get_args():
   parser.add_argument("--model_size", type=str,
                       help="The model size as specified on hugging face. DO NOT use the xl model.",
                       choices=['gpt2', 'gpt2-medium', 'gpt2-large'], default='gpt2')
+  parser.add_argument("--exp_name", type=str, default="baseline",
+                      help="Experiment name for logging (e.g., 'baseline', 'lora_r8')")
 
   args = parser.parse_args()
   return args
