@@ -24,6 +24,7 @@ from datasets import (
   SonnetsDataset,
 )
 from models.gpt2 import GPT2Model
+from logging_utils import ExperimentLogger
 
 from optimizer import AdamW
 
@@ -56,12 +57,44 @@ class SonnetGPT(nn.Module):
 
   def forward(self, input_ids, attention_mask):
     """
-    This is similar to the forward for ParaphraseGPT, but we now want to produce a logit for each token in our sequence;
-    not just the last token! This will allow our model to learn the natural language distribution that composes sonnets,
-    not just the distribution over next tokens for the last token!
+    对一批 sonnet 文本进行前向传播，返回序列中每个 token 的词汇表 logits。
+
+    与 ParaphraseGPT 不同，这里不是只取最后一个 token，而是返回整个序列
+    每个位置的 logits。这样模型才能学习到 sonnet 中每个 token 的分布，
+    而不仅仅是最后一个 token 之后的预测。
+
+    训练循环会做标准的 next-token prediction：
+      - logits[:, :-1]  → 去掉最后一个位置的预测（它没有对应的 label）
+      - labels = input_ids[:, 1:]  → 去掉第一个 token，作为 ground truth
+
+    返回:
+      (batch_size, seq_len, vocab_size) 的 logits
     """
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    # =========================================================================
+    # 第 1 步：将输入送入 GPT-2，获取所有 token 的隐藏状态
+    # =========================================================================
+    # 这次我们使用 'last_hidden_state'（整个序列），而不是 'last_token'（最后一个 token）
+    # 因为 sonnet generation 是 next-token prediction 任务，需要每个位置的预测
+    
+    # 将 tokenized 后的输入送入 GPT-2 模型，首先 embed 得到 embeddings，然后经过 12 层 Transformer
+    # 得到所有 token 的 hidden state，最终返回的 last_hidden_state 是所有 token 的上下文感知表示
+    outputs = self.gpt(input_ids, attention_mask)
+    last_hidden_state = outputs['last_hidden_state']  # (batch_size, seq_len, hidden_size)
+
+    # =========================================================================
+    # 第 2 步：将每个 token 的隐藏状态投影到词汇表空间
+    # =========================================================================
+    # hidden_state_to_token 可以接受任意形状的 hidden state：
+    #   (batch_size, seq_len, hidden_size) @ (hidden_size, vocab_size)
+    #   = (batch_size, seq_len, vocab_size)
+    #
+    # 结果中 last_hidden_state[i, j, :] 是第 i 个样本、第 j 个 token 在整个
+    # 词汇表上的 logits（未归一化得分）
+
+    # 得到每个位置上每个 token 的未归一化的 logits
+    logits = self.gpt.hidden_state_to_token(last_hidden_state)  # (batch_size, seq_len, vocab_size)
+
+    return logits
 
 
   def get_device(self):
@@ -148,8 +181,20 @@ def train(args):
   lr = args.lr
   optimizer = AdamW(model.parameters(), lr=lr)
 
+  # 初始化实验日志
+  logger = ExperimentLogger(
+    experiment_name=args.exp_name,
+    task="sonnet",
+    method="full_finetune",  # 后续 DPO 时改为 "dpo"
+    output_dir="logs"
+  )
+  logger.log_config(vars(args))
+  logger.log_model_info(model)
+  logger.log_training_start()
+
   # Run for the specified number of epochs.
   for epoch in range(args.epochs):
+    logger.log_epoch_start()
     model.train()
     train_loss = 0
     num_batches = 0
@@ -176,13 +221,49 @@ def train(args):
     print(f"Epoch {epoch}: train loss :: {train_loss :.3f}.")
     print('Generating several output sonnets...')
     model.eval()
-    for batch in held_out_sonnet_dataset:
-      encoding = model.tokenizer(batch[1], return_tensors='pt', padding=True, truncation=True).to(device)
-      output = model.generate(encoding['input_ids'], temperature=args.temperature, top_p=args.top_p)
-      print(f'{batch[1]}{output[1]}\n\n')
 
-    # TODO: consider a stopping condition to prevent overfitting on the small dataset of sonnets.
-    save_model(model, optimizer, args, f'{epoch}_{args.filepath}')
+    # 生成 dev sonnets 并计算 chrF score
+    generated_sonnets = []
+    for batch in held_out_sonnet_dataset:
+      sonnet_id = batch[0]
+      prompt = batch[1]
+      encoding = model.tokenizer(prompt, return_tensors='pt', padding=True, truncation=True).to(device)
+      output = model.generate(encoding['input_ids'], temperature=args.temperature, top_p=args.top_p)
+      generated_sonnets.append((sonnet_id, output[1]))
+      print(f'{prompt}{output[1]}\n\n')
+
+    # 保存临时文件用于计算 chrF
+    temp_dev_path = f'predictions/generated_sonnets_dev_epoch_{epoch}.txt'
+    with open(temp_dev_path, 'w') as f:
+      f.write('--Generated Sonnets--\n\n')
+      for sonnet_id, sonnet_text in generated_sonnets:
+        f.write(f'\n{sonnet_id}\n')
+        f.write(sonnet_text)
+
+    # 计算 chrF score
+    from evaluation import test_sonnet
+    chrf_score = test_sonnet(
+      test_path=temp_dev_path,
+      gold_path='data/TRUE_sonnets_held_out_dev.txt'
+    )
+    print(f"Epoch {epoch}: train loss :: {train_loss :.3f}, dev chrF :: {chrf_score :.3f}")
+
+    # 记录当前 epoch 的指标
+    logger.log_epoch_metrics(epoch, {
+      "train_loss": train_loss,
+      "dev_chrF": chrf_score,
+    })
+
+  # 训练结束，记录最终结果
+  logger.log_training_end()
+  logger.log_final_results({
+    "final_chrF": chrf_score,
+  })
+  logger.save()
+  logger.print_summary()
+
+  # TODO: consider a stopping condition to prevent overfitting on the small dataset of sonnets.
+  save_model(model, optimizer, args, f'{args.epochs}_{args.filepath}')
 
 
 @torch.no_grad()
@@ -236,6 +317,8 @@ def get_args():
   parser.add_argument("--lr", type=float, help="learning rate", default=1e-5)
   parser.add_argument("--model_size", type=str, help="The model size as specified on hugging face.",
                       choices=['gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'], default='gpt2')
+  parser.add_argument("--exp_name", type=str, default="baseline",
+                      help="Experiment name for logging (e.g., 'baseline', 'dpo_beta0.1')")
 
   args = parser.parse_args()
   return args
