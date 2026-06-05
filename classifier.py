@@ -77,7 +77,7 @@ class GPT2SentimentClassifier(torch.nn.Module):
     batch_indices = torch.arange(batch_size, device=last_hidden_state.device)
     # 从 last_hidden_state 中取出每个句子的最后一个 token 的 hidden state，形状为 (batch_size, hidden_size)
     last_token_hidden_states = last_hidden_state[batch_indices, sequence_lengths,:]
-
+    # 利用分类头，将 last token hidden state 通过线性层映射到 5 个类别的得分
     logits = self.classification_head(last_token_hidden_states)
 
     return logits

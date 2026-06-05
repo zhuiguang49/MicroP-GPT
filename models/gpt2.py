@@ -93,11 +93,15 @@ class GPT2Model(GPTPreTrainedModel):
     embedding_output = self.embed(input_ids=input_ids)
 
     # Feed to a transformer (a stack of GPTLayers).
+    # 这里的 sequence_output 就是 GPT-2 模型返回的 hidden state，也即
+    # 序列中每个 token 经过 12 层 Transformer 和 LayerNorm 后的 hidden state
     sequence_output = self.encode(embedding_output, attention_mask=attention_mask)
     sequence_output = self.final_layer_norm(sequence_output)
 
     # Get the hidden state of the final token.
+    # 获取的是每个句子中的最有一个非 padding token 的 索引
     last_non_pad_idx = attention_mask.sum(dim=1) - 1  # Subtract 1 to get last index
+    # 提取每个句子的最后一个 token 的 hidden state，shape 是 (batch_size, hidden_size)
     last_token = sequence_output[torch.arange(sequence_output.shape[0]), last_non_pad_idx]
 
     return {'last_hidden_state': sequence_output, 'last_token': last_token}

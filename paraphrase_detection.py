@@ -59,20 +59,65 @@ class ParaphraseGPT(nn.Module):
 
   def forward(self, input_ids, attention_mask):
     """
-    TODO: Predict the label of the token using the paraphrase_detection_head Linear layer.
+    对一批句子对进行 paraphrase detection（cloze-style 完形填空方式）。
 
-    We structure the input as:
-
+    输入已被数据集格式化为：
       'Is "{s1}" a paraphrase of "{s2}"? Answer "yes" or "no": '
+    模型需要预测句子末尾的下一个 token 是 "yes"（token id = 8505）
+    还是 "no"（token id = 3919）。
 
-    So you want to find the prediction for the next token at the end of this sentence. Optimistically, it will be the
-    token "yes" (byte pair encoding index of 8505) for examples that are paraphrases or "no" (byte pair encoding index
-     of 3919) for examples that are not paraphrases.
+    return:
+      (batch_size, 2) 的 logits，第一列 = "no"，第二列 = "yes"。
     """
+    # =========================================================================
+    # 第 1 步：将输入送入 GPT-2，获取每个 token 的隐藏状态
+    # =========================================================================
+    # self.gpt(...) 返回一个字典，包含：
+    #   'last_hidden_state': (batch_size, seq_len, hidden_size)
+    #       序列中每个 token 经过 12 层 Transformer 后的上下文表示
+    #   'last_token': (batch_size, hidden_size)
+    #       最后一个非 padding token 的隐藏状态（models/gpt2.py 中已经实现）
+    #
+    # 对于 cloze-style 任务，我们只需要最后一个 token 位置的表示，
+    # 因为我们要在这个位置预测下一个 token 是 "yes" 还是 "no"
+    # self.gpt 实际上调用的是 models/gpt2.py 中的 forward 函数
+    outputs = self.gpt(input_ids, attention_mask)
+    last_token_hidden = outputs['last_token']  # (batch_size, hidden_size)
 
-    'Takes a batch of sentences and produces embeddings for them.'
-    ### YOUR CODE HERE
-    raise NotImplementedError
+    # =========================================================================
+    # 第 2 步：将最后一个 token 的隐藏状态投影到词汇表空间，直接利用 models/gpt2.py 
+    # 中的 hidden_state_to_token 函数即可
+    # =========================================================================
+    # hidden_state_to_token 做的事情：
+    #   hidden_state @ word_embedding.weight^T
+    # 即 (batch_size, hidden_size) @ (hidden_size, vocab_size)
+    #  = (batch_size, vocab_size)
+    #
+    # 结果中每个位置的值代表"该 token 是词汇表中第 i 个单词"的未归一化得分（logit）
+    vocab_logits = self.gpt.hidden_state_to_token(last_token_hidden)  # (batch_size, vocab_size)
+
+    # =========================================================================
+    # 第 3 步：从整个词汇表（50257 个 token）中只提取 "yes" 和 "no" 的 logits
+    # =========================================================================
+    # GPT-2 的 BPE tokenizer 中，这两个单词各自是一个完整的 token：
+    #   - "yes" → token id = 8505
+    #   - "no"  → token id = 3919
+    #
+    # 我们只关心这两个 token 的得分，因为模型的任务就是判断
+    # 接下来应该输出 "yes"（是 paraphrase）还是 "no"（不是 paraphrase）
+    yes_logits = vocab_logits[:, 8505].unsqueeze(1)  # (batch_size, 1)
+    no_logits = vocab_logits[:, 3919].unsqueeze(1)    # (batch_size, 1)
+
+    # =========================================================================
+    # 第 4 步：拼接成二分类 logits 返回
+    # =========================================================================
+    # 返回形状 (batch_size, 2)：
+    #   第 0 列 = "no" 的 logit  → class 0 = not paraphrase
+    #   第 1 列 = "yes" 的 logit → class 1 = is paraphrase
+    #
+    # 这样 torch.argmax(logits, dim=1) 的结果就是 0 或 1，
+    # 可以直接和 label 比较计算准确率
+    return torch.cat([no_logits, yes_logits], dim=1)  # (batch_size, 2)
 
 
 
@@ -124,6 +169,13 @@ def train(args):
       b_ids = b_ids.to(device)
       b_mask = b_mask.to(device)
       labels = labels.to(device)
+
+      # 将 labels 从 token id 转换为 class index
+      # 数据集的 collate_fn 将 label 编码为 tokenized 的 "yes"/"no" 字符串，
+      # 所以 labels 中的值是 token id：8505 表示 "yes"，3919 表示 "no"
+      # 但 F.cross_entropy 要求 label 是 class index（0 或 1），
+      # 因此我们将 8505 ("yes") → 1，3919 ("no") → 0
+      labels = (labels == 8505).long()  # (batch_size,), 1 = is paraphrase, 0 = not paraphrase
 
       # Compute the loss, gradients, and update the model's parameters.
       optimizer.zero_grad()

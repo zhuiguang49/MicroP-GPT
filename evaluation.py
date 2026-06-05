@@ -33,6 +33,11 @@ def model_eval_paraphrase(dataloader, model, device):
     logits = model(b_ids, b_mask).cpu().numpy()
     preds = np.argmax(logits, axis=1).flatten()
 
+    # 将 labels 从 token id 转换为 class index（与训练时保持一致）
+    # labels 中的值是 token id：8505 = "yes", 3919 = "no"
+    # 转换为：8505 → 1 (is paraphrase), 3919 → 0 (not paraphrase)
+    labels = (labels == 8505).long().numpy()
+
     y_true.extend(labels)
     y_pred.extend(preds)
     sent_ids.extend(b_sent_ids)
