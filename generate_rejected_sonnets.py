@@ -53,7 +53,8 @@ def generate_rejected(args):
     encoding = model.tokenizer(prompt, return_tensors='pt', padding=False, truncation=True)
     input_ids = encoding['input_ids'].to(device)
 
-    # 用未微调的 GPT-2 生成补全（高 temperature 增加随机性/低质量）
+    # 用未微调的 GPT-2 生成补全（高 temperature 能够使得模型选择概率较低的输出
+    # 增加随机性/低质量）
     _, generated_text = model.generate(
       input_ids,
       temperature=args.temperature,

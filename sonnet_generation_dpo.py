@@ -76,7 +76,8 @@ class DPOSonnetDataset(Dataset):
       truncation=True, max_length=self.max_length
     )
 
-    # 计算 prompt 的 token 数量（用于构建 completion mask）
+    # 计算 prompt 的 token 数量，在计算 loss 的时候，我们需要屏蔽掉 prompt 部分的 token
+    # 只计算 completion 部分的对数概率
     prompt_enc = self.tokenizer(prompt, return_tensors='pt', truncation=True, max_length=self.max_length)
     prompt_len = prompt_enc['input_ids'].shape[1]
 
@@ -99,9 +100,7 @@ class DPOSonnetDataset(Dataset):
     }
 
 
-# =============================================================================
 # DPO Core Functions
-# =============================================================================
 
 def compute_log_probs(model, input_ids, attention_mask):
   """
@@ -118,7 +117,7 @@ def compute_log_probs(model, input_ids, attention_mask):
   # SonnetGPT.forward() 直接返回 (batch, seq_len, vocab_size) 的 logits
   logits = model(input_ids, attention_mask)  # (batch, seq_len, vocab_size)
 
-  # Shift: 用位置 0..T-2 的 logits 预测位置 1..T-1 的 token
+  # Shift: 利用前缀预测下一个 token，logits[:, :-1, :] (位置 0 到 T-2) 用于预测 input_ids[:, 1:] (位置 1 到 T-1)
   shift_logits = logits[:, :-1, :].contiguous()
   shift_labels = input_ids[:, 1:].contiguous()
 
@@ -140,7 +139,7 @@ def dpo_loss(policy_chosen_logps, policy_rejected_logps,
     policy_rejected_logps: (batch,) policy model 对 rejected 序列的 log prob
     ref_chosen_logps: (batch,) reference model 对 chosen 序列的 log prob
     ref_rejected_logps: (batch,) reference model 对 rejected 序列的 log prob
-    beta: KL 惩罚系数
+    beta: KL 惩罚系数，控制 policy model 偏离 reference model 的成都
 
   Returns:
     loss: scalar
@@ -191,9 +190,7 @@ def get_sequence_log_probs(log_probs, attention_mask, prompt_lens):
   return seq_log_probs
 
 
-# =============================================================================
 # Training
-# =============================================================================
 
 def train(args):
   """Train GPT-2 with DPO for sonnet generation."""
@@ -214,6 +211,7 @@ def train(args):
 
   # ---- Policy Model (可训练) ----
   policy_model = SonnetGPT(args)
+  # 从 STF 模型初始化 policy model，在 SFT 的基础上进行偏好对齐
   if args.sft_checkpoint:
     print(f"Loading SFT checkpoint from {args.sft_checkpoint}")
     saved = torch.load(args.sft_checkpoint, weights_only=False)
@@ -222,12 +220,17 @@ def train(args):
 
   # ---- Reference Model (冻结) ----
   ref_model = SonnetGPT(args)
+  if args.sft_checkpoint:
+    print(f"Loading SFT checkpoint for reference model from {args.sft_checkpoint}")
+    saved = torch.load(args.sft_checkpoint, weights_only=False)
+    ref_model.load_state_dict(saved['model'])
   ref_model = ref_model.to(device)
   ref_model.eval()
   for param in ref_model.parameters():
     param.requires_grad = False
 
   # ---- 优化器 ----
+  # DPO 的学习率通常比 SFT 小
   optimizer = AdamW(policy_model.parameters(), lr=args.lr)
 
   # ---- 实验日志 ----
@@ -367,7 +370,7 @@ def get_args():
   parser.add_argument("--held_out_sonnet_path", type=str, default="data/sonnets_held_out_dev.txt")
   parser.add_argument("--sonnet_out", type=str, default="predictions/generated_sonnets_dpo.txt")
 
-  # SFT checkpoint (可选)
+  # SFT checkpoint 
   parser.add_argument("--sft_checkpoint", type=str, default=None,
                       help="Path to SFT fine-tuned checkpoint. If None, starts from pretrained GPT-2.")
 
