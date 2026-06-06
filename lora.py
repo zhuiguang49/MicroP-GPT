@@ -64,11 +64,15 @@ class LinearWithLoRA(nn.Module):
     推理时将 LoRA 权重合并回原始权重，消除额外计算开销。
     W_merged = W + (α/r) * B @ A
     """
+    # 将 lora 权重合并回原始的权重中，得到新的矩阵 W_merged = W + (α/r) * B @ A
     self.original_linear.weight.data += self.scaling * (self.lora_B @ self.lora_A)
 
   @torch.no_grad()
   def unmerge_weights(self):
     """撤销合并，恢复原始权重。"""
+    # 在我们跑 training 的时候，我们需要冻结 W，这时只计算对 A, B 的梯度并更新，所以不能合并
+    # 在推理的时候可以合并，此时模型在推理时的 computation graph、计算量、显存占用和原始的 
+    # GPT-2 相同，没有延迟
     self.original_linear.weight.data -= self.scaling * (self.lora_B @ self.lora_A)
 
 
