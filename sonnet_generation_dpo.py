@@ -233,6 +233,12 @@ def train(args):
   # DPO 的学习率通常比 SFT 小
   optimizer = AdamW(policy_model.parameters(), lr=args.lr)
 
+  # ---- Early Stopping 配置 ----
+  best_chrF = 0
+  best_epoch = 0
+  patience_counter = 0
+  patience = getattr(args, 'early_stopping_patience', 3)
+
   # ---- 实验日志 ----
   logger = ExperimentLogger(
     experiment_name=args.exp_name,
@@ -249,7 +255,6 @@ def train(args):
   logger.log_training_start()
 
   # ---- 训练循环 ----
-  best_chrF = 0
 
   for epoch in range(args.epochs):
     logger.log_epoch_start()
@@ -336,6 +341,17 @@ def train(args):
     )
     print(f"Epoch {epoch}: dev chrF :: {chrf_score :.3f}")
 
+    # Early Stopping 逻辑
+    if chrf_score > best_chrF:
+      best_chrF = chrf_score
+      best_epoch = epoch
+      patience_counter = 0
+      save_model(policy_model, optimizer, args, f'best_{args.filepath}')
+      print(f"✨ New best chrF: {best_chrF:.3f} at epoch {epoch}. Model saved.")
+    else:
+      patience_counter += 1
+      print(f"⚠️ No improvement. Patience: {patience_counter}/{patience}")
+
     logger.log_epoch_metrics(epoch, {
       "dpo_loss": avg_dpo_loss,
       "chosen_reward": avg_chosen_reward,
@@ -343,20 +359,86 @@ def train(args):
       "reward_margin": reward_margin,
       "dev_chrF": chrf_score,
       "best_chrF": best_chrF,
+      "patience_counter": patience_counter,
     })
 
-  # 训练结束，保存最终模型
+    # 检查是否触发 Early Stopping
+    if patience_counter >= patience:
+      print(f"\n🛑 Early stopping triggered at epoch {epoch}!")
+      print(f"   Best chrF: {best_chrF:.3f} (epoch {best_epoch})")
+      break
+
+  # 训练结束
   logger.log_training_end()
   logger.log_final_results({
     "best_chrF": best_chrF,
+    "best_epoch": best_epoch,
     "final_dpo_loss": avg_dpo_loss,
     "final_reward_margin": reward_margin,
+    "early_stopped": patience_counter >= patience,
   })
   logger.save()
   logger.print_summary()
+  
+  # 只保存一次模型，使用统一的命名格式
   final_model_path = f'{args.epochs}_{args.filepath}'
   save_model(policy_model, optimizer, args, final_model_path)
-  print(f"Final DPO model saved to: {final_model_path}")
+  print(f"\n✅ Training completed. Best model saved as 'best_{args.filepath}'")
+
+
+@torch.no_grad()
+def generate_submission_sonnets(args):
+  """生成用于提交的 sonnets（DPO 版本）"""
+  device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
+  
+  # 优先加载最佳模型，如果不存在则回退到最后一个 epoch 的模型
+  best_model_path = f'best_{args.filepath}'
+  final_model_path = f'{args.epochs}_{args.filepath}'
+  
+  import os
+  if os.path.exists(best_model_path):
+    model_path = best_model_path
+    print(f"Loading best DPO model from: {model_path}")
+  else:
+    model_path = final_model_path
+    print(f"Warning: Best model not found. Loading final model from: {model_path}")
+  
+  saved = torch.load(model_path, weights_only=False, map_location=device)
+
+  model = SonnetGPT(saved['args'])
+  model.load_state_dict(saved['model'])
+  model = model.to(device)
+  model.eval()
+
+  # 加载 held-out 数据集
+  held_out_sonnet_dataset = SonnetsDataset(args.held_out_sonnet_path)
+  tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+  tokenizer.pad_token = tokenizer.eos_token
+
+  generated_sonnets = []
+  for batch in held_out_sonnet_dataset:
+    sonnet_id = batch[0]
+    prompt = batch[1]
+    encoding = tokenizer(prompt, return_tensors='pt', padding=False, truncation=True).to(device)
+    
+    # 使用 generate 方法，直接获取已处理的文本
+    token_ids, generated_text = model.generate(
+      encoding['input_ids'], 
+      temperature=args.temperature, 
+      top_p=args.top_p
+    )
+    
+    full_sonnet = f'{generated_text}\n\n'
+    generated_sonnets.append((sonnet_id, full_sonnet))
+    print(f'{prompt}{generated_text}\n\n')
+
+  with open(args.sonnet_out, "w+") as f:
+    f.write(f"--Generated Sonnets-- \n\n")
+    for sonnet in generated_sonnets:
+      f.write(f"\n{sonnet[0]}\n")
+      f.write(sonnet[1])
+  
+  print(f"Submission sonnets saved to: {args.sonnet_out}")
 
 
 def get_args():
@@ -371,6 +453,8 @@ def get_args():
   # SFT checkpoint 
   parser.add_argument("--sft_checkpoint", type=str, default=None,
                       help="Path to SFT fine-tuned checkpoint. If None, starts from pretrained GPT-2.")
+  parser.add_argument("--auto_find_sft", action='store_true',
+                      help="Automatically find SFT checkpoint based on epochs and lr")
 
   # 训练参数
   parser.add_argument("--seed", type=int, default=11711)
@@ -381,6 +465,8 @@ def get_args():
   parser.add_argument("--lr", type=float, default=5e-6,
                       help="DPO 学习率通常比 SFT 更小")
   parser.add_argument("--max_length", type=int, default=256)
+  parser.add_argument("--early_stopping_patience", type=int, default=3,
+                      help="Number of epochs to wait for improvement before early stopping (default: 3)")
 
   # DPO 参数
   parser.add_argument("--beta", type=float, default=0.1,
@@ -398,9 +484,17 @@ def get_args():
   args = parser.parse_args()
   return args
 
-
 if __name__ == "__main__":
   args = get_args()
+  
+  # 自动查找 SFT checkpoint（如果启用）
+  if args.auto_find_sft and args.sft_checkpoint is None:
+    args.sft_checkpoint = f'{args.sft_epochs}_{args.sft_epochs}-{args.sft_lr}-sonnet.pt'
+    print(f"Auto-detected SFT checkpoint: {args.sft_checkpoint}")
+  
   args.filepath = f'{args.epochs}-{args.lr}-dpo_beta{args.beta}-sonnet.pt'
   seed_everything(args.seed)
   train(args)
+  
+  # 生成提交用的 sonnets
+  generate_submission_sonnets(args)

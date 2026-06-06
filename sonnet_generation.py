@@ -192,6 +192,12 @@ def train(args):
   logger.log_model_info(model)
   logger.log_training_start()
 
+  # Early Stopping 相关变量
+  best_chrF = 0
+  best_epoch = 0
+  patience_counter = 0
+  patience = getattr(args, 'early_stopping_patience', 3)  # 默认 patience=3
+
   # Run for the specified number of epochs.
   for epoch in range(args.epochs):
     logger.log_epoch_start()
@@ -248,28 +254,65 @@ def train(args):
     )
     print(f"Epoch {epoch}: train loss :: {train_loss :.3f}, dev chrF :: {chrf_score :.3f}")
 
+    # Early Stopping 逻辑
+    if chrf_score > best_chrF:
+      best_chrF = chrf_score
+      best_epoch = epoch
+      patience_counter = 0
+      # 保存最佳模型
+      save_model(model, optimizer, args, f'best_{args.filepath}')
+      print(f"✨ New best chrF: {best_chrF:.3f} at epoch {epoch}. Model saved.")
+    else:
+      patience_counter += 1
+      print(f"⚠️ No improvement. Patience: {patience_counter}/{patience}")
+
     # 记录当前 epoch 的指标
     logger.log_epoch_metrics(epoch, {
       "train_loss": train_loss,
       "dev_chrF": chrf_score,
+      "best_chrF": best_chrF,
+      "patience_counter": patience_counter,
     })
+
+    # 检查是否触发 Early Stopping
+    if patience_counter >= patience:
+      print(f"\n🛑 Early stopping triggered at epoch {epoch}!")
+      print(f"   Best chrF: {best_chrF:.3f} (epoch {best_epoch})")
+      break
 
   # 训练结束，记录最终结果
   logger.log_training_end()
   logger.log_final_results({
+    "best_chrF": best_chrF,
+    "best_epoch": best_epoch,
     "final_chrF": chrf_score,
+    "early_stopped": patience_counter >= patience,
   })
   logger.save()
   logger.print_summary()
 
-  # TODO: consider a stopping condition to prevent overfitting on the small dataset of sonnets.
+  # 保存最后一个 epoch 的模型
   save_model(model, optimizer, args, f'{args.epochs}_{args.filepath}')
+  print(f"\n✅ Training completed. Best model saved as 'best_{args.filepath}'")
 
 
 @torch.no_grad()
 def generate_submission_sonnets(args):
   device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
-  saved = torch.load(f'{args.epochs}_{args.filepath}', weights_only=False)
+  
+  # 优先加载最佳模型，如果不存在则回退到最后一个 epoch 的模型
+  best_model_path = f'best_{args.filepath}'
+  final_model_path = f'{args.epochs}_{args.filepath}'
+  
+  import os
+  if os.path.exists(best_model_path):
+    model_path = best_model_path
+    print(f"Loading best model from: {model_path}")
+  else:
+    model_path = final_model_path
+    print(f"Warning: Best model not found. Loading final model from: {model_path}")
+  
+  saved = torch.load(model_path, weights_only=False)
 
   model = SonnetGPT(saved['args'])
   model.load_state_dict(saved['model'])
@@ -319,6 +362,8 @@ def get_args():
                       choices=['gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'], default='gpt2')
   parser.add_argument("--exp_name", type=str, default="baseline",
                       help="Experiment name for logging (e.g., 'baseline', 'dpo_beta0.1')")
+  parser.add_argument("--early_stopping_patience", type=int, default=3,
+                      help="Number of epochs to wait for improvement before early stopping (default: 3)")
 
   args = parser.parse_args()
   return args
