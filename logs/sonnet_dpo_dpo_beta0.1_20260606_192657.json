@@ -1,0 +1,104 @@
+{
+  "experiment": {
+    "name": "dpo_beta0.1",
+    "task": "sonnet",
+    "method": "dpo",
+    "timestamp": "2026-06-06T19:25:16.296304"
+  },
+  "config": {
+    "dpo_data_path": "data/sonnets_rejected.json",
+    "held_out_sonnet_path": "data/sonnets_held_out_dev.txt",
+    "sonnet_out": "predictions/generated_sonnets_dpo.txt",
+    "sft_checkpoint": "10_10-1e-05-sonnet.pt",
+    "seed": 11711,
+    "epochs": 5,
+    "use_gpu": true,
+    "batch_size": 4,
+    "lr": 5e-06,
+    "max_length": 256,
+    "beta": 0.1,
+    "temperature": 1.2,
+    "top_p": 0.9,
+    "model_size": "gpt2",
+    "exp_name": "dpo_beta0.1",
+    "filepath": "5-5e-06-dpo_beta0.1-sonnet.pt",
+    "d": 768,
+    "l": 12,
+    "num_heads": 12
+  },
+  "model": {
+    "total_params": 125030400,
+    "trainable_params": 125030400,
+    "frozen_params": 0,
+    "trainable_ratio": 1.0,
+    "frozen_ratio": 0.0,
+    "param_size_mb": 476.953125,
+    "beta": 0.1,
+    "reference_model": "frozen_pretrained",
+    "sft_checkpoint": "10_10-1e-05-sonnet.pt"
+  },
+  "metrics": [
+    {
+      "epoch": 0,
+      "epoch_time_sec": 20.457967281341553,
+      "dpo_loss": 0.1325488438292406,
+      "chosen_reward": -2.271903243931857,
+      "rejected_reward": -10.238514040455673,
+      "reward_margin": 7.966610796523816,
+      "dev_chrF": 41.48083131214101,
+      "best_chrF": 0
+    },
+    {
+      "epoch": 1,
+      "epoch_time_sec": 20.068849325180054,
+      "dpo_loss": 0.037874984918902774,
+      "chosen_reward": -2.4744417089404482,
+      "rejected_reward": -14.239704623366848,
+      "reward_margin": 11.7652629144264,
+      "dev_chrF": 41.615197700961474,
+      "best_chrF": 0
+    },
+    {
+      "epoch": 2,
+      "epoch_time_sec": 19.888294458389282,
+      "dpo_loss": 0.007534231298319411,
+      "chosen_reward": -2.358512285983924,
+      "rejected_reward": -14.377514203389486,
+      "reward_margin": 12.019001917405562,
+      "dev_chrF": 41.37022516971666,
+      "best_chrF": 0
+    },
+    {
+      "epoch": 3,
+      "epoch_time_sec": 20.382630825042725,
+      "dpo_loss": 0.008453279550208621,
+      "chosen_reward": -2.2699693116274746,
+      "rejected_reward": -14.855755227984805,
+      "reward_margin": 12.585785916357331,
+      "dev_chrF": 41.94342758594994,
+      "best_chrF": 0
+    },
+    {
+      "epoch": 4,
+      "epoch_time_sec": 20.76792049407959,
+      "dpo_loss": 0.005242403764530116,
+      "chosen_reward": -2.481723315788038,
+      "rejected_reward": -14.975583712259928,
+      "reward_margin": 12.49386039647189,
+      "dev_chrF": 41.78348224753986,
+      "best_chrF": 0
+    }
+  ],
+  "training": {
+    "total_time_sec": 101.56569147109985,
+    "avg_epoch_time_sec": 20.31313829421997,
+    "gpu_memory_peak_mb": 6693.13037109375,
+    "gpu_memory_current_mb": 3839.11376953125
+  },
+  "results": {
+    "best_chrF": 0,
+    "final_dpo_loss": 0.005242403764530116,
+    "final_reward_margin": 12.49386039647189
+  },
+  "notes": ""
+}

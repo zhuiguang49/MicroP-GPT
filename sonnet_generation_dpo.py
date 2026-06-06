@@ -336,10 +336,6 @@ def train(args):
     )
     print(f"Epoch {epoch}: dev chrF :: {chrf_score :.3f}")
 
-    if chrf_score > best_chrF:
-      best_chrF = chrf_score
-      save_model(policy_model, optimizer, args, args.filepath)
-
     logger.log_epoch_metrics(epoch, {
       "dpo_loss": avg_dpo_loss,
       "chosen_reward": avg_chosen_reward,
@@ -349,7 +345,7 @@ def train(args):
       "best_chrF": best_chrF,
     })
 
-  # 训练结束
+  # 训练结束，保存最终模型
   logger.log_training_end()
   logger.log_final_results({
     "best_chrF": best_chrF,
@@ -358,7 +354,9 @@ def train(args):
   })
   logger.save()
   logger.print_summary()
-  save_model(policy_model, optimizer, args, f'{args.epochs}_{args.filepath}')
+  final_model_path = f'{args.epochs}_{args.filepath}'
+  save_model(policy_model, optimizer, args, final_model_path)
+  print(f"Final DPO model saved to: {final_model_path}")
 
 
 def get_args():
