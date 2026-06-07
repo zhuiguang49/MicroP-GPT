@@ -1,0 +1,114 @@
+{
+  "experiment": {
+    "name": "dpo_beta0.1_Deepseekr1_Rejected",
+    "task": "sonnet",
+    "method": "dpo",
+    "timestamp": "2026-06-07T15:59:45.337267"
+  },
+  "config": {
+    "dpo_data_path": "data/sonnets_rejected.json",
+    "rejected_path": "data/sonnets_rejected_deepseek_r1.json",
+    "held_out_sonnet_path": "data/sonnets_held_out.txt",
+    "sonnet_out": "predictions/generated_sonnets_dpo_beta0.1_Deepseekr1_Rejected.txt",
+    "sft_checkpoint": "best_10-1e-05-sonnet.pt",
+    "auto_find_sft": false,
+    "seed": 11711,
+    "epochs": 10,
+    "use_gpu": true,
+    "batch_size": 8,
+    "lr": 5e-06,
+    "max_length": 256,
+    "early_stopping_patience": 3,
+    "beta": 0.1,
+    "temperature": 1.2,
+    "top_p": 0.9,
+    "model_size": "gpt2",
+    "exp_name": "dpo_beta0.1_Deepseekr1_Rejected",
+    "filepath": "10-5e-06-dpo_beta0.1_Deepseekr1_Rejected-sonnet.pt",
+    "d": 768,
+    "l": 12,
+    "num_heads": 12
+  },
+  "model": {
+    "total_params": 125030400,
+    "trainable_params": 125030400,
+    "frozen_params": 0,
+    "trainable_ratio": 1.0,
+    "frozen_ratio": 0.0,
+    "param_size_mb": 476.953125,
+    "beta": 0.1,
+    "reference_model": "frozen_pretrained",
+    "sft_checkpoint": "best_10-1e-05-sonnet.pt"
+  },
+  "metrics": [
+    {
+      "epoch": 0,
+      "epoch_time_sec": 24.23316979408264,
+      "dpo_loss": 0.08744477680727247,
+      "chosen_reward": -2.3330096988116993,
+      "rejected_reward": -10.139575214946971,
+      "reward_margin": 7.806565516135272,
+      "dev_chrF": 40.69898652703128,
+      "best_chrF": 40.69898652703128,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 1,
+      "epoch_time_sec": 21.772987365722656,
+      "dpo_loss": 0.0024058422344047452,
+      "chosen_reward": -2.8704547741833855,
+      "rejected_reward": -17.366589490105124,
+      "reward_margin": 14.496134715921738,
+      "dev_chrF": 41.12304311621537,
+      "best_chrF": 41.12304311621537,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 2,
+      "epoch_time_sec": 17.47054934501648,
+      "dpo_loss": 0.0008776325576611696,
+      "chosen_reward": -3.065932273864746,
+      "rejected_reward": -19.227872063131894,
+      "reward_margin": 16.161939789267148,
+      "dev_chrF": 40.06062745953443,
+      "best_chrF": 41.12304311621537,
+      "patience_counter": 1
+    },
+    {
+      "epoch": 3,
+      "epoch_time_sec": 18.196321487426758,
+      "dpo_loss": 0.0005961443963858043,
+      "chosen_reward": -3.1519556887009563,
+      "rejected_reward": -19.886786965762866,
+      "reward_margin": 16.73483127706191,
+      "dev_chrF": 40.01974151421397,
+      "best_chrF": 41.12304311621537,
+      "patience_counter": 2
+    },
+    {
+      "epoch": 4,
+      "epoch_time_sec": 18.5915048122406,
+      "dpo_loss": 0.0013030380450073033,
+      "chosen_reward": -3.2446443894330192,
+      "rejected_reward": -19.635715933407056,
+      "reward_margin": 16.391071543974036,
+      "dev_chrF": 40.918326096245764,
+      "best_chrF": 41.12304311621537,
+      "patience_counter": 3
+    }
+  ],
+  "training": {
+    "total_time_sec": 100.264577627182,
+    "avg_epoch_time_sec": 20.0529155254364,
+    "gpu_memory_peak_mb": 9527.0048828125,
+    "gpu_memory_current_mb": 3826.48828125
+  },
+  "results": {
+    "best_chrF": 41.12304311621537,
+    "best_epoch": 1,
+    "final_dpo_loss": 0.0013030380450073033,
+    "final_reward_margin": 16.391071543974036,
+    "early_stopped": true
+  },
+  "notes": ""
+}
