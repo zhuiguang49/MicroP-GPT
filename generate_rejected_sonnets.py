@@ -1,25 +1,21 @@
 '''
-Phase 1: Generate rejected samples for DPO training.
+Phase 1: Generate rejected samples for DPO training (Hard Negatives Version).
 
-使用未微调的 GPT-2 对训练集 sonnet 的前 3 行做补全，生成低质量版本。
+采用“破坏正样本”策略生成高质量负样本。
+通过对真实十四行诗进行打乱顺序、同义词替换或截断，生成“看似合理但存在瑕疵”的文本。
 生成的结果保存为 JSON 文件，供 DPO 训练使用。
 
 Running:
-  `python generate_rejected_sonnets.py --use_gpu`
+  `python generate_rejected_sonnets.py`
 '''
 
 import argparse
 import json
 import random
-import torch
-import numpy as np
+import re
 
 from tqdm import tqdm
-from transformers import GPT2Tokenizer
-
 from datasets import SonnetsDataset
-from models.gpt2 import GPT2Model
-from sonnet_generation import SonnetGPT, add_arguments, seed_everything
 
 
 def get_prompt_from_sonnet(sonnet_text: str, num_prompt_lines: int = 3) -> str:
@@ -29,16 +25,53 @@ def get_prompt_from_sonnet(sonnet_text: str, num_prompt_lines: int = 3) -> str:
   return '\n'.join(prompt_lines)
 
 
-@torch.no_grad()
+def perturb_sonnet(sonnet_text: str) -> str:
+  """
+  对十四行诗进行扰动，生成一个质量较低的版本。
+  策略：
+  1. 打乱最后两行或最后四行的顺序。
+  2. 简单词汇替换（降低艺术性）。
+  """
+  lines = [line for line in sonnet_text.strip().split('\n') if line.strip()]
+  
+  if len(lines) < 14:
+    return sonnet_text
+
+  # 策略选择：50% 概率打乱顺序，50% 概率替换词汇
+  strategy = random.choice(['shuffle', 'replace'])
+
+  if strategy == 'shuffle':
+    # 保持前 10 行不变，打乱后 4 行
+    prefix = lines[:10]
+    suffix = lines[10:]
+    random.shuffle(suffix)
+    perturbed_lines = prefix + suffix
+  else:
+    # 简单同义词替换映射
+    replacements = {
+      r'\blove\b': 'like',
+      r'\bfair\b': 'good',
+      r'\bbeauty\b': 'look',
+      r'\bheart\b': 'mind',
+      r'\bsweet\b': 'nice',
+      r'\bthou\b': 'you',
+      r'\bthy\b': 'your',
+      r'\bthee\b': 'you',
+      r'\bdoth\b': 'does',
+      r'\bhath\b': 'has'
+    }
+    
+    perturbed_lines = []
+    for line in lines:
+      new_line = line
+      for pattern, repl in replacements.items():
+        new_line = re.sub(pattern, repl, new_line, flags=re.IGNORECASE)
+      perturbed_lines.append(new_line)
+
+  return '\n'.join(perturbed_lines)
+
+
 def generate_rejected(args):
-  device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
-
-  # 加载未微调的 GPT-2
-  args = add_arguments(args)
-  model = SonnetGPT(args)
-  model = model.to(device)
-  model.eval()
-
   # 加载训练集 sonnets
   sonnet_dataset = SonnetsDataset(args.sonnet_path)
 
@@ -48,38 +81,28 @@ def generate_rejected(args):
   for idx in tqdm(range(len(sonnet_dataset))):
     _, sonnet_text = sonnet_dataset[idx]
     prompt = get_prompt_from_sonnet(sonnet_text, num_prompt_lines=3)
-
-    # Tokenize prompt
-    encoding = model.tokenizer(prompt, return_tensors='pt', padding=False, truncation=True)
-    input_ids = encoding['input_ids'].to(device)
-
-    # 用未微调的 GPT-2 生成补全（高 temperature 能够使得模型选择概率较低的输出
-    # 增加随机性/低质量）
-    _, generated_text = model.generate(
-      input_ids,
-      temperature=args.temperature,
-      top_p=args.top_p,
-      max_length=args.max_length
-    )
+    
+    # 生成扰动后的负样本
+    rejected_text = perturb_sonnet(sonnet_text)
 
     paired_data.append({
       "id": idx,
       "prompt": prompt,
       "chosen": sonnet_text.strip(),
-      "rejected": generated_text.strip(),
+      "rejected": rejected_text.strip(),
     })
 
   # 保存为 JSON
   with open(args.output_path, 'w', encoding='utf-8') as f:
     json.dump(paired_data, f, indent=2, ensure_ascii=False)
 
-  print(f"Saved {len(paired_data)} paired samples to {args.output_path}")
+  print(f"✅ Saved {len(paired_data)} paired samples to {args.output_path}")
 
-  # 打印几个样例
+  # 打印几个样例检查质量
   print("\n--- Sample 0 ---")
   print(f"Prompt:\n{paired_data[0]['prompt']}")
   print(f"\nChosen (real):\n{paired_data[0]['chosen'][:200]}...")
-  print(f"\nRejected (generated):\n{paired_data[0]['rejected'][:200]}...")
+  print(f"\nRejected (perturbed Hard Negative):\n{paired_data[0]['rejected'][:200]}...")
 
 
 def get_args():
@@ -87,18 +110,7 @@ def get_args():
 
   parser.add_argument("--sonnet_path", type=str, default="data/sonnets.txt")
   parser.add_argument("--output_path", type=str, default="data/sonnets_rejected.json")
-  parser.add_argument("--use_gpu", action='store_true')
   parser.add_argument("--seed", type=int, default=11711)
-
-  # 生成参数：高 temperature 产生更多样化/低质量的文本
-  parser.add_argument("--temperature", type=float, default=1.5,
-                      help="Higher temperature for more diverse (lower quality) generation")
-  parser.add_argument("--top_p", type=float, default=0.95)
-  parser.add_argument("--max_length", type=int, default=128,
-                      help="Max tokens to generate")
-
-  parser.add_argument("--model_size", type=str, default='gpt2',
-                      choices=['gpt2', 'gpt2-medium', 'gpt2-large'])
 
   args = parser.parse_args()
   return args
@@ -106,5 +118,5 @@ def get_args():
 
 if __name__ == "__main__":
   args = get_args()
-  seed_everything(args.seed)
+  random.seed(args.seed)
   generate_rejected(args)

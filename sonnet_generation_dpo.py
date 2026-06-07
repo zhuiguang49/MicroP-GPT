@@ -201,7 +201,9 @@ def train(args):
   tokenizer.pad_token = tokenizer.eos_token
 
   # ---- 数据 ----
-  dpo_dataset = DPOSonnetDataset(args.dpo_data_path, tokenizer, max_length=args.max_length)
+  data_path = args.rejected_path if args.rejected_path else args.dpo_data_path
+  print(f"Using DPO data from: {data_path}")
+  dpo_dataset = DPOSonnetDataset(data_path, tokenizer, max_length=args.max_length)
   dpo_dataloader = DataLoader(
     dpo_dataset, shuffle=True, batch_size=args.batch_size,
     collate_fn=DPOSonnetDataset.collate_fn
@@ -328,7 +330,7 @@ def train(args):
       output = policy_model.generate(encoding['input_ids'], temperature=args.temperature, top_p=args.top_p)
       generated_sonnets.append((sonnet_id, output[1]))
 
-    temp_dev_path = f'predictions/generated_sonnets_dpo_dev_epoch_{epoch}.txt'
+    temp_dev_path = f'predictions/generated_sonnets_{args.exp_name}_dev_epoch_{epoch}.txt'
     with open(temp_dev_path, 'w') as f:
       f.write('--Generated Sonnets--\n\n')
       for sonnet_id, sonnet_text in generated_sonnets:
@@ -393,6 +395,8 @@ def get_args():
   # 数据路径
   parser.add_argument("--dpo_data_path", type=str, default="data/sonnets_rejected.json",
                       help="Path to paired data JSON from generate_rejected_sonnets.py")
+  parser.add_argument("--rejected_path", type=str, default=None,
+                      help="Path to rejected samples data. If provided, can be used for specific negative sampling strategies.")
   parser.add_argument("--held_out_sonnet_path", type=str, default="data/sonnets_held_out.txt",
                       help="Held-out sonnets for submission generation (test set by default)")
   parser.add_argument("--sonnet_out", type=str, default="predictions/generated_sonnets_dpo.txt")
@@ -426,9 +430,16 @@ def get_args():
   # 模型
   parser.add_argument("--model_size", type=str, default='gpt2',
                       choices=['gpt2', 'gpt2-medium', 'gpt2-large'])
-  parser.add_argument("--exp_name", type=str, default="dpo_beta0.1")
+  parser.add_argument("--exp_name", type=str, default="dpo_beta0.1",
+                      help="Experiment name for logging and file naming (e.g., dpo_perturbed)")
 
   args = parser.parse_args()
+  
+  # 根据实验名称动态设置输出文件路径，确保不同策略的结果互不覆盖
+  if args.exp_name:
+    args.sonnet_out = f"predictions/generated_sonnets_{args.exp_name}.txt"
+    args.filepath = f'{args.epochs}-{args.lr}-{args.exp_name}-sonnet.pt'
+  
   return args
 
 
@@ -498,7 +509,6 @@ if __name__ == "__main__":
     args.sft_checkpoint = f'{args.sft_epochs}_{args.sft_epochs}-{args.sft_lr}-sonnet.pt'
     print(f"Auto-detected SFT checkpoint: {args.sft_checkpoint}")
   
-  args.filepath = f'{args.epochs}-{args.lr}-dpo_beta{args.beta}-sonnet.pt'
   seed_everything(args.seed)
   train(args)
   
