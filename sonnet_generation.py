@@ -145,7 +145,7 @@ class SonnetGPT(nn.Module):
         [attention_mask, torch.ones((1, 1), dtype=torch.int64).to(self.get_device())], dim=1
       )
 
-    generated_output = self.tokenizer.decode(token_ids[0].cpu().numpy().tolist())[3:]
+    generated_output = self.tokenizer.decode(token_ids[0].cpu().numpy().tolist(), skip_special_tokens=True)
     return token_ids, generated_output
 
 
@@ -171,8 +171,8 @@ def train(args):
   sonnet_dataloader = DataLoader(sonnet_dataset, shuffle=True, batch_size=args.batch_size,
                                  collate_fn=sonnet_dataset.collate_fn)
 
-  # Create the held-out dataset: these only have the first 3 lines. Your job is to fill in the rest!
-  held_out_sonnet_dataset = SonnetsDataset(args.held_out_sonnet_path)
+  # Create the held-out dataset for training evaluation (always use dev set)
+  held_out_sonnet_dataset = SonnetsDataset("data/sonnets_held_out_dev.txt")
 
   args = add_arguments(args)
   model = SonnetGPT(args)
@@ -320,24 +320,27 @@ def generate_submission_sonnets(args):
   model.eval()
 
   # Create the held-out dataset: these only have the first 3 lines. Your job is to fill in the rest!
+  print(f"\n📝 Generating submission sonnets from: {args.held_out_sonnet_path}")
   held_out_sonnet_dataset = SonnetsDataset(args.held_out_sonnet_path)
+  print(f"   Total sonnets to generate: {len(held_out_sonnet_dataset)}")
 
   generated_sonnets = []
   for batch in held_out_sonnet_dataset:
     sonnet_id = batch[0]
     encoding = model.tokenizer(batch[1], return_tensors='pt', padding=False, truncation=True).to(device)
-    output = model.generate(encoding['input_ids'], temperature=args.temperature, top_p=args.top_p)[0][0]
-    decoded_output = model.tokenizer.decode(output)
-    full_sonnet = f'{decoded_output}\n\n'
+    token_ids, generated_text = model.generate(encoding['input_ids'], temperature=args.temperature, top_p=args.top_p)
+    full_sonnet = f'{generated_text}\n\n'
     generated_sonnets.append((sonnet_id, full_sonnet))
 
-    print(f'{decoded_output}\n\n')
+    print(f'\n[Sonnet {sonnet_id}]\n{batch[1][:80]}...\n{generated_text[:100]}...')
 
   with open(args.sonnet_out, "w+") as f:
     f.write(f"--Generated Sonnets-- \n\n")
     for sonnet in generated_sonnets:
       f.write(f"\n{sonnet[0]}\n")
       f.write(sonnet[1])
+  
+  print(f"\n✅ Submission sonnets saved to: {args.sonnet_out}")
 
 
 def get_args():

@@ -207,7 +207,8 @@ def train(args):
     collate_fn=DPOSonnetDataset.collate_fn
   )
 
-  held_out_sonnet_dataset = SonnetsDataset(args.held_out_sonnet_path)
+  # Always use dev set for training evaluation
+  held_out_sonnet_dataset = SonnetsDataset("data/sonnets_held_out_dev.txt")
 
   # ---- Policy Model (可训练) ----
   policy_model = SonnetGPT(args)
@@ -386,68 +387,14 @@ def train(args):
   print(f"\n✅ Training completed. Best model saved as 'best_{args.filepath}'")
 
 
-@torch.no_grad()
-def generate_submission_sonnets(args):
-  """生成用于提交的 sonnets（DPO 版本）"""
-  device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
-  
-  # 优先加载最佳模型，如果不存在则回退到最后一个 epoch 的模型
-  best_model_path = f'best_{args.filepath}'
-  final_model_path = f'{args.epochs}_{args.filepath}'
-  
-  import os
-  if os.path.exists(best_model_path):
-    model_path = best_model_path
-    print(f"Loading best DPO model from: {model_path}")
-  else:
-    model_path = final_model_path
-    print(f"Warning: Best model not found. Loading final model from: {model_path}")
-  
-  saved = torch.load(model_path, weights_only=False, map_location=device)
-
-  model = SonnetGPT(saved['args'])
-  model.load_state_dict(saved['model'])
-  model = model.to(device)
-  model.eval()
-
-  # 加载 held-out 数据集
-  held_out_sonnet_dataset = SonnetsDataset(args.held_out_sonnet_path)
-  tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-  tokenizer.pad_token = tokenizer.eos_token
-
-  generated_sonnets = []
-  for batch in held_out_sonnet_dataset:
-    sonnet_id = batch[0]
-    prompt = batch[1]
-    encoding = tokenizer(prompt, return_tensors='pt', padding=False, truncation=True).to(device)
-    
-    # 使用 generate 方法，直接获取已处理的文本
-    token_ids, generated_text = model.generate(
-      encoding['input_ids'], 
-      temperature=args.temperature, 
-      top_p=args.top_p
-    )
-    
-    full_sonnet = f'{generated_text}\n\n'
-    generated_sonnets.append((sonnet_id, full_sonnet))
-    print(f'{prompt}{generated_text}\n\n')
-
-  with open(args.sonnet_out, "w+") as f:
-    f.write(f"--Generated Sonnets-- \n\n")
-    for sonnet in generated_sonnets:
-      f.write(f"\n{sonnet[0]}\n")
-      f.write(sonnet[1])
-  
-  print(f"Submission sonnets saved to: {args.sonnet_out}")
-
-
 def get_args():
   parser = argparse.ArgumentParser()
 
   # 数据路径
   parser.add_argument("--dpo_data_path", type=str, default="data/sonnets_rejected.json",
                       help="Path to paired data JSON from generate_rejected_sonnets.py")
-  parser.add_argument("--held_out_sonnet_path", type=str, default="data/sonnets_held_out_dev.txt")
+  parser.add_argument("--held_out_sonnet_path", type=str, default="data/sonnets_held_out.txt",
+                      help="Held-out sonnets for submission generation (test set by default)")
   parser.add_argument("--sonnet_out", type=str, default="predictions/generated_sonnets_dpo.txt")
 
   # SFT checkpoint 
@@ -483,6 +430,65 @@ def get_args():
 
   args = parser.parse_args()
   return args
+
+
+@torch.no_grad()
+def generate_submission_sonnets(args):
+  """生成用于提交的 sonnets（DPO 版本）"""
+  device = torch.device('cuda') if args.use_gpu else torch.device('cpu')
+  
+  # 优先加载最佳模型，如果不存在则回退到最后一个 epoch 的模型
+  best_model_path = f'best_{args.filepath}'
+  final_model_path = f'{args.epochs}_{args.filepath}'
+  
+  import os
+  if os.path.exists(best_model_path):
+    model_path = best_model_path
+    print(f"Loading best DPO model from: {model_path}")
+  else:
+    model_path = final_model_path
+    print(f"Warning: Best model not found. Loading final model from: {model_path}")
+  
+  saved = torch.load(model_path, weights_only=False, map_location=device)
+
+  model = SonnetGPT(saved['args'])
+  model.load_state_dict(saved['model'])
+  model = model.to(device)
+  model.eval()
+
+  # 加载 held-out 数据集（使用 test set 生成最终提交文件）
+  print(f"\n📝 Generating submission sonnets from: {args.held_out_sonnet_path}")
+  held_out_sonnet_dataset = SonnetsDataset(args.held_out_sonnet_path)
+  tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+  tokenizer.pad_token = tokenizer.eos_token
+  print(f"   Total sonnets to generate: {len(held_out_sonnet_dataset)}")
+
+  generated_sonnets = []
+  for batch in held_out_sonnet_dataset:
+    sonnet_id = batch[0]
+    prompt = batch[1]
+    encoding = tokenizer(prompt, return_tensors='pt', padding=False, truncation=True).to(device)
+    
+    # 使用 generate 方法，直接获取已处理的文本
+    token_ids, generated_text = model.generate(
+      encoding['input_ids'], 
+      temperature=args.temperature, 
+      top_p=args.top_p
+    )
+    
+    full_sonnet = f'{generated_text}\n\n'
+    generated_sonnets.append((sonnet_id, full_sonnet))
+    
+    print(f'\n[Sonnet {sonnet_id}]\n{prompt[:80]}...\n{generated_text[:100]}...')
+
+  with open(args.sonnet_out, "w+") as f:
+    f.write(f"--Generated Sonnets-- \n\n")
+    for sonnet in generated_sonnets:
+      f.write(f"\n{sonnet[0]}\n")
+      f.write(sonnet[1])
+  
+  print(f"\n✅ Submission sonnets saved to: {args.sonnet_out}")
+
 
 if __name__ == "__main__":
   args = get_args()
