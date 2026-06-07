@@ -1,0 +1,8 @@
+# 维度二：LLM-as-a-Judge 语言流利度与诗意评测报告（均分）
+
+| Model Strategy                |   LLM Fluency Score (1-5) |   LLM Coherence Score (1-5) |
+|:------------------------------|--------------------------:|----------------------------:|
+| 1. SFT Baseline               |                      3    |                        2    |
+| 2. DPO (SFT Rejected)         |                      3.33 |                        2.42 |
+| 3. DPO (Destroyed PS)         |                      3.5  |                        2.67 |
+| 4. DPO (DeepSeek-R1 Rejected) |                      3.25 |                        2.42 |

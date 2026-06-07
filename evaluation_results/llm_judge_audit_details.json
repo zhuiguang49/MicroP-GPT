@@ -1,0 +1,386 @@
+[
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 0,
+        "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nAgainst wherethat saw locks that stop Thy pains,\nAnd in clothe her crippled limbs gone with slavery.\nSpan time away, bitterness supplicates my glory,\nTherefore her tears sure shame faster crushed\nSuch roselakes to scickls then,\nThat you homely hoary tones found your cold foot so cold;\nPeared pentoxide away a thin Death beside\nIf you today say nothing but pay off all disgrace.\nOn me you shall shame true Mary.\n\n\nSomnes wide their wailing lambherd, rather hanged\nAgainst him brave I sung her name than thou wr",
+        "fluency_score": 2.0,
+        "coherence_score": 1.0,
+        "reason": "语言混乱，拼写错误多，意象破碎无逻辑"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 1,
+        "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nGreat slopes, but huge tines cast out their channels,\nOutstanded and away doth happen where there good—\nHear to be thence restrained against chance,\nThough thou place interest set on unfavourable returns.\nStill thou be me with assured instinct me first,\nYet second thyself power shuts me up in spite\nUntil o'erst thou second thine grew, but pass.\n  Urth the burden and thus in defense.\n  Adder me of thy gentle fleet and letting passion take\n  Margstros lie satisfied with that nobility.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，意象破碎不连贯，诗意难以理解。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 2,
+        "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\n[And I must walk wherever it hath concurrence from\nAnd my private end shall cover me]\nIn winter's cruel thrift; night will not send my chitters;\nObedient soulless rejoicing to my discontent.\nE'erms murmur of bliss coming not to acquaintance--\nThat I find a friendly port forward;\nOr an African civivorous time forwards for winter;\n\nTo locate winter why there can arise no line\nWhile winters outside these, may perish thereby end by loss.\n  No return on her loves hated or removed not but thus,\n  Siring away",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在无意义词汇堆砌，上下文逻辑断裂，意象破碎"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 3,
+        "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nAnd with those eyes with wontfulness take notice\nOf time?\nWho are nor see, to keep me mine shame?\nHave some roses recurred once or twice,\nIf confounded elsewhere show the beauty I do love.\nWhen, therefore, more is my praise, none blots,\nWhen concealing another's envy pulls their burden back,\nWhilst habs confound themselves lest I permit my love\nTo hang to veil me.\n  Why graces of vise night have caught my eye;\n  For before judgment's thrust, years took their form;\n  Then time touches Me only",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分句子难以理解，意象破碎缺乏连贯性。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 4,
+        "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot my power,\nWhen I did repent my wretched vices but enkindle thy grief?\nHer sweet And a sordid tears burst forth  As her day there suffered to grow.\nSo thou, thou sick servant, now think anew of such folly,\nAnd by my charge would perfidy wear away upon thee\nThy ignorance preventest thy see, renews thine private ermin;\nThou, earnest, assent thou wouldst consent;\nGood woe did so spirit deceive her o'ertle were\nThat false more princes of this world than upon dainless [age];\nSo",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言较为流畅但部分句子晦涩难懂，诗意存在但意象混乱不连贯。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 5,
+        "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nTo lack thy beauty consecrated\nWhereby your mind seems universal by cold waters sweet,\nThe fraud which so doth grieve grows this counterfeit,\nEven by thy blushing tongue, and all knowing it hopes not to plague.\nBut not alas if thus renewed make myself live.\nAnd yet for your love's part thou shalt drown me in peace,\nGravelling till it kills thee, till mute it revenges me.\n  Woe to umpires before God blind for folly,\n  Pain for heaven blindness to your answers.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象虽美但上下文连贯性不足。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 6,
+        "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nOut of this light to do every brawn,\nFrom youth's fool to the quality of that bandage\nTames youth's breast in spite of youth's privilege;\nWhich after this time frailer sport\nSwing you yet quicker to greater despair,\nStooping to defeat is impeded his time.\nConvinced, thee built should remain a youth;\nThou therefore my sleep has cost me pay--\nYour vanity beautified in sweet nurse confers,\nOn new days that remind us of the faces out of coward's woe;\n  Lo, you despite the width of such wonder",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与连贯性。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 7,
+        "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn me of sight;\nThy trust questions not far settled are, who am thou the one fast,\nBeing done like nothing on earth on no page could graze;\nBut in fair and true labour to gain thy steed's envy;\nI now too in justice take thy vanities upon my shoulders;\nWhich do ye abominate how nice marriages might dye;\n For tyrants do sometimes invent themselves works of cunning,\n Suspending return in fashion after defection to violence;\n  Have love yet wrong to reason fast or stir?",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分词汇堆砌无意义，意象破碎难以理解。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 8,
+        "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steepen,\nShe treasured the title of 'What thy kiss hath told thee'.\nWhom Love's tender would declare the woman,\nTo that thick wet coward, For nourishing living to break\nUpon how untreaty she fear but was mine.\nSupposing, indeed, Love indeed then to mourn thee, but yet buried on earth;\nOr if still near, grave's stigma thought you, if face file, lo know the creature said weep,\nNever again look now to thee in thy space, nor am I constrained to bear witness.\n  You were consigned, once him killed, to land",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，意象破碎不连贯"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 9,
+        "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nBeon her loves still abiding among the idle benevolence\nOf givens waiving the sort;\nBidden such things to come nor more, thou mayst sweetest others ride,\nAnd when time o'erways live older yourself,\nAnd remember your folly not dare to fancy her off\nFor from whence you heard her roar\nWhich story thou knew wrong thy picture of miracles,\nBut silent folly against time thither profit each dole;\n  Think above what others, when his good leave you stifled,\n  Thy humbler'llst stay to lend any feeling\n  Though all whether",
+        "fluency_score": 2.0,
+        "coherence_score": 1.0,
+        "reason": "句法混乱，存在大量无意义的词汇堆砌，上下文逻辑不连贯，意象破碎。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 10,
+        "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nDoth that my virtuous naturality maketh just her nor unwages her worth;\nThou bear it all, make best my losses power only\nAnd wholly lie even to say that thou art fair.\nIf then the flower must have my sin already out born\nAnd get delight mixed against wretched foes\nShowing her knowing hold of that stouter goddess\nOf miles and many bitter curses to day,\nA wish to child dies thee to make right.[28]\nThank thee naught but plain men's sympathies spend.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "1. SFT Baseline",
+        "sonnet_index": 11,
+        "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nIntelligent enough and learned little herself I know not;\nEnjoying sweet woman's sad love and heart's tenements,\nTaketh her burned skin thin, green beast count'd.\nYet when my still fill me with sorrow,\nMy troubled found love that has hid, wisened\nShall have her pale against our vilest fears.\nWould this cruel, gentle joy seen mine take you down,\nThat lifted me where he could dare to wish it out all bad?\n  Yet when my breath only calls from our pity, my pain\n  Letst kiss thee on our wound,",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在拼写错误和逻辑断裂，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 0,
+        "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nBut thou didst for that which looks return\nHereways thus spoiled by game\nMake all welcome welcome, unless be this knife\nOr new crew's mask which same ye.\n  But did for thanksgiving, our debt done,\n  Now \"foreth'st thou, thyself, the ship\n  Between thy boat and thee.\"\n  To blame the bloody but idleness,\n  In an age when time gave thee tiresome,\n  To thee then let the lamb learn\n  that milk, lest therefore he perish!",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言较为流畅但部分句子结构混乱，意象跳跃缺乏连贯性。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 1,
+        "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nImpossible to from within now,\nBringing thee this comparison when there\nGoes thy sight whom thou thus moved,\nIt is idle, unhappy in thy look\nWhen one question begins upon thee\nDoth attend to thy character upon the\nMeans of equality;\nBut where thou sits most, what you daily behold,\nWhen it is wetting thee from within\nWhy then have I grieved this breath?\nDost thou, behold me lovelier than I\nThat am worth so much love in day\nLove's slow: no more depends\nOn what is a broken, unaided jaw",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与连贯性。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 2,
+        "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nAnd feeding on the ill only,\nSo heares for life why doest thou\nAs yet doth break all his sufferings,\nAnd graces can no stronger carry\nThan truth graces with vision;\nFor though his love cannot it be so in,\nFor hence another by loving\nTo see his account's offense,\nNor doth pen our truths bid\nFor such concordation,\nAnd devasaint our truths does;\nFrom him she doth welcome,\nAnd why should he find\nHe'll find fear to joy?\n  For his love is as a which winters",
+        "fluency_score": 2.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，上下文逻辑不连贯，意象破碎。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 3,
+        "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nAnd my mind from want com'n'st won?\nWhile, do not by what means best be fixed,\nWhich I in manners can best pleasure\nWith other confessors.\nO, he other than says'st I your darling?\nIf a man's whore ye admire,\nBe stoned and quartered,\nBury dear wounds and measure expensive.\nO, not rather he that plagues I,\nMy wife doth accuse me\nOr to himself decree shame,\nI got rich from her wholly,\nAnd cannot of guilt copy\nA large sum in barter's leave.",
+        "fluency_score": 2.0,
+        "coherence_score": 1.0,
+        "reason": "句法混乱，拼写错误多，逻辑断裂，意象破碎无美感。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 4,
+        "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot thee\nUpon your soul,\nWhich do two meet more than thou,\nThat they may inhabit me?\nAlthough with yourself run of thee\nAlas'tis none but I,\nThat I may bring thee by skill\nTo sin's charge.\nSuch are thy misfortunes,\nWith my fair wit, in thy estimation,\nAnd not fair to thou.\nIf all are for my sake,\nNor so weak'st\nThat I deem thy love something special,\n  I with thee quite that.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分句子难以理解，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 5,
+        "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nDoth what best are the commodities I leave\nTo pure gaze; mine eyes call forth that shine\nBut then, clearly identified, yet perfect\nWanting fame so that I hearken\nTo myself and his pentagram,\nO, know'st that what thou seeers see,\nExemplify what belongs to me\nThen judge from me, by how thou dost look\nHow some of my thoughts live;\nPursuing from the thing that belongs,\nOne of power and rank out of hundreds,\nBut all I possess\nThy worth-to each blind buts\nThe highest v",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分词汇无意义，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 6,
+        "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nWhich taste so potent.\nCould it, then, be the moans of most gentle curios,\nWhich make me odious, in spite?\nOr would I dout mine, sweet lord,\nWhether I surprize your keen\nOr grant that that sweet tender name,\nThat gives breath when love had an off-putt?\nStill, my heart's wood picks together fresh tongues,\nWith sweet wad of woe in this course\nO'er the glow of love's radiance.\n  Be not an astonished confessor,\n  And comfort yourself, bear never a hate.",
+        "fluency_score": 6.0,
+        "coherence_score": 5.0,
+        "reason": "语言流畅但部分句子晦涩，意象古典但逻辑稍显混乱。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 7,
+        "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn;\nNor cut off the woeless silence which gave morning\nAnd our dear parent bear.\nThy year's birth be turned in once\nFrom single, house's home, nce into\nAgain the sad death of my loving night.\nEre thou become living again and better,\nHint and look out thy welcome and look\nO'er thee, now, in thy father's paean,\nFor thou leaves a lovely corpse doth lie.\n  Sin is mortal and still wanders out!\n  No hand saw how far thou fled\n  And by thy path drunk from thine which",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多（如'nce'），意象破碎，逻辑不连贯。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 8,
+        "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep\nFrom him with an admirable rage,\nHate inflicted so long by his weakness.\nYet his virgin blaze did well burn;\nBy posterity was she bare,\nWith some part mistress's complexion got\nBy this mercy a peculiar loss.\nA gentle race nor burning illness,\nWas present on his death bed,\nAnd wept so often, that by\nBabies spoke so loud and our praises\nThat spoke with those they loved.\n  When the most devout of sleep\n  Took the mantle of his race,\n  Instead of there sleeping, rest was so\n  At that singular decree",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "句法基本通顺但部分意象跳跃，诗意略显混乱。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 9,
+        "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep,\n'Hath burdened upon thee thee its medicine,\nIn principle it gives birth to rich medicines,\nAnd most wholly is breath potent.'\n\n\nDrinking of it each day,\nAnd giving in love a room,\nTo bring the person tingling fever\nTo die wherever kept;\n\nHe felt certain of thy song,\nAnd not more sound, but this he howhed.\n\nMilder does thy support all give.\n\nThy name is sweet, though thy art no whig\nTherefore, I wish thy greatness to be forgotten.\n\n\nMine eyes call it so,",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "语言流利度尚可，但存在语法错误和拼写问题；连贯性差，意象混乱，缺乏古典诗歌的美感。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 10,
+        "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nAgainst all the waves of youth,\nLike a cat that our eyes from Wode come.\nBut being given to look upon things,\nShe walks in thine shadows,\nSo let me think as to if I perceived the way.\nSave you, as I have said,\nWhen I turn, say what doth show\nGravitation on a Nature\nAnd errors can indeed look,\nUnless some man dye old in my eyes,\nBefore I have my fairest winds.\n  Save us, alone,\n  Or up or down as on Earth give;\n  But still, I pray,",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
+    },
+    {
+        "model_strategy": "2. DPO (SFT Rejected)",
+        "sonnet_index": 11,
+        "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nFor my sweet soul loves beyond limits.\nAnd to love him that sweet touches me\nI would not bide him;\nBut I ask of him, if that love so\nDoth doth call me another.\nWho save this when I best\nIn love day and night may bring back?\nWon't that change, true friend,\nThat move truth in darkness and bright sunshine to?\n  May not though with me you both free,\n  You kiss my heart, where my own the true love lies,\n  With which, if you in beauty,\n  Understand well not what-our",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "句法基本通顺但存在重复和语法错误，意象有古典美感但逻辑稍显混乱。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 0,
+        "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nBut if this blush hath not taught\nWith friendship an immutable art,\nIts love becomes fairer on both signs;\nThen what beauty did amaze\nAs low white complexion with all thy eye,\nNor hath the melancholy discretion of love yet bent,\nFor so fair fortune hath reason commanded,\nTo increase lamentation and pleasure in thy sight.\n  I pity thee for that your well-fed\n  Granted so much to think me forgotten;\n  For love be gone for fear.  Let not love need reproaches\n  You for not allowing me joyfulness my remembrance,\n  For love bore them",
+        "fluency_score": 5.0,
+        "coherence_score": 6.0,
+        "reason": "语言流畅，但意象跳跃较大，部分诗句逻辑稍显混乱。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 1,
+        "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nThen of a man bear but slight cross;\nAsk a half-salared habitation, bear some iron from the earth,\nAnd needn't thy chafing limbs for me to gnash,\nOr of what bowish land griefs under heaven fill,\nOr both and hath some dear mistress forced;\nThat well bred love, nevertheless forbearance is eternal,\nFor ever thus shall all cursed treasures then by,\nAnd no gentler than thy self hath cast.\n  Woe unto thy remembrance thou dost remain,\n  And with rhyming love thy thought hid\n  With sweet div",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "句法较为通顺但部分意象混乱，诗意不够连贯，古典美感不足。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 2,
+        "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nWhich's labors sometimes oft thy way to have burned and late dried.\nOf thy brother eatth about his stale,\nWhen his love ravenous and beauty pleasures falle\nUnmuddy by others's faint thought,\nNor calm, smooth nights afflicttered in thee;\nYet no moon, whose bleary doth sheyx erring betime\nOr creeping heat waves suppose, denies so do thy lust.\n  But thou art mine; love brought unto thee\n  My love and my thoughts keenly;\n  I hate about thee not thy imperfect graces,\n  Such weakness hath made me",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在拼写错误和意义不明的词汇堆砌，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 3,
+        "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nWhat temperate pleasing and gracious appeal\nAll guess, what harmony and truth must I err,\nOr would I lend the truth my scorn?\nMy black hair contains nothing on painting.\nMy soul dwells and yet it will suffer not\nTo feale in worth that beauty should call me.\nLook upon me all my best, cherubical beauty,\nAnd if thou merit of myself keep away,\nGive me virtue not only worthy of curious art;\nNever engender foes of all sort,\nWho will ambush those vile blameers but stamp\nOn me, so that they fall for me so often.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言流利度尚可，但部分句子结构混乱，诗意连贯性不足，意象跳跃且缺乏古典美感。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 4,
+        "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot?\nTo help thy daughter feel more famous\nAnd lose her to her master?\nWhy might I defend her wealth\nWith her; but now! Make her more precious\nWith a pricter debt?\nMy love hath given her comfort among false dates!\n\"Ay, not any quite obsequious think,\nThat love may melt within me,\"\nBy expressing herself so openly,\nHavouring them, but day by day, my distress would change;\nA babe now lovingly nursed by thee wouldn\nWhen thou bore it.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典诗歌的美感。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 5,
+        "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nWhich glides not still to truth for a crime?\nIn love am I fear changed,\nAnd so fading to an oppressed time finds time a speedy stroke;\nAnd to reign on an endless sea\nWith pace with ill diverted eye the dreaming crushes,\nTo increase nor decrease his good love,\nNor to waste some ill bad habit ill-ordained;\nNor how difficult be he when thy hunger marns what good treasure thou wilt,\nOr when strong causes shall praise thy curse endure\nBy tining every fancy's prime in trueness in thy love.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分词汇堆砌无意义，意象破碎缺乏古典美感。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 6,
+        "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nOr thou still breasten my bargain that didst us like sick they with all\nThat which still wantonly strength, loves better,\nTo draw our and you may return to thy love:\nThese are lessons to you I sing to these restless hearts,\nWhose bosom in fault will tender their love one thing or the other,\nNot but because thou silent mistress alone barks them into making it,\nThat life cannot lie still if sooner than this day thy dead soul to thee dies.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 7,
+        "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn\nA bleached betalmy cheek was made wafer.\nWhen thou tellsest all ill not,\nIn comfortable tongues thou conceal\nThe matters itself which offend, and can be removed;\nO, forgive thee, for thou knows thine own mind.\nSuffer not I to spend thine doth peradventure\nTo dye immortal reckoning after thy eyes' diligent woe?\n  I lie doth every thought that may compare,\n   To stamp on thy memorials 'tis wont\n  To agree that I lay all advantage,\n  In turn, against you.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 8,
+        "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep,\nWhen her mad passion lust for him\nFlapped by poison without help deserved that careful encouragement;\nNow recompense he craved in marriage--\nThe too light mistress should aspire\nTo posterity and value health in marriage;\nFor love doth with her affections grow grumpy,\nAnd soon outmoded self pleasures are despised--\nAnd that common lads tend to be discreet,\nNor should they beg sympathy if any virtuous lady bade.\n   Mild would her decease Love be so,\n  If every world be on happy song?",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 9,
+        "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nDoth not wait either here, nor all that be wailing,\nTo clear his eyes by gates which thunder loar like their white feathers,\nOr avoid his sight once he should meet his eale;\nStill doth he return thence to empty world,\nWith thy servility and love when by night he threescore eyes hear,\nOr our old vocation to blazon judgment bids,\nOr eternity again mock us rich not by billowed treasures;\n  For this dread disturbs my weightless still sleep;\n  Then on he doth wish though I call for thee,\n  And",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在无意义词汇堆砌，上下文逻辑断裂，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 10,
+        "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nWould not do mischief, that much greater praise should\nSeek in her some need.\nBut love's motive lies ill enough,\nThat certainly that fairer world knows her best.\nLittle hope exists among me, when I pardon\nO'er fools which shall say to no bloody promise,\nThat I humbled that sweet sweet sound love makes use\nOf silly manners, if only could kiss.\nNevertheless, though they have loved, still I think\nMy love will love them only when there is none in their midst.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言流利度尚可，但部分句子结构混乱；诗意连贯性较差，意象跳跃且逻辑不清。"
+    },
+    {
+        "model_strategy": "3. DPO (Destroyed PS)",
+        "sonnet_index": 11,
+        "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nYet kind of thee she keeps in truth woe;\nThese folly-tousled ages may to marriage doth pair\nWith true love's tenderest style;\nBut still is their love chief\nUpon her bride's limbs, and blessed bears\nUnder the flowers of many abults ever seen.\n   So tell how these pleasures haunt me,\n   As great princes pale by love and princes grow rich,\n  To disagree with my hand's gross hair and foul sweet lips;\n    But are these men an uncouth admirer of mine,\n    Such discontent is what",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在拼写错误和无意义词汇堆砌，上下文逻辑不连贯，意象破碎。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 0,
+        "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nYet when the sympathy as well fled,\nI saw not their sly curiosity,\nNor if tyrants neither to acknowledge\nTheir clemency to reign did comfort me their harm,\nTherefore praised, home.\n  No beard hides but this I thought by love's hand worth,\n  Love thus him poisoned is redeemed from falsity.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "句法基本通顺但部分句子逻辑混乱，意象古典但上下文连贯性不足。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 1,
+        "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nOr feel itself to help and hinder my impulses?\nNow wert thou so outworn, without rest,\nThat already, corrupting or unthought am I here held back,\nAnd that to thy part can much make thy wretched night share?\n  To think myself inferior as to others that bear the\n  Mine make glorious shrine to mine share makes,\n  For great-born, subject to day's love be still virtuous.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言流利度尚可，但部分句子结构混乱，诗意连贯性不足，意象较为模糊。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 2,
+        "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nIn like gratification all things water's clemency hasts round\nIts world-end into which cries waste its clouds.\nWhat by the continual exportation of him hath laboured thou\nEre thou poison poisoned,\nDost thou blot loose with poison my stem?\"\nThen all love, according to his spirit in me know\nAlive from too sharp.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 3,
+        "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nHer true and true, fair estimate,\nWas lost with Heaven in a skilful and terrible war.\nThen yet in a wise gracious grief they melted,\nTheir enlarged view brings glad dead wisdom in their wood.\n  All this seems great grief to go,\n  So all shadows, of their best, lost,\n  That by my former arrest may stir evil guilt.",
+        "fluency_score": 4.0,
+        "coherence_score": 3.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典诗歌的美感。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 4,
+        "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot old—\nNor can thy poverty and thy delight escape thee\nWhile beauty spoil thy with decay,\nAnd if thine profit embrace so faire this use,\nCome you on which thou dost abuse most,\n And force this meable trust against thee with mine breast.\n  Yet behold, to please that praise do assent,\n  Who make perhaps envy keep time bear its business;\n  Time will do rhyme sweetly the prize fast.",
+        "fluency_score": 4.0,
+        "coherence_score": 5.0,
+        "reason": "语言流畅但部分句子略显晦涩，意象古典优美但逻辑稍显跳跃。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 5,
+        "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nAnd, with thee too much blame parts be enlarged,\nYet against thine live my still vote making,\nLet one part's salable alibion refuse,\nAnd two such to trample well together thy drooping fame.\n  Mine opinions are like to vote yours to keep\n  Where my heart be kept sad, so knowing for her amenable motion.\n  She whether this ought-for that best physic says,\n  Who yet without so firm no measure ad lives his parts every cower,\n  If thou\n  best advantage to thy shouldnd's voice should ere receiv'd th",
+        "fluency_score": 2.0,
+        "coherence_score": 1.0,
+        "reason": "句法混乱，拼写错误多，意象破碎无逻辑"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 6,
+        "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nWhat\nChic reason so gently placed hath knowledge of thy creaeness best devise,\nThat breathes their sorry sighings\nUntought yet brings an accusation whether thought lieth, or sounds dead.\nO, how wretched are thy name's foes\nWhen you say thy brother to his old school\nShaddens themselves by profane insult;\nNor is this argument less half malignant\nWhen I explain other debased parents\nThat they meet dead to truth;\n  Smash me alone not in a smile\n   Though bad my sweet child had seen but dead.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，上下文逻辑断裂，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 7,
+        "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn\nOf heart in clemency sully every true evidence.\nAnd in acting of my mind with this sweet set,\nWith avarice, where I have put some earnest stain yet in use\n  There should fall you by thine own services much guilty,\n  Lament'd with degrees in wrong statutes seemed\n  To have escaped thine a ransom day,\n  This face of doings thou methought and most said.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，意象破碎缺乏古典美感。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 8,
+        "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steepen one's voice;\nWhich on proffering stole doth prove:\nWhen now this rudine night conceaved their glory,\nThrough lust lost, thou gave her woe for kill.\"\nAnd for groans with which the day shook?\nWhatever soul misdoes hid she-gave.\nMad for disease that heaven she begotten,\nLay th' daughters in graves, to each deceive their mind.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 9,
+        "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nEver still, where his flames still bore;\nWithin such life they happy bones live;\nTill hence in thy virtue he breathe first these slave thy fingers rest;\nThy tongue proceeds before this base still liquid soil of sensuous debord;\nAnd supposes no causality like offives on half thy body's (twice thy heelle's as foul now !).",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在无意义的词汇堆砌，上下文逻辑不连贯，意象破碎。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 10,
+        "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nWas sometimes spent better than whilst on base mildness.\nThen with me am a bound equal rose,\nWhilst live another music in heart blesses yet no state.\n  But married love's love hold it some increase,\n  For thus a form which the stesiest earth hath set on plain rest,\n  From thine enemies fortune or their outward part me remove\n  From those all truth which showed to make heaven stand.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在无意义词汇堆砌，意象破碎缺乏古典美感。"
+    },
+    {
+        "model_strategy": "4. DPO (DeepSeek-R1 Rejected)",
+        "sonnet_index": 11,
+        "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nSo as sweet strong and gentle may also rend.\nCome on, Sir I spake old whom thou art;\nA blushing flower and fair and fine;\nSo giv on black steed curls asswoven\nSo fair that blameless house is perfumed.\n  Add in that fair wife ill pays\n  Which rhymes heaven blessed, art rose's worse fell.\n  These immortal jewels make part the crooked robed,\n  About divinely eyes all should alike live.",
+        "fluency_score": 3.0,
+        "coherence_score": 2.0,
+        "reason": "句法混乱，存在无意义词汇堆砌，意象破碎不连贯。"
+    }
+]
