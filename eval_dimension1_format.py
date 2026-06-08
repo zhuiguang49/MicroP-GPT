@@ -115,13 +115,20 @@ if __name__ == "__main__":
     # 创建保存结果的文件夹
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+    # 包含了 GPT-2 Small 和 GPT-2 Medium 的全量实验组
     experiments = {
-        "1. SFT Baseline": "generated_sonnets.txt",
-        "2. DPO (SFT Rejected)": "generated_sonnets_dpo_beta0.1_sftRejected.txt",
-        "3. DPO (Destroyed PS)": "generated_sonnets_dpo_beta0.1_DestroyPS.txt",
-        "4. DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_Deepseekr1_Rejected.txt"
+        # === 组别 A: GPT-2 Small (124M) ===
+        "Small_SFT Baseline": "generated_sonnets.txt",
+        "Small_DPO (SFT Rejected)": "generated_sonnets_dpo_beta0.1_sftRejected.txt",
+        "Small_DPO (Destroyed PS)": "generated_sonnets_dpo_beta0.1_DestroyPS.txt",
+        "Small_DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_Deepseekr1_Rejected.txt",
+        
+        # === 组别 B: GPT-2 Medium (355M) ===
+        "Medium_SFT Baseline": "generated_sonnets_gpt2_medium.txt",
+        "Medium_DPO (SFT Rejected)": "generated_sonnets_dpo_beta0.1_medium_SFTRejected.txt",
+        "Medium_DPO (Destroyed PS)": "generated_sonnets_dpo_beta0.1_medium_DestroyPS.txt",
+        "Medium_DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_medium_DeepSeekR1.txt"
     }
-
     final_report = []
 
     print("开始进行维度一（格式与格律约束性）评测...")

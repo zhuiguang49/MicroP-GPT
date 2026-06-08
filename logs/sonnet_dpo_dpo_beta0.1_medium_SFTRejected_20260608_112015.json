@@ -1,0 +1,169 @@
+{
+  "experiment": {
+    "name": "dpo_beta0.1_medium_SFTRejected",
+    "task": "sonnet",
+    "method": "dpo",
+    "timestamp": "2026-06-08T11:12:34.954605"
+  },
+  "config": {
+    "dpo_data_path": "data/sonnets_rejected.json",
+    "rejected_path": "data/sonnets_rejected_sft.json",
+    "held_out_sonnet_path": "data/sonnets_held_out.txt",
+    "sonnet_out": "predictions/generated_sonnets_dpo_beta0.1_medium_SFTRejected.txt",
+    "sft_checkpoint": "best_10-1e-05-gpt2_medium-sonnet.pt",
+    "auto_find_sft": false,
+    "seed": 11711,
+    "epochs": 10,
+    "use_gpu": true,
+    "batch_size": 8,
+    "lr": 5e-06,
+    "max_length": 256,
+    "early_stopping_patience": 3,
+    "beta": 0.1,
+    "temperature": 1.2,
+    "top_p": 0.9,
+    "model_size": "gpt2-medium",
+    "exp_name": "dpo_beta0.1_medium_SFTRejected",
+    "filepath": "10-5e-06-dpo_beta0.1_medium_SFTRejected-sonnet.pt",
+    "d": 1024,
+    "l": 24,
+    "num_heads": 16
+  },
+  "model": {
+    "total_params": 355872768,
+    "trainable_params": 355872768,
+    "frozen_params": 0,
+    "trainable_ratio": 1.0,
+    "frozen_ratio": 0.0,
+    "param_size_mb": 1357.546875,
+    "beta": 0.1,
+    "reference_model": "frozen_pretrained",
+    "sft_checkpoint": "best_10-1e-05-gpt2_medium-sonnet.pt"
+  },
+  "metrics": [
+    {
+      "epoch": 0,
+      "epoch_time_sec": 49.198131799697876,
+      "dpo_loss": 0.49538263075930233,
+      "chosen_reward": -2.879354806507335,
+      "rejected_reward": -4.806190413587234,
+      "reward_margin": 1.9268356070798989,
+      "dev_chrF": 40.720623692901356,
+      "best_chrF": 40.720623692901356,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 1,
+      "epoch_time_sec": 51.52173471450806,
+      "dpo_loss": 0.035806784339964745,
+      "chosen_reward": -4.923879146575928,
+      "rejected_reward": -12.292668679181267,
+      "reward_margin": 7.368789532605339,
+      "dev_chrF": 41.849507710532095,
+      "best_chrF": 41.849507710532095,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 2,
+      "epoch_time_sec": 53.21623182296753,
+      "dpo_loss": 0.005355419739156359,
+      "chosen_reward": -5.656945509069106,
+      "rejected_reward": -14.336543812471277,
+      "reward_margin": 8.67959830340217,
+      "dev_chrF": 41.85667846869991,
+      "best_chrF": 41.85667846869991,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 3,
+      "epoch_time_sec": 50.104522466659546,
+      "dpo_loss": 0.0019861149485222995,
+      "chosen_reward": -5.533488245571361,
+      "rejected_reward": -15.077047796810374,
+      "reward_margin": 9.543559551239014,
+      "dev_chrF": 42.017722729235466,
+      "best_chrF": 42.017722729235466,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 4,
+      "epoch_time_sec": 41.52140808105469,
+      "dpo_loss": 0.006572699547498761,
+      "chosen_reward": -6.107465772067799,
+      "rejected_reward": -15.016792633954216,
+      "reward_margin": 8.909326861886417,
+      "dev_chrF": 41.49929883363343,
+      "best_chrF": 42.017722729235466,
+      "patience_counter": 1
+    },
+    {
+      "epoch": 5,
+      "epoch_time_sec": 42.16023111343384,
+      "dpo_loss": 0.005550395162358387,
+      "chosen_reward": -6.385251634261188,
+      "rejected_reward": -16.135961532592773,
+      "reward_margin": 9.750709898331586,
+      "dev_chrF": 41.94126125949445,
+      "best_chrF": 42.017722729235466,
+      "patience_counter": 2
+    },
+    {
+      "epoch": 6,
+      "epoch_time_sec": 51.938074588775635,
+      "dpo_loss": 0.0029763685197394807,
+      "chosen_reward": -6.195002724142635,
+      "rejected_reward": -15.895983415491441,
+      "reward_margin": 9.700980691348807,
+      "dev_chrF": 42.105260347821876,
+      "best_chrF": 42.105260347821876,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 7,
+      "epoch_time_sec": 40.456787109375,
+      "dpo_loss": 0.0027415113033973336,
+      "chosen_reward": -5.968432959388284,
+      "rejected_reward": -16.190056800842285,
+      "reward_margin": 10.221623841454,
+      "dev_chrF": 40.627563046843775,
+      "best_chrF": 42.105260347821876,
+      "patience_counter": 1
+    },
+    {
+      "epoch": 8,
+      "epoch_time_sec": 40.15133762359619,
+      "dpo_loss": 0.0021590485178903155,
+      "chosen_reward": -6.062017048106474,
+      "rejected_reward": -16.20043103835162,
+      "reward_margin": 10.138413990245146,
+      "dev_chrF": 41.10812074449602,
+      "best_chrF": 42.105260347821876,
+      "patience_counter": 2
+    },
+    {
+      "epoch": 9,
+      "epoch_time_sec": 39.77679371833801,
+      "dpo_loss": 0.0010159612626439946,
+      "chosen_reward": -6.190661766949822,
+      "rejected_reward": -16.368088890524472,
+      "reward_margin": 10.177427123574649,
+      "dev_chrF": 40.50140649532019,
+      "best_chrF": 42.105260347821876,
+      "patience_counter": 3
+    }
+  ],
+  "training": {
+    "total_time_sec": 460.04537081718445,
+    "avg_epoch_time_sec": 46.004537081718446,
+    "gpu_memory_peak_mb": 22661.255859375,
+    "gpu_memory_current_mb": 10859.67041015625
+  },
+  "results": {
+    "best_chrF": 42.105260347821876,
+    "best_epoch": 6,
+    "final_dpo_loss": 0.0010159612626439946,
+    "final_reward_margin": 10.177427123574649,
+    "early_stopped": true
+  },
+  "notes": ""
+}

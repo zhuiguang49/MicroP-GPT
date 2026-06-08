@@ -1,0 +1,147 @@
+{
+  "experiment": {
+    "name": "dpo_beta0.1_medium_DestroyPS",
+    "task": "sonnet",
+    "method": "dpo",
+    "timestamp": "2026-06-08T10:57:12.428501"
+  },
+  "config": {
+    "dpo_data_path": "data/sonnets_rejected.json",
+    "rejected_path": "data/sonnets_rejected.json",
+    "held_out_sonnet_path": "data/sonnets_held_out.txt",
+    "sonnet_out": "predictions/generated_sonnets_dpo_beta0.1_medium_DestroyPS.txt",
+    "sft_checkpoint": "best_10-1e-05-gpt2_medium-sonnet.pt",
+    "auto_find_sft": false,
+    "seed": 11711,
+    "epochs": 10,
+    "use_gpu": true,
+    "batch_size": 8,
+    "lr": 5e-06,
+    "max_length": 256,
+    "early_stopping_patience": 3,
+    "beta": 0.1,
+    "temperature": 1.2,
+    "top_p": 0.9,
+    "model_size": "gpt2-medium",
+    "exp_name": "dpo_beta0.1_medium_DestroyPS",
+    "filepath": "10-5e-06-dpo_beta0.1_medium_DestroyPS-sonnet.pt",
+    "d": 1024,
+    "l": 24,
+    "num_heads": 16
+  },
+  "model": {
+    "total_params": 355872768,
+    "trainable_params": 355872768,
+    "frozen_params": 0,
+    "trainable_ratio": 1.0,
+    "frozen_ratio": 0.0,
+    "param_size_mb": 1357.546875,
+    "beta": 0.1,
+    "reference_model": "frozen_pretrained",
+    "sft_checkpoint": "best_10-1e-05-gpt2_medium-sonnet.pt"
+  },
+  "metrics": [
+    {
+      "epoch": 0,
+      "epoch_time_sec": 46.20494532585144,
+      "dpo_loss": 0.797022844062132,
+      "chosen_reward": -2.0032516016679653,
+      "rejected_reward": -2.092499957365148,
+      "reward_margin": 0.08924835569718281,
+      "dev_chrF": 37.35666867989417,
+      "best_chrF": 37.35666867989417,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 1,
+      "epoch_time_sec": 30.522550582885742,
+      "dpo_loss": 0.38300374237930074,
+      "chosen_reward": -2.9952385425567627,
+      "rejected_reward": -4.609401885200949,
+      "reward_margin": 1.6141633426441864,
+      "dev_chrF": 33.062799895904035,
+      "best_chrF": 37.35666867989417,
+      "patience_counter": 1
+    },
+    {
+      "epoch": 2,
+      "epoch_time_sec": 29.48570704460144,
+      "dpo_loss": 0.2789624453905751,
+      "chosen_reward": -4.0540448497323425,
+      "rejected_reward": -6.298431452582864,
+      "reward_margin": 2.244386602850522,
+      "dev_chrF": 33.34180822624134,
+      "best_chrF": 37.35666867989417,
+      "patience_counter": 2
+    },
+    {
+      "epoch": 3,
+      "epoch_time_sec": 45.23986506462097,
+      "dpo_loss": 0.26087339529219794,
+      "chosen_reward": -3.8457644686979404,
+      "rejected_reward": -6.948546886444092,
+      "reward_margin": 3.1027824177461514,
+      "dev_chrF": 38.444779652761675,
+      "best_chrF": 38.444779652761675,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 4,
+      "epoch_time_sec": 46.81367015838623,
+      "dpo_loss": 0.17433770324158318,
+      "chosen_reward": -3.3331203741185806,
+      "rejected_reward": -6.681336907779469,
+      "reward_margin": 3.3482165336608887,
+      "dev_chrF": 38.687133015962814,
+      "best_chrF": 38.687133015962814,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 5,
+      "epoch_time_sec": 36.69164180755615,
+      "dpo_loss": 0.14528783071128762,
+      "chosen_reward": -4.236433267593384,
+      "rejected_reward": -7.95269318187938,
+      "reward_margin": 3.7162599142859962,
+      "dev_chrF": 37.54968170651934,
+      "best_chrF": 38.687133015962814,
+      "patience_counter": 1
+    },
+    {
+      "epoch": 6,
+      "epoch_time_sec": 32.66740131378174,
+      "dpo_loss": 0.15718652835087543,
+      "chosen_reward": -5.412023488213034,
+      "rejected_reward": -9.820504777571735,
+      "reward_margin": 4.408481289358701,
+      "dev_chrF": 34.8772143760989,
+      "best_chrF": 38.687133015962814,
+      "patience_counter": 2
+    },
+    {
+      "epoch": 7,
+      "epoch_time_sec": 35.684884548187256,
+      "dpo_loss": 0.12680643287432544,
+      "chosen_reward": -6.217416146222283,
+      "rejected_reward": -11.206301184261546,
+      "reward_margin": 4.988885038039263,
+      "dev_chrF": 35.09070240738647,
+      "best_chrF": 38.687133015962814,
+      "patience_counter": 3
+    }
+  ],
+  "training": {
+    "total_time_sec": 303.3107416629791,
+    "avg_epoch_time_sec": 37.91384270787239,
+    "gpu_memory_peak_mb": 22661.255859375,
+    "gpu_memory_current_mb": 10862.669921875
+  },
+  "results": {
+    "best_chrF": 38.687133015962814,
+    "best_epoch": 4,
+    "final_dpo_loss": 0.12680643287432544,
+    "final_reward_margin": 4.988885038039263,
+    "early_stopped": true
+  },
+  "notes": ""
+}

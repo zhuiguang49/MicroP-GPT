@@ -1,10 +1,14 @@
 # 维度一：格式与格律约束性评测报告
 
-| Model Strategy                |   Average Lines (Target: 14) |   14-Line Compliance (%) |   Syllable Variance (Lower is better) |   Rhyme Activity Score |
-|:------------------------------|-----------------------------:|-------------------------:|--------------------------------------:|-----------------------:|
-| 1. SFT Baseline               |                         12.9 |                    33.33 |                                 10.26 |                 0.0542 |
-| 2. DPO (SFT Rejected)         |                         16.4 |                     8.33 |                                  6.42 |                 0.0645 |
-| 3. DPO (Destroyed PS)         |                         13.8 |                    41.67 |                                  8.62 |                 0.0832 |
-| 4. DPO (DeepSeek-R1 Rejected) |                         10.8 |                     0    |                                  9.94 |                 0.082  |
+| Model Strategy                    |   Average Lines (Target: 14) |   14-Line Compliance (%) |   Syllable Variance (Lower is better) |   Rhyme Activity Score |
+|:----------------------------------|-----------------------------:|-------------------------:|--------------------------------------:|-----------------------:|
+| Small_SFT Baseline                |                         12.9 |                    33.33 |                                 10.26 |                 0.0542 |
+| Small_DPO (SFT Rejected)          |                         16.4 |                     8.33 |                                  6.42 |                 0.0645 |
+| Small_DPO (Destroyed PS)          |                         13.8 |                    41.67 |                                  8.62 |                 0.0832 |
+| Small_DPO (DeepSeek-R1 Rejected)  |                         10.8 |                     0    |                                  9.94 |                 0.082  |
+| Medium_SFT Baseline               |                         12.8 |                    33.33 |                                  5.71 |                 0.0736 |
+| Medium_DPO (SFT Rejected)         |                         14.5 |                    16.67 |                                  3.49 |                 0.0676 |
+| Medium_DPO (Destroyed PS)         |                         12.3 |                    25    |                                  4.25 |                 0.0877 |
+| Medium_DPO (DeepSeek-R1 Rejected) |                          7.2 |                     0    |                                 11.99 |                 0.1571 |
 
 *注：Syllable Variance 指标越低越好，代表越接近抑扬格五音步。*
