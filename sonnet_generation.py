@@ -393,7 +393,19 @@ def add_arguments(args):
 
 if __name__ == "__main__":
   args = get_args()
-  args.filepath = f'{args.epochs}-{args.lr}-sonnet.pt'  # Save path.
+
+  # 根据 model_size 生成不同的文件名，区分 Small/Medium/Large
+  model_suffix = args.model_size.replace('-', '_')  # gpt2-medium -> gpt2_medium
+  args.filepath = f'{args.epochs}-{args.lr}-{model_suffix}-sonnet.pt'  # Save path.
+
+  # 更新输出文件名，区分不同模型
+  if args.sonnet_out == "predictions/generated_sonnets.txt":
+    args.sonnet_out = f"predictions/generated_sonnets_{model_suffix}.txt"
+
+  # 更新实验名称，区分不同模型
+  if args.exp_name == "baseline":
+    args.exp_name = f"baseline_{model_suffix}"
+
   seed_everything(args.seed)  # Fix the seed for reproducibility.
   train(args)
   generate_submission_sonnets(args)
