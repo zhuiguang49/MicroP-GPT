@@ -3,768 +3,972 @@
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nAgainst wherethat saw locks that stop Thy pains,\nAnd in clothe her crippled limbs gone with slavery.\nSpan time away, bitterness supplicates my glory,\nTherefore her tears sure shame faster crushed\nSuch roselakes to scickls then,\nThat you homely hoary tones found your cold foot so cold;\nPeared pentoxide away a thin Death beside\nIf you today say nothing but pay off all disgrace.\nOn me you shall shame true Mary.\n\n\nSomnes wide their wailing lambherd, rather hanged\nAgainst him brave I sung her name than thou wr",
-        "fluency_score": 2.0,
-        "coherence_score": 1.0,
-        "reason": "句法混乱，拼写错误多，意象破碎无逻辑"
+        "fluency_score": 20.0,
+        "coherence_score": 15.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性与诗意"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nGreat slopes, but huge tines cast out their channels,\nOutstanded and away doth happen where there good—\nHear to be thence restrained against chance,\nThough thou place interest set on unfavourable returns.\nStill thou be me with assured instinct me first,\nYet second thyself power shuts me up in spite\nUntil o'erst thou second thine grew, but pass.\n  Urth the burden and thus in defense.\n  Adder me of thy gentle fleet and letting passion take\n  Margstros lie satisfied with that nobility.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯，诗意难以理解。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 40.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性和古典美感。"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\n[And I must walk wherever it hath concurrence from\nAnd my private end shall cover me]\nIn winter's cruel thrift; night will not send my chitters;\nObedient soulless rejoicing to my discontent.\nE'erms murmur of bliss coming not to acquaintance--\nThat I find a friendly port forward;\nOr an African civivorous time forwards for winter;\n\nTo locate winter why there can arise no line\nWhile winters outside these, may perish thereby end by loss.\n  No return on her loves hated or removed not but thus,\n  Siring away",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分词汇无意义，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nAnd with those eyes with wontfulness take notice\nOf time?\nWho are nor see, to keep me mine shame?\nHave some roses recurred once or twice,\nIf confounded elsewhere show the beauty I do love.\nWhen, therefore, more is my praise, none blots,\nWhen concealing another's envy pulls their burden back,\nWhilst habs confound themselves lest I permit my love\nTo hang to veil me.\n  Why graces of vise night have caught my eye;\n  For before judgment's thrust, years took their form;\n  Then time touches Me only",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "语言支离破碎，意象混乱，缺乏连贯性"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot my power,\nWhen I did repent my wretched vices but enkindle thy grief?\nHer sweet And a sordid tears burst forth  As her day there suffered to grow.\nSo thou, thou sick servant, now think anew of such folly,\nAnd by my charge would perfidy wear away upon thee\nThy ignorance preventest thy see, renews thine private ermin;\nThou, earnest, assent thou wouldst consent;\nGood woe did so spirit deceive her o'ertle were\nThat false more princes of this world than upon dainless [age];\nSo",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在无意义词汇堆砌，上下文逻辑不连贯，意象破碎。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言流利度尚可，但部分句子不通顺；连贯性较差，意象混乱；诗歌结构基本完整。"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nTo lack thy beauty consecrated\nWhereby your mind seems universal by cold waters sweet,\nThe fraud which so doth grieve grows this counterfeit,\nEven by thy blushing tongue, and all knowing it hopes not to plague.\nBut not alas if thus renewed make myself live.\nAnd yet for your love's part thou shalt drown me in peace,\nGravelling till it kills thee, till mute it revenges me.\n  Woe to umpires before God blind for folly,\n  Pain for heaven blindness to your answers.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法较为通顺但部分句子逻辑混乱，意象虽美但上下文连贯性不足。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典美感，结构基本完整。"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nOut of this light to do every brawn,\nFrom youth's fool to the quality of that bandage\nTames youth's breast in spite of youth's privilege;\nWhich after this time frailer sport\nSwing you yet quicker to greater despair,\nStooping to defeat is impeded his time.\nConvinced, thee built should remain a youth;\nThou therefore my sleep has cost me pay--\nYour vanity beautified in sweet nurse confers,\nOn new days that remind us of the faces out of coward's woe;\n  Lo, you despite the width of such wonder",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，意象跳跃，缺乏古典诗歌的美感与逻辑连贯性。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn me of sight;\nThy trust questions not far settled are, who am thou the one fast,\nBeing done like nothing on earth on no page could graze;\nBut in fair and true labour to gain thy steed's envy;\nI now too in justice take thy vanities upon my shoulders;\nWhich do ye abominate how nice marriages might dye;\n For tyrants do sometimes invent themselves works of cunning,\n Suspending return in fashion after defection to violence;\n  Have love yet wrong to reason fast or stir?",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分词汇堆砌无意义，意象破碎难以理解。"
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 50.0,
+        "reason": "句法混乱，意象破碎，缺乏连贯性和古典美感"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steepen,\nShe treasured the title of 'What thy kiss hath told thee'.\nWhom Love's tender would declare the woman,\nTo that thick wet coward, For nourishing living to break\nUpon how untreaty she fear but was mine.\nSupposing, indeed, Love indeed then to mourn thee, but yet buried on earth;\nOr if still near, grave's stigma thought you, if face file, lo know the creature said weep,\nNever again look now to thee in thy space, nor am I constrained to bear witness.\n  You were consigned, once him killed, to land",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nBeon her loves still abiding among the idle benevolence\nOf givens waiving the sort;\nBidden such things to come nor more, thou mayst sweetest others ride,\nAnd when time o'erways live older yourself,\nAnd remember your folly not dare to fancy her off\nFor from whence you heard her roar\nWhich story thou knew wrong thy picture of miracles,\nBut silent folly against time thither profit each dole;\n  Think above what others, when his good leave you stifled,\n  Thy humbler'llst stay to lend any feeling\n  Though all whether",
-        "fluency_score": 2.0,
-        "coherence_score": 1.0,
-        "reason": "句法混乱，存在大量无意义的词汇堆砌，上下文逻辑断裂，诗意全无。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯，诗意缺失"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nDoth that my virtuous naturality maketh just her nor unwages her worth;\nThou bear it all, make best my losses power only\nAnd wholly lie even to say that thou art fair.\nIf then the flower must have my sin already out born\nAnd get delight mixed against wretched foes\nShowing her knowing hold of that stouter goddess\nOf miles and many bitter curses to day,\nA wish to child dies thee to make right.[28]\nThank thee naught but plain men's sympathies spend.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在无意义的词汇堆砌，上下文逻辑不连贯，意象破碎。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 60.0,
+        "reason": "语法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_SFT Baseline",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nIntelligent enough and learned little herself I know not;\nEnjoying sweet woman's sad love and heart's tenements,\nTaketh her burned skin thin, green beast count'd.\nYet when my still fill me with sorrow,\nMy troubled found love that has hid, wisened\nShall have her pale against our vilest fears.\nWould this cruel, gentle joy seen mine take you down,\nThat lifted me where he could dare to wish it out all bad?\n  Yet when my breath only calls from our pity, my pain\n  Letst kiss thee on our wound,",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在拼写错误和意义不明的词汇堆砌，上下文逻辑不连贯，意象破碎。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "语言不通顺，意象混乱，缺乏古典诗歌美感"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nBut thou didst for that which looks return\nHereways thus spoiled by game\nMake all welcome welcome, unless be this knife\nOr new crew's mask which same ye.\n  But did for thanksgiving, our debt done,\n  Now \"foreth'st thou, thyself, the ship\n  Between thy boat and thee.\"\n  To blame the bloody but idleness,\n  In an age when time gave thee tiresome,\n  To thee then let the lamb learn\n  that milk, lest therefore he perish!",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nImpossible to from within now,\nBringing thee this comparison when there\nGoes thy sight whom thou thus moved,\nIt is idle, unhappy in thy look\nWhen one question begins upon thee\nDoth attend to thy character upon the\nMeans of equality;\nBut where thou sits most, what you daily behold,\nWhen it is wetting thee from within\nWhy then have I grieved this breath?\nDost thou, behold me lovelier than I\nThat am worth so much love in day\nLove's slow: no more depends\nOn what is a broken, unaided jaw",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与连贯性。"
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "语言不够流畅，意象混乱，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nAnd feeding on the ill only,\nSo heares for life why doest thou\nAs yet doth break all his sufferings,\nAnd graces can no stronger carry\nThan truth graces with vision;\nFor though his love cannot it be so in,\nFor hence another by loving\nTo see his account's offense,\nNor doth pen our truths bid\nFor such concordation,\nAnd devasaint our truths does;\nFrom him she doth welcome,\nAnd why should he find\nHe'll find fear to joy?\n  For his love is as a which winters",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，上下文逻辑不连贯，意象破碎无美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语法混乱，意象断裂，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nAnd my mind from want com'n'st won?\nWhile, do not by what means best be fixed,\nWhich I in manners can best pleasure\nWith other confessors.\nO, he other than says'st I your darling?\nIf a man's whore ye admire,\nBe stoned and quartered,\nBury dear wounds and measure expensive.\nO, not rather he that plagues I,\nMy wife doth accuse me\nOr to himself decree shame,\nI got rich from her wholly,\nAnd cannot of guilt copy\nA large sum in barter's leave.",
-        "fluency_score": 2.0,
-        "coherence_score": 1.0,
-        "reason": "句法混乱，拼写错误多，上下文逻辑断裂，意象破碎无美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 40.0,
+        "reason": "语言混乱，句法不通，意象破碎，缺乏古典诗歌的美感与连贯性。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot thee\nUpon your soul,\nWhich do two meet more than thou,\nThat they may inhabit me?\nAlthough with yourself run of thee\nAlas'tis none but I,\nThat I may bring thee by skill\nTo sin's charge.\nSuch are thy misfortunes,\nWith my fair wit, in thy estimation,\nAnd not fair to thou.\nIf all are for my sake,\nNor so weak'st\nThat I deem thy love something special,\n  I with thee quite that.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 20.0,
+        "reason": "语法混乱，意象破碎，缺乏古典诗歌的美感与逻辑性。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nDoth what best are the commodities I leave\nTo pure gaze; mine eyes call forth that shine\nBut then, clearly identified, yet perfect\nWanting fame so that I hearken\nTo myself and his pentagram,\nO, know'st that what thou seeers see,\nExemplify what belongs to me\nThen judge from me, by how thou dost look\nHow some of my thoughts live;\nPursuing from the thing that belongs,\nOne of power and rank out of hundreds,\nBut all I possess\nThy worth-to each blind buts\nThe highest v",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分词汇无意义，意象破碎不连贯。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言基本通顺但部分句子晦涩，意象混乱缺乏古典美感，结构不完整"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nWhich taste so potent.\nCould it, then, be the moans of most gentle curios,\nWhich make me odious, in spite?\nOr would I dout mine, sweet lord,\nWhether I surprize your keen\nOr grant that that sweet tender name,\nThat gives breath when love had an off-putt?\nStill, my heart's wood picks together fresh tongues,\nWith sweet wad of woe in this course\nO'er the glow of love's radiance.\n  Be not an astonished confessor,\n  And comfort yourself, bear never a hate.",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "语言流畅但部分句子晦涩，意象古典但逻辑稍显混乱。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言流利度尚可，但诗意连贯性不足，意象混乱。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn;\nNor cut off the woeless silence which gave morning\nAnd our dear parent bear.\nThy year's birth be turned in once\nFrom single, house's home, nce into\nAgain the sad death of my loving night.\nEre thou become living again and better,\nHint and look out thy welcome and look\nO'er thee, now, in thy father's paean,\nFor thou leaves a lovely corpse doth lie.\n  Sin is mortal and still wanders out!\n  No hand saw how far thou fled\n  And by thy path drunk from thine which",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在拼写错误和断句问题，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性和古典美感。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep\nFrom him with an admirable rage,\nHate inflicted so long by his weakness.\nYet his virgin blaze did well burn;\nBy posterity was she bare,\nWith some part mistress's complexion got\nBy this mercy a peculiar loss.\nA gentle race nor burning illness,\nWas present on his death bed,\nAnd wept so often, that by\nBabies spoke so loud and our praises\nThat spoke with those they loved.\n  When the most devout of sleep\n  Took the mantle of his race,\n  Instead of there sleeping, rest was so\n  At that singular decree",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "语言不通顺，意象混乱，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep,\n'Hath burdened upon thee thee its medicine,\nIn principle it gives birth to rich medicines,\nAnd most wholly is breath potent.'\n\n\nDrinking of it each day,\nAnd giving in love a room,\nTo bring the person tingling fever\nTo die wherever kept;\n\nHe felt certain of thy song,\nAnd not more sound, but this he howhed.\n\nMilder does thy support all give.\n\nThy name is sweet, though thy art no whig\nTherefore, I wish thy greatness to be forgotten.\n\n\nMine eyes call it so,",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "语言流利度一般，存在拼写错误和句法不通顺；连贯性差，意象混乱，缺乏古典诗歌的美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言不通顺，逻辑混乱，意象破碎"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nAgainst all the waves of youth,\nLike a cat that our eyes from Wode come.\nBut being given to look upon things,\nShe walks in thine shadows,\nSo let me think as to if I perceived the way.\nSave you, as I have said,\nWhen I turn, say what doth show\nGravitation on a Nature\nAnd errors can indeed look,\nUnless some man dye old in my eyes,\nBefore I have my fairest winds.\n  Save us, alone,\n  Or up or down as on Earth give;\n  But still, I pray,",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，意象跳跃不连贯，部分句子无意义。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "语言不通顺，意象混乱，缺乏古典诗歌的美感。"
     },
     {
         "model_strategy": "Small_DPO (SFT Rejected)",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nFor my sweet soul loves beyond limits.\nAnd to love him that sweet touches me\nI would not bide him;\nBut I ask of him, if that love so\nDoth doth call me another.\nWho save this when I best\nIn love day and night may bring back?\nWon't that change, true friend,\nThat move truth in darkness and bright sunshine to?\n  May not though with me you both free,\n  You kiss my heart, where my own the true love lies,\n  With which, if you in beauty,\n  Understand well not what-our",
-        "fluency_score": 3.0,
-        "coherence_score": 4.0,
-        "reason": "句法有些混乱，存在重复和拼写错误，但意象仍具古典美感。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但存在重复和语法错误，诗意连贯性不足，意象混乱。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nBut if this blush hath not taught\nWith friendship an immutable art,\nIts love becomes fairer on both signs;\nThen what beauty did amaze\nAs low white complexion with all thy eye,\nNor hath the melancholy discretion of love yet bent,\nFor so fair fortune hath reason commanded,\nTo increase lamentation and pleasure in thy sight.\n  I pity thee for that your well-fed\n  Granted so much to think me forgotten;\n  For love be gone for fear.  Let not love need reproaches\n  You for not allowing me joyfulness my remembrance,\n  For love bore them",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "语言流畅但部分句子逻辑混乱，意象古典但上下文连贯性不足。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但存在语法错误，意象混乱缺乏古典美感，十四行诗结构完整但逻辑不连贯。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nThen of a man bear but slight cross;\nAsk a half-salared habitation, bear some iron from the earth,\nAnd needn't thy chafing limbs for me to gnash,\nOr of what bowish land griefs under heaven fill,\nOr both and hath some dear mistress forced;\nThat well bred love, nevertheless forbearance is eternal,\nFor ever thus shall all cursed treasures then by,\nAnd no gentler than thy self hath cast.\n  Woe unto thy remembrance thou dost remain,\n  And with rhyming love thy thought hid\n  With sweet div",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但存在部分混乱，意象较为破碎缺乏连贯美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 20.0,
+        "reason": "语法混乱，意象断裂，缺乏完整十四行诗结构"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nWhich's labors sometimes oft thy way to have burned and late dried.\nOf thy brother eatth about his stale,\nWhen his love ravenous and beauty pleasures falle\nUnmuddy by others's faint thought,\nNor calm, smooth nights afflicttered in thee;\nYet no moon, whose bleary doth sheyx erring betime\nOr creeping heat waves suppose, denies so do thy lust.\n  But thou art mine; love brought unto thee\n  My love and my thoughts keenly;\n  I hate about thee not thy imperfect graces,\n  Such weakness hath made me",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 80.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nWhat temperate pleasing and gracious appeal\nAll guess, what harmony and truth must I err,\nOr would I lend the truth my scorn?\nMy black hair contains nothing on painting.\nMy soul dwells and yet it will suffer not\nTo feale in worth that beauty should call me.\nLook upon me all my best, cherubical beauty,\nAnd if thou merit of myself keep away,\nGive me virtue not only worthy of curious art;\nNever engender foes of all sort,\nWho will ambush those vile blameers but stamp\nOn me, so that they fall for me so often.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但部分意象混乱，诗意尚可但逻辑不够连贯。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但部分句子不通顺，意象混乱缺乏古典美感，十四行诗结构完整但逻辑断裂。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot?\nTo help thy daughter feel more famous\nAnd lose her to her master?\nWhy might I defend her wealth\nWith her; but now! Make her more precious\nWith a pricter debt?\nMy love hath given her comfort among false dates!\n\"Ay, not any quite obsequious think,\nThat love may melt within me,\"\nBy expressing herself so openly,\nHavouring them, but day by day, my distress would change;\nA babe now lovingly nursed by thee wouldn\nWhen thou bore it.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典美感。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "语言不够流畅，意象混乱，逻辑不连贯"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nWhich glides not still to truth for a crime?\nIn love am I fear changed,\nAnd so fading to an oppressed time finds time a speedy stroke;\nAnd to reign on an endless sea\nWith pace with ill diverted eye the dreaming crushes,\nTo increase nor decrease his good love,\nNor to waste some ill bad habit ill-ordained;\nNor how difficult be he when thy hunger marns what good treasure thou wilt,\nOr when strong causes shall praise thy curse endure\nBy tining every fancy's prime in trueness in thy love.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分词汇堆砌无意义，意象破碎缺乏古典美感。"
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 100.0,
+        "reason": "语言流利度一般，存在语法错误和不通顺的句子；连贯性和诗意较差，意象混乱且缺乏古典美感；十四行诗完整。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nOr thou still breasten my bargain that didst us like sick they with all\nThat which still wantonly strength, loves better,\nTo draw our and you may return to thy love:\nThese are lessons to you I sing to these restless hearts,\nWhose bosom in fault will tender their love one thing or the other,\nNot but because thou silent mistress alone barks them into making it,\nThat life cannot lie still if sooner than this day thy dead soul to thee dies.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在无意义词汇堆砌，上下文逻辑不连贯，意象破碎。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn\nA bleached betalmy cheek was made wafer.\nWhen thou tellsest all ill not,\nIn comfortable tongues thou conceal\nThe matters itself which offend, and can be removed;\nO, forgive thee, for thou knows thine own mind.\nSuffer not I to spend thine doth peradventure\nTo dye immortal reckoning after thy eyes' diligent woe?\n  I lie doth every thought that may compare,\n   To stamp on thy memorials 'tis wont\n  To agree that I lay all advantage,\n  In turn, against you.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 35.0,
+        "completeness_score": 60.0,
+        "reason": "语言不通顺，意象混乱，缺乏古典诗歌的美感。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep,\nWhen her mad passion lust for him\nFlapped by poison without help deserved that careful encouragement;\nNow recompense he craved in marriage--\nThe too light mistress should aspire\nTo posterity and value health in marriage;\nFor love doth with her affections grow grumpy,\nAnd soon outmoded self pleasures are despised--\nAnd that common lads tend to be discreet,\nNor should they beg sympathy if any virtuous lady bade.\n   Mild would her decease Love be so,\n  If every world be on happy song?",
-        "fluency_score": 3.0,
-        "coherence_score": 4.0,
-        "reason": "句法较为混乱，部分句子不通顺，但意象具有古典诗歌的美感。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本通顺但部分句子逻辑混乱，意象古典但诗意不连贯。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nDoth not wait either here, nor all that be wailing,\nTo clear his eyes by gates which thunder loar like their white feathers,\nOr avoid his sight once he should meet his eale;\nStill doth he return thence to empty world,\nWith thy servility and love when by night he threescore eyes hear,\nOr our old vocation to blazon judgment bids,\nOr eternity again mock us rich not by billowed treasures;\n  For this dread disturbs my weightless still sleep;\n  Then on he doth wish though I call for thee,\n  And",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在无意义词汇堆砌，上下文逻辑断裂，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 40.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nWould not do mischief, that much greater praise should\nSeek in her some need.\nBut love's motive lies ill enough,\nThat certainly that fairer world knows her best.\nLittle hope exists among me, when I pardon\nO'er fools which shall say to no bloody promise,\nThat I humbled that sweet sweet sound love makes use\nOf silly manners, if only could kiss.\nNevertheless, though they have loved, still I think\nMy love will love them only when there is none in their midst.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但部分句子逻辑混乱，意象有些古典美感但整体连贯性不足。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本通顺但部分句子逻辑混乱，意象跳跃缺乏古典美感，十四行诗结构完整但诗意不足。"
     },
     {
         "model_strategy": "Small_DPO (Destroyed PS)",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nYet kind of thee she keeps in truth woe;\nThese folly-tousled ages may to marriage doth pair\nWith true love's tenderest style;\nBut still is their love chief\nUpon her bride's limbs, and blessed bears\nUnder the flowers of many abults ever seen.\n   So tell how these pleasures haunt me,\n   As great princes pale by love and princes grow rich,\n  To disagree with my hand's gross hair and foul sweet lips;\n    But are these men an uncouth admirer of mine,\n    Such discontent is what",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分词汇无意义，上下文逻辑不连贯，意象破碎。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅但部分句子不通顺，意象混乱缺乏古典美感，十四行诗基本完整。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nYet when the sympathy as well fled,\nI saw not their sly curiosity,\nNor if tyrants neither to acknowledge\nTheir clemency to reign did comfort me their harm,\nTherefore praised, home.\n  No beard hides but this I thought by love's hand worth,\n  Love thus him poisoned is redeemed from falsity.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "句法混乱，意象断裂，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nOr feel itself to help and hinder my impulses?\nNow wert thou so outworn, without rest,\nThat already, corrupting or unthought am I here held back,\nAnd that to thy part can much make thy wretched night share?\n  To think myself inferior as to others that bear the\n  Mine make glorious shrine to mine share makes,\n  For great-born, subject to day's love be still virtuous.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子难以理解，意象破碎，缺乏古典诗歌的美感。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nIn like gratification all things water's clemency hasts round\nIts world-end into which cries waste its clouds.\nWhat by the continual exportation of him hath laboured thou\nEre thou poison poisoned,\nDost thou blot loose with poison my stem?\"\nThen all love, according to his spirit in me know\nAlive from too sharp.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性和完整性"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nHer true and true, fair estimate,\nWas lost with Heaven in a skilful and terrible war.\nThen yet in a wise gracious grief they melted,\nTheir enlarged view brings glad dead wisdom in their wood.\n  All this seems great grief to go,\n  So all shadows, of their best, lost,\n  That by my former arrest may stir evil guilt.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典诗歌美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象断裂，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot old—\nNor can thy poverty and thy delight escape thee\nWhile beauty spoil thy with decay,\nAnd if thine profit embrace so faire this use,\nCome you on which thou dost abuse most,\n And force this meable trust against thee with mine breast.\n  Yet behold, to please that praise do assent,\n  Who make perhaps envy keep time bear its business;\n  Time will do rhyme sweetly the prize fast.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法较为通顺但有部分混乱，诗意尚可但意象略显晦涩。"
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "句法混乱，意象不连贯，诗意模糊。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nAnd, with thee too much blame parts be enlarged,\nYet against thine live my still vote making,\nLet one part's salable alibion refuse,\nAnd two such to trample well together thy drooping fame.\n  Mine opinions are like to vote yours to keep\n  Where my heart be kept sad, so knowing for her amenable motion.\n  She whether this ought-for that best physic says,\n  Who yet without so firm no measure ad lives his parts every cower,\n  If thou\n  best advantage to thy shouldnd's voice should ere receiv'd th",
-        "fluency_score": 2.0,
-        "coherence_score": 1.0,
-        "reason": "句法混乱，拼写错误多，上下文逻辑断裂，意象破碎无美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，句法不通，意象破碎，缺乏古典诗歌美感"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nWhat\nChic reason so gently placed hath knowledge of thy creaeness best devise,\nThat breathes their sorry sighings\nUntought yet brings an accusation whether thought lieth, or sounds dead.\nO, how wretched are thy name's foes\nWhen you say thy brother to his old school\nShaddens themselves by profane insult;\nNor is this argument less half malignant\nWhen I explain other debased parents\nThat they meet dead to truth;\n  Smash me alone not in a smile\n   Though bad my sweet child had seen but dead.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "语言混乱，拼写错误多，逻辑断裂，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性与完整性"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn\nOf heart in clemency sully every true evidence.\nAnd in acting of my mind with this sweet set,\nWith avarice, where I have put some earnest stain yet in use\n  There should fall you by thine own services much guilty,\n  Lament'd with degrees in wrong statutes seemed\n  To have escaped thine a ransom day,\n  This face of doings thou methought and most said.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在无意义的词汇堆砌，意象破碎缺乏古典美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steepen one's voice;\nWhich on proffering stole doth prove:\nWhen now this rudine night conceaved their glory,\nThrough lust lost, thou gave her woe for kill.\"\nAnd for groans with which the day shook?\nWhatever soul misdoes hid she-gave.\nMad for disease that heaven she begotten,\nLay th' daughters in graves, to each deceive their mind.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，逻辑不清，诗意缺失。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nEver still, where his flames still bore;\nWithin such life they happy bones live;\nTill hence in thy virtue he breathe first these slave thy fingers rest;\nThy tongue proceeds before this base still liquid soil of sensuous debord;\nAnd supposes no causality like offives on half thy body's (twice thy heelle's as foul now !).",
-        "fluency_score": 2.0,
-        "coherence_score": 1.0,
-        "reason": "句法混乱，拼写错误多，意象破碎无逻辑，诗意全无。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性与诗意"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nWas sometimes spent better than whilst on base mildness.\nThen with me am a bound equal rose,\nWhilst live another music in heart blesses yet no state.\n  But married love's love hold it some increase,\n  For thus a form which the stesiest earth hath set on plain rest,\n  From thine enemies fortune or their outward part me remove\n  From those all truth which showed to make heaven stand.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Small_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nSo as sweet strong and gentle may also rend.\nCome on, Sir I spake old whom thou art;\nA blushing flower and fair and fine;\nSo giv on black steed curls asswoven\nSo fair that blameless house is perfumed.\n  Add in that fair wife ill pays\n  Which rhymes heaven blessed, art rose's worse fell.\n  These immortal jewels make part the crooked robed,\n  About divinely eyes all should alike live.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "语言混乱，存在多处语法错误和意义不明的词汇堆砌，诗意破碎。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯，诗意缺失。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nEven now I are black for want of him not had\nAnd raised her health with necessary impediments,\nAnd even now she suffers for him to be gone.\nWhy always to me shall thou say that day sings this song;\nSweep a light's dew through lakes in ages unknown,\nMake sun sign with unknown flowers and colors show;\nGive the beams for tears and show sweet hidden to the heaven,\nThat I might yet feel it right after that afterthought closes;\nSometimes well in conflict gives his (true) disdain thine;\nThinking thee call o'er the happy shade, remember",
-        "fluency_score": 3.0,
-        "coherence_score": 4.0,
-        "reason": "部分句法不通顺，存在拼写错误，但意象具有古典诗歌的美感。"
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅度一般，存在语法错误；连贯性较差，意象混乱；十四行诗基本完整。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nLike a vulture deprived of seed?\nDo consecrated flowers not make gold thou forget'st?\nCouldst thy immortal soul find pleasure without my affection\nStretching her high rocks with sweet veins?\n O base springs thy showers resist the heat of this evening\nAre full of the jewels thy imaginations add,\nWho conjures up all the brightness that shuns unfailed depth\nWhich sins shall hoary horego before thy countenance bound.\n  All that thy sea chain of cherubim adored when high,\n  Die before thy interest deceive, sad, unkind friends called by",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流畅但部分句子晦涩难懂，意象跳跃缺乏连贯性。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅但意象混乱，诗意不连贯"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nAnd these weak dobs seem best still so.\nO that when that tender becoming way toward life,\nShould bark and howl call anew to death\nWith rapacious shows, nay effect as in death,\nThou change'd with us this court world lively nature,\nAnd with help enhance its vows,\nBereft of what light it wears in infancy good,\nEver bold and immortal of thy work;\nWhere doth my dwell, with open eyes since strange days,\nGran did thy desire this wondrous circle.\n  Lament, but this I can show that old poor state",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "部分句法不通顺，意象混乱，缺乏古典诗歌的美感。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "句法混乱，意象不连贯，诗意破碎"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nSince heaven directs all my kindnesses into some title,\nAlbeit no meritorious boast can gain.\nIn truth thy bounty is not divine,\nWhich mine unjust judges are no wiser nor better,\nNor concerne thine high people's treasuries:\nTeaching alone doth thy bounty breed so imperfect\nThat they bemuse their lords with such audacity.\nWhat be the remedy of this place, King Charius,\nIf life of clay by utter decay\nOr beauty of barren decay ever a birth\nShould abide? In a sentence for thy heart,\nLike Jerusalem?",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "句法基本通顺但部分句子晦涩难懂，意象混乱缺乏古典诗歌的美感。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 60.0,
+        "reason": "语言基本通顺但诗意混乱，意象不连贯，古典美感不足。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot thee?\nI see thou hast kept me as firm an heart\nAs though thoughts of love came by sunderment\nAnd betrayed me, breaking my nature like what grief\nWhilst thou dost cling me with grievous tears\nTying mine ear and howling that soul with pain?\nThy honor hath needed through my languor best;\nAnd beauty hath deserved daily to wield\nTirerence in mine heir when going to hate.\nThen supplicate me of what measure thy worth above\nThe gift of water's incenses (τὰ ) dignifies?\nOr sing on why like this",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "语言流利度尚可，但部分句子结构复杂且晦涩。连贯性一般，意象虽具古典美感但逻辑稍显混乱。"
+        "fluency_score": 70.0,
+        "coherence_score": 60.0,
+        "completeness_score": 50.0,
+        "reason": "语言流畅但部分句子晦涩，意象混乱缺乏古典美感，未完成十四行诗结构"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nMine all for righteousness, have offended thy lot\nMade a beast of my mercy and wronged the truth.\nO pitiful slave! sell then both those lusts are thy fault.\nPay thine altars aloft, for after so black a day\nBroke in tender hours parting paths rage ate black\nConjured for \"lack of sight,\" carved all to naught\nAnd though silent thoughts fail false hearts,\nDearly rich in burning nerves might deform They say false boast.\nFrom thee all persons of report gain I place to add.\n Let no zealous eye do power on this account,",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言较为流畅但部分句子晦涩难懂，意象混乱缺乏古典美感。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但部分句子晦涩，意象混乱缺乏古典美感，结构完整但逻辑断裂"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nFrom how thou gavest every praise parting\nUnbrings fire, wondrous shell and great roses;\nIn such hoary labor and tedious force\nWhere you weep of love blind and away desire,\nAnd bear much else as from nothing.\nBut bid not thy 'conscience' hunt too long\nIn nursery and all pondering feast dour\nAs great rose Or piteous excuse pleads her pretence.\nOh, always write praise as thy love hath cost me,\nThat slow 'conscience,' flow with its pride renewed,\nForever set aside which pile is so cleans'd.",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "句法较为通顺但部分词汇堆砌，意象混乱缺乏古典诗歌美感。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 100.0,
+        "reason": "语言流畅但意象混乱，诗意不连贯，十四行诗完整。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn.\nEre then attico paradoxen ready his beard,\nAnd with sword poet form still painting likeness divine\nStrive, self fear with soul melancholy color behold,\nWhen ever change defying thy shadow does drive him from;\nYet his blood awefully never prods thee where\nIt doth mourn men shape two is night charged sweet;\nNow if thou with black manself seest clearer and clearer,\nHelp us have bluehood resemble come light.\n  Till as assured of all can wave black body for himay.",
-        "fluency_score": 2.0,
-        "coherence_score": 1.0,
-        "reason": "句法混乱，存在大量无意义的词汇堆砌，上下文逻辑断裂，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性与古典美感。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep and hallow\nThe lofty shrubbery which then may sleep this insimitably delicate morning\nYet boldly directed during her waiting this span.\nThe dear meek race thought those fair eyes of fire would ruin,\nThat wondrous owl, standing on mid rank curb tipped o'er\nThe sweet growing sumptuous triple snow, chafing in fair hope of day\nWhen moon else all grapes and flowers might clothe the joyless maiden,\nIn for themselves, though one with daintiness they bind.\nAnd fair him so fair is his nightingale singing,\nSo young his reverie dear",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流畅但部分句子结构复杂，意象丰富但逻辑稍显混乱。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象堆砌无逻辑，缺乏古典诗歌美感"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep,\nThrough wounds even of heart's kindred laughed out loud,\nWhile romantic sham he consecrated buried\nBy keeping his day, careless thunderless mind;\nThat methodless logic, by ways that said time's loss,\nTo pine eyelaces eyes?\"",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分句子无意义，意象破碎不连贯。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "句法混乱，意象断裂，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nToo small for a condescension's proscy\nGilding & driving not your remonstrance might more daring;\nBut, ill children, she be mad and such a most wit,\nOf ill baseness she pretends she make.\nInstead of giving her knowledge of dates,\nWhy, let me read your sheets a year with my tongue,\nThen after that year she be wiser than you:\nUnearthed is like dented stone again;\nSo nature bindeth a bent garment far back;\nI suppose quods still preferth a pack of thyself\nWhile art impudent my",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯，诗意难以理解。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 40.0,
+        "reason": "语法混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Medium_SFT Baseline",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nThat measures out their lines the way, neither weaker\nThan still my two years : yet his truth tears into more tender beams,\nAnd frail seeks for ever affront.\nGreat ends, four steeds should devise to my stronger phoese!\nAnd still to heaven chide morward have died.\nTo rescue still I you aid render,\nOnce fewer with no refund shall I plead thee for.\n  Time might betide unconmussed angels pity,\n  When pain hit firmer bonds thy weight payed high.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎缺乏古典美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 80.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nNot did she disgrace the loves of thy sweet\nTo draw away thyself from love's sweet absence,\nBut thy true beauty sang from her dumb lips.\nThen, having swallowed away her scummy tears,\nHer soul's prize in us thine own delight\nCame gladdened to her, dashing her head\nAgainst her eyelids. 'Tis true that  In these shades thyself\nBleeds with men's  love, but  It is with thyself\nThat I will be  awaked and grow  Up in beauty's sight.\n  This is the",
-        "fluency_score": 6.0,
-        "coherence_score": 7.0,
-        "reason": "语言流畅但部分句子结构混乱，意象优美但逻辑稍显断裂。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但存在拼写错误，意象混乱缺乏古典美感，结构基本完整。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nWho with thy inward unquietness dost hide?\nWash my pores and withdraw my juices,\nAnd thou shalt open my eyes into heaven;\nThou shalt reign still there as the ancient,\"\n\"And fear no shame, save, that it might come\nTo steal thee out as of a fire,\nWhose place is now rent with drought and blazes\nWith that glorious day of spring, when\nAs soon as thyself doth bend thy head\nTo gaze upon a thing within, some flame doth\nCast o'er thy bosom; thy seed shall fall,\nAnd be def",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "语言流畅但部分句子不完整，意象混乱缺乏古典美感。"
+        "fluency_score": 85.0,
+        "coherence_score": 70.0,
+        "completeness_score": 60.0,
+        "reason": "语言流畅但意象跳跃，十四行诗未完成"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nThat we may live an easy and deathless way,\nAnd by no means believe in death or life.\nBut, when thy appetite be,\nWhen in thy whole soul thy heart darkens\nWith what thou hast no love for,\nAnd when the remembrance of me\nShuts the bright day of life in shadow,\nThen shall mine vernal hour end\nLike crystal with more silver than gold.\n  Let that morning shine as it were by day\n  To show thee thy love & shed light.",
-        "fluency_score": 8.0,
-        "coherence_score": 7.0,
-        "reason": "语言流畅，但部分意象转换略显突兀，诗意尚可。"
+        "fluency_score": 85.0,
+        "coherence_score": 80.0,
+        "completeness_score": 90.0,
+        "reason": "语言流畅，意象古典优美，但部分逻辑略显跳跃。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nThat peremptorily brings them forth into his eye?\nTo what yellowish ointment are\nMy lovely eyes made, wherein they shall sport,\nAnd more ill than a flea and more disease?\nO where is my fool my stolid visage?\nWhere is my fair beauty my visible breast?\nFor what eyes are put upon that worthless sight,\nWhich they do receive with all manner of exult\nFrom no subject wherein they are excepted?\nTherefore let thy heart be strong,\nAnd allow all thine eyes to shine in love.\n  Let not thyself deceive",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "语言流畅但部分句子晦涩难懂，意象混乱缺乏古典美感。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 100.0,
+        "reason": "语言基本流畅但部分句子生硬，意象混乱缺乏古典美感，十四行诗完整。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot\nThose to whom those far below\nToteth store, and with thymost the means\nTo feed thee by toil, when? And how long\nIs not life and mind enough for thee?\nA last thin prospect, behold!\nThen at last seem you well refreshed\nTo gaze before me on all thyself,\nAnd I feel the decay and woe,\nAs the lapse of time when both\nStart again from the stillness of day.\n  No! 't may seem, but poverty now\n  Is rather thy friend than  My means.\n  Tell me, art thou now living",
-        "fluency_score": 3.0,
-        "coherence_score": 4.0,
-        "reason": "句法混乱，部分词汇无意义，但意象尚具古典诗歌美感。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 50.0,
+        "reason": "语言不通顺，意象混乱，缺乏古典诗歌的美感。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nAnd enlarge my wanton heart's parts,\nWhilst I thus give witness of myself\nThat thou, O greatest of queens, consort's child\nWith doth thyself love these walls, and stay\nThe supreme jealous enjoyment\nOf thy queen's bosom, so intemperate\nThat thyself, being thyself out of thy power,\nIs compassed thence, being no match\nFor her beauty's suppliant, nor by her\nEqual to thyself, but in all things more\nFor the loveliness of thyself.\n  But if thou dost succeed in remodelling",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但部分表达晦涩，意象虽古典但逻辑稍显混乱。"
+        "fluency_score": 70.0,
+        "coherence_score": 65.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅但部分句法混乱，意象古典但逻辑稍显断裂，十四行诗完整。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nTo help me to add with my pen an\nWith learning thy flattering language,\nOr ask to give to love thy good?\nMine heart already declines much\nThat thy love's dominion should be sin.\nO, grant not my demand thy offer;\nFor let such love as mine end,\nFor thine I will live, and love thyself.\n  And where my love's search is,\n  I might not look for mine enemy.",
-        "fluency_score": 7.0,
-        "coherence_score": 6.0,
-        "reason": "句法基本通顺，但部分诗句逻辑稍显混乱，意象古典但不够连贯。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但存在语法错误，诗意连贯性不足，十四行诗结构完整但逻辑混乱。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn\nWith thickest expiation forbidden:\nSince he of thy love right so spake,\nIs of right guilt bound, by loss all\nFor his wench's shame.\nThou knew'st thyself but a fable,\nAnd, no wonder, my shem I know,\nFrom thy needless love never his blust.\nSo thy keyless love, which kept so close\n\nAnd lodged so strong within my heart,\n\nCan, out of many robbers at once, escape\n\nThy clutches. In old days the thief might:\nNow through him all thine cares go",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本流畅但部分句子晦涩，意象混乱缺乏古典美感，结构不完整"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep\nIn cloud and rich vein, to soften\nAn angel's firm ammount of it on\nTo the tender days of love's morning;\nThen at day's breaking light he set an\nFull lamp, to impress his notice\nWhile for lusty life' sake he was slept;\nAnd young honey would pour out that fire\nThat dwelt for all his youth's sweet rest,\nAnd use her youth's flame with new light.\nYea, here are so many jars of Rose,\nOne with sweet petals from thee, another\nFrom another's child. But old Nero\nYet lives in antique bright",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但部分句子断裂，意象古典但逻辑稍显混乱。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言基本通顺但部分句子断裂，意象混乱缺乏古典美感，十四行诗结构不完整。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nShocked in rapture with his beauty,\nAnd these, seeing that he their maiden they far wa'\nWere offended, and disturbed and disgraced,\nThough in love, yet their husbands should disgrace\nTheir queen, and therewith would deceive\nThe courts of wooers' gladiators with his shade.\nThou, poor girl, being fallen asleep\nShalst not worth praise, but am henceforth bereft\nOf happiness, as shalt henceforth enjoy.\n  This life is so dear to me that it so greatly\n  Courtesie me that love should keep me in\n  Sight",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言不通顺，意象混乱，缺乏古典诗歌的美感与合理性。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nAnd that then I might love a fairer man.\nIf I were so aught, none would so learn\nAs a true reader. He that loves truth will say,\n\"These things thou knowing'st, are written in\nThy breast and in mine own eyes.\"\nBut he that dost confute\nWhat thou supposest to be so,\nIs not yet worthy to have his opinion\nOf love.  So even thou shalt not lie,\nBut even my love will one day tell\nThou shouldst not treat as an untaught child.",
-        "fluency_score": 8.0,
-        "coherence_score": 7.0,
-        "reason": "语言流畅，但部分句子结构略显复杂，诗意表达较为古典但逻辑稍显混乱。"
+        "fluency_score": 85.0,
+        "coherence_score": 75.0,
+        "completeness_score": 90.0,
+        "reason": "语言流畅，但部分逻辑略显混乱，意象古典但不够统一。"
     },
     {
         "model_strategy": "Medium_DPO (SFT Rejected)",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nAnd by his counsels all these poor afflicted are\nShewing how much they can with patience,\nAnd in patience gentle applications\nHave lain heavy on my side since my days.\nA lover that I have, like two spirits in  \nA county long dark, living as till some sunder\nIs shut out from light and day by his kind\nWho but daily looks out to wish for his gentle woe.\n  And I, like his twin in bliss, who live,\n  Too proud to fear my weakness.",
-        "fluency_score": 5.0,
-        "coherence_score": 4.0,
-        "reason": "语言流畅但部分句子结构混乱，意象古典但逻辑稍显断裂。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言基本通顺但存在语法错误，意象混乱不连贯，十四行诗结构不完整。"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nNor, there after that, would I wake thee\nSince sorrow lays but writ in mine eye.\nO haste thou forgot the unhappy nights that turned\nThe green plant from April flower\nUpon the gold crowned finger of Osheim;\nHold my hand again as over my head,\nAnd from thence to another he may depart.\n  High in the winter's dawn rose that fresh report,\n  It said it was thirty days and ten nights since\n  Wherefore had I left thee before this hideous time?",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典美感。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言基本通顺但存在语法错误，意象混乱缺乏古典美感，十四行诗不完整。"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nAnd stay unless my sweet Venus wrought\nAnd at thy coming sink my loves?\nThe fiery virgin of rain, Spinning warring waves,\nShould thou this whirlwind be swift to cleanse it,\nO lake, thunderbolt, titanic bird of death\nLet loose yet  such mute purple round her she might sound;\nOr blessed bride, giving to maiden adore,\nWhilst down her unclouded till th' end deliver\nThe sap of what life she drank o'er with sad sigh,\nOr her hated love still bringer sore lover\nWith leavenen vows rent to O weary",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "语言支离破碎，意象混乱，缺乏古典诗歌的美感与逻辑连贯性。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nAnd at his refreshment doth rescue my love\nGathers round its walls shall he die,\nBy temptation of not being loved, in bad attire\nAnd abroad wasted inwardly:\nTherefore as he advanced to thy bitter end,\nO sinful heir of thee,\nMy love thought that thy plight required all,\nKnowing thee not, wherefore I cried\nWith loud voice as mournful thoughts refused light,\nHearing thy face buried beneath the earth\nIn the dark green waters of love's soft deadly growth\nWidowed night and day since morning;\nBut now I am shall force thee to please",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法较为通顺但部分逻辑混乱，意象丰富但诗意略显晦涩。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言基本通顺但部分句子逻辑混乱，意象跳跃缺乏古典美感"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nWhich I love when well taught,\nFor they perceive nothing but his grace,\nWhich denies nothing?\nSeek him, I pray thee, and must read\nHow wisdom stands in the ear of flesh and\nLike a winepress, thou our things bereft;\nYe need no aid to admire well thy beauty,\nAnd good? Speak from His fair virtue, thou bitter cup,\nAnd hear thy thoughts pleased.\n  Thus, to devote thy lovesties to others,\n  For they, being rejoiced at thy children's may,\n  Resent the fair advantage to betide\n  But",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，意象跳跃，缺乏连贯性和古典美感。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象不连贯，十四行诗不完整"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot thee;\nWhy, although in my rage do I stand thus?\nNor this prime age bear such a glory:\nNor thy beauty can me find, be poor of life.\nO, I heartily love thee, thou son of earth!\nThus will my love love ill rest,\nThat maketh for fear of me to hazard the plough-season.",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "语言流畅但部分句子结构复杂，诗意古典但逻辑稍显混乱。"
+        "fluency_score": 70.0,
+        "coherence_score": 65.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅但部分句子逻辑稍显混乱，意象古典但连贯性不足。"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nOr tell all truth when some supposed mine eye,\nWhich deserved shame to fall upon thee kept\nTo behold other the glory, be ne'er so uncentered\nAs thine sight should prefer thee without so sweet a soul.\nSowing heaped thy devotion; thanking his light\nWhen all eyes praised the beauty of thee,\nThou give me all wrong, except in woe and love.",
-        "fluency_score": 7.0,
-        "coherence_score": 6.0,
-        "reason": "语言流畅但部分句子结构复杂，诗意尚可但逻辑稍显混乱。"
+        "fluency_score": 65.0,
+        "coherence_score": 60.0,
+        "completeness_score": 70.0,
+        "reason": "语言流畅但部分句子逻辑混乱，诗意尚可但意象不够连贯。"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nFor there comes love itself his living story,\nHow he drove behind in love from heaven's trail,\nGauging fare as silver bargains in gold:\nWithout hearing of, nor had I her read,\nAt last, O how solemn she now robs thee?\nThere's the rider of thy love here,\nStruck with shame and thy delight'd sight,\nEre his kiss she didn't it hand,\nGird with sorrow's deep sadness for thy won memory.",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典诗歌的美感。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 100.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典美感，十四行诗完整。"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn,\nMy heart'd love with bare bosom o'er thy dainty garment bade,\nAnd thou alone child of hers filled mine hate fickle sweet.\n⁠For heartless wretches attend my tears,\n⁠And honey for mine eyes I vow desire more,\n⁠Thus neediest love she ne'er know'st any finer dower,\nNor all sages day or night true wax rare\n⁠Where love renews itself from desert age;\n⁠For his love hath had no spouse of youth\n⁠Hath no sway with fair wards--\n�",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但存在拼写错误，意象混乱缺乏古典美感。"
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "语言混乱，意象破碎，部分句子无意义"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep:\nAn old tomb, though rich and heavily coffered,\nGrew one despite his plump frame to finer preserve.\nHe is gone in the prime of youth,\nA lovely tender maiden, one born stout in belly;\nWhen deard railed her, my most stubborn heart\nMade certain cause to kiss his frocked name;\nStill born, what am I then worthy to remember\nWhen he did outrose heaven from thee outbreathing air\nShoot him a rough ball of flame?\nIt is in her twinkling breast to which I spent\nMy youth into a maiden morning,",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "语言流利度尚可，但部分句子逻辑混乱，意象跳跃不连贯。"
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "语言混乱，意象跳跃，缺乏连贯性"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nUnto diamond yves full for this his lust give warning\nAnd frost's guilty morning--love himself back forgot;\nO, Venus; a perfect sort thy honor droppeth\nWhat times thou got through silver dish to conceal,\nO, that single patience loyaly had kept;\nKnowing, young love--such age not wanteth life",
-        "fluency_score": 3.0,
-        "coherence_score": 4.0,
-        "reason": "语言流畅度一般，存在语法错误和不通顺的句子；诗意尚可，但部分意象混乱。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 0.0,
+        "reason": "句法混乱，意象断裂，不符合十四行诗完整结构"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nWho may have ignorant proof of love,\nOf this prince whose nature beguiles but my will,\nThat though I love him, I love myself falsely,\nThat I have sought a thoughtless, minded mistress;\nThus in truth lies my love in thee,\nThat sunshine's sweet fragrance looks in me bold.\n  And now out of outward blushes spring new and different faces;\n  The rosebuds where there is sincest hair from thee hide,\n  The maiden bough within me from sight,\n  Being pale and fair with blue rain,\n  The withered sarcasm whereby I",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但部分句子逻辑混乱，意象虽美但上下文连贯性不足。"
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 60.0,
+        "reason": "语言基本流畅但部分句子结构混乱，意象跳跃缺乏连贯性，未完成十四行诗"
     },
     {
         "model_strategy": "Medium_DPO (Destroyed PS)",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nTo give right warning in the very night\nTo others what hath breakable thou art.\nO, henceforth my love will dwell\nWithin thee, whereon night and day will tell\nMy gentle heart and idly my dangers.",
-        "fluency_score": 9.0,
-        "coherence_score": 8.0,
-        "reason": "语言流畅，意象优美，但部分句子逻辑稍显跳跃。"
+        "fluency_score": 85.0,
+        "coherence_score": 75.0,
+        "completeness_score": 60.0,
+        "reason": "语言流畅但意象跳跃，十四行诗不完整"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 0,
         "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nOr fear, as the adder went stark, still poisons a lisp to the mean\nWhich however praised perfection betimes betwixt them.\n  Save e'er this vile cruelty, s'y see me plain tell.\n  Such sunshining beams, light's swollen mouth, fair desert, give their marvellous light\n  Upon deserts this tyred wire chains fast; burn  As miles fire and stone do love themselves fare.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在拼写错误和逻辑断裂，意象堆砌但缺乏古典美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 0.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性与完整性。"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 1,
         "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nThat waste privilege of my hearthtime alone ?\nBe not base, miserable earth\nThat violates thy first so dear in thee,\nAnd mar,' step from my grave day, when thou dost he\nAnd defeat slain renown and heritage spread,\nThat this body lives after death that man them wed ;\n  Whom shalt come at next every moment graver their laws,",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在拼写错误和意义不明的词汇堆砌，意象破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，拼写错误多，意象破碎不连贯"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 2,
         "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nWhile ignorant philosophers fast hold me down and die without is cured\nWhich, every short striping hours in his yield, releaseth engrossed decease,\nThere his part he feeds on more than others do,\nBurying, each stone accounted the fresh-cleaned sword\nWhich can heal his his sworn finger for death's pearl.\n  From whence whose root derive so many pleasures none quelleth he;\n  But the daily sum him liveth recre'd which doubly sweet to war deface,\n  For meate dears which feest the enchantments, and belladas, which",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，拼写错误多，意象破碎不连贯"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语言混乱，意象破碎，缺乏古典诗歌的美感与逻辑连贯性。"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 3,
         "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nThis misfortune, with eye, gold rare rack?\nFor justice I love, though all eyes are heeled;\nBut nature, never such a fault, offereth not virtue by separation.\n  Ye whose eyes are proformed, I cannot praise ill,\n  ; but so beloved best were mine.",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，部分词汇无意义，诗意破碎不连贯。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "语言混乱，存在拼写错误和语法问题，意象不连贯，诗意缺失。"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 4,
         "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot thee?\nThat the eyes of a jealous father behold that thy loves not made,\nWhen thou art there upon my two breast?\n  Be thou consoled, of my love and my example not guilt\n  Thine own.",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "句法基本通顺但部分表达生硬，意象混乱缺乏古典美感。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 30.0,
+        "reason": "语言基本通顺但存在语法错误，意象混乱不连贯，诗歌不完整。"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 5,
         "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nAnd by persuasions lies thy iniquity advanced,\nSo that thy pride of weight bear date fair-toothed against birth?\n   Thus who in deed and freedom may list,\n  Which thou didst chose in deserts of thy winter travels scorn,",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "句法基本通顺但部分表达晦涩，意象古典但逻辑稍显混乱。"
+        "fluency_score": 70.0,
+        "coherence_score": 60.0,
+        "completeness_score": 50.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象跳跃缺乏古典美感，未完成十四行诗。"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 6,
         "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nHow love grows rich with more joy than my adored dumb count!",
-        "fluency_score": 8.0,
-        "coherence_score": 7.0,
-        "reason": "语言流畅，但最后一行意象略显混乱，影响了整体诗意。"
+        "fluency_score": 85.0,
+        "coherence_score": 75.0,
+        "completeness_score": 60.0,
+        "reason": "语言流畅但诗意稍显混乱，最后一行意象突兀"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 7,
         "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn.",
-        "fluency_score": 9.0,
-        "coherence_score": 9.0,
-        "reason": "句法通顺，拼写无误，意象古典优美，逻辑连贯。"
+        "fluency_score": 95.0,
+        "coherence_score": 90.0,
+        "completeness_score": 30.0,
+        "reason": "语言流畅，意象古典优美，但诗歌不完整"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 8,
         "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep doth rise:\nHis thinking abstinence for her human heart,\nAnd nor do sweet reminiscences forget her gifts:\nSince whate'er long past Lard dun wanteth in solitude sleep takes,\nQuivered in honey for awhile his heart,  And addeth kind praise to past praises,\nEven though every breathed departed save ours.",
-        "fluency_score": 3.0,
-        "coherence_score": 4.0,
-        "reason": "句法混乱，存在拼写错误，但意象具有古典诗歌的美感。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 0.0,
+        "reason": "句法混乱，意象破碎，缺乏古典诗歌美感"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 9,
         "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep,\nRevealing the advantage of lust time drives unblind on my wit;\nFor I esteem it strange have not my eyes His equally to one pity!\n  I then praised the joy of the lean breast\n  In nothing between sleep's soft picture, and had love lovely all praise",
-        "fluency_score": 3.0,
-        "coherence_score": 2.0,
-        "reason": "句法混乱，存在无意义的词汇堆砌，上下文逻辑不连贯，意象破碎。"
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语法混乱，意象断裂，缺乏古典诗歌美感"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 10,
         "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\nWho has doubtless paid her vows to publish\nAgainst my laws worthiest beauteous vindicaters.\n  Hath she accepted blame upon blame's shameful figure,\n  Thy equal patient have she banished, dost amount to oft",
-        "fluency_score": 4.0,
-        "coherence_score": 3.0,
-        "reason": "句法基本通顺但部分词汇堆砌，意象古典但逻辑稍显混乱。"
+        "fluency_score": 40.0,
+        "coherence_score": 30.0,
+        "completeness_score": 20.0,
+        "reason": "句法混乱，意象不连贯，缺乏古典诗歌美感"
     },
     {
         "model_strategy": "Medium_DPO (DeepSeek-R1 Rejected)",
         "sonnet_index": 11,
         "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nAnd rare without man.\nAlas, if all this truth bear record\nMore beloyed, they have spread tears besides.\n⁠ As I blush by remorse's beauty, so am I foiled.",
-        "fluency_score": 6.0,
-        "coherence_score": 5.0,
-        "reason": "句法基本通顺，但部分诗句意义模糊，意象略显混乱。"
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 40.0,
+        "reason": "句法基本通顺但存在拼写错误，意象混乱缺乏古典美感，诗歌不完整。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 0,
+        "raw_text": "Those lips that Love's own hand did make\nBreathed forth the sound that said \"I hate\"\nTo me that languished for her sake;\nAnd ever must they obey an moon.\nSo from their warm heart shall my funeral hue\nTout tousled the grieving wretched day.\n—April, Knight of Kyle\nTrue are friends in grief, Yet faithful never marry.\nWhen dead wait who live while near am —\nThrill oft upon as weeping meet .\nBorn together in sooth with horror,\nYet harken to much better living than trust.\nO true love let wedded children fear,\nAt burial they may sing.\nFrom lips thou numb all empty grief;\nLike sylvan soul were we wont,\nIt",
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 40.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性和古典美感。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 1,
+        "raw_text": "Poor soul, the center of my sinful earth,\nPressed with these rebel powers that thee array,\nWhy dost thou pine within and suffer dearth,\nHas caused my servile soul to long and years?\nI count death a doting servant, I resent\nOf his three of indifference at what is stay'd,\nBefore he do his part and hold me innocence,\nSure that in eight at most he storeth his store.\nAnd live'st thou desire he wear- not a strife sport;\nIs thy self like him to love nor live?\nHave I as substance take any other world's loathing?\nJudge not my compareth, and not thou I.\nWithout reason, spend, spend a day, find in death\nWretched one portion",
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言流畅但部分句子逻辑混乱，意象古典但诗意不连贯"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 2,
+        "raw_text": "My love is as a fever, longing still\nFor that which longer nurseth the disease,\nFeeding on that which doth preserve the ill,\nAnd from yon roots and neighboring pool\nIt creeps up by graves steep'd in blood and clay.\nDead, face'd in woes the rising love stands,\nAnd from rocky tunnels o'er rents any sorrow\nOr puts the wounded soul once more to claim\nHer first guardian from justice knows.\nThough expence procures new races at length,\nUnless God comforts them with thee,\nThat oft, offspring of my changes,\nI felt arise, to bid me dwell still.\n Now shut up from my hiding's ring\nI lie, ever the sudden journeying parent,\n  Nothing as",
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言部分通顺但存在断裂，意象混乱且逻辑不连贯，十四行诗结构基本完整。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 3,
+        "raw_text": "O me, what eyes hath love put in my head,\nWhich have no correspondence with true sight!\nOr if they have, where is my judgment fled,\nWhen facing my blind eye in disdain Bascids call?\nWhat way through a clouds vital undress thee?\nAs covers a coy orchid's veil, or clear?\nWhen rightly curled not woful has drapes drenched:\nBargain mine esteem with haste forget;\nWhen quality fond of acceptance\nSees as dead spolls substitute pay-all!\nIf day of lity divers away green of buds?\nThe cloud Hath stored my patience most bald.\n  Clear Face of few ambition of beauty add.\n  I look with secret rapture upon no hues.",
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 50.0,
+        "reason": "语言混乱，意象破碎，缺乏连贯性"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 4,
+        "raw_text": "Canst thou, O cruel, say I love thee not\nWhen I against myself with thee partake?\nDo I not think on thee when I forgot thee,\nWhen dying I requite thee the hurt of waking?\nBut think ye each thing and abstain from Him\nThat makes thy time single to me a decay,\nWhere my joy alone and always quick grows pure,\nExcept my love rede, then with thee almost go\nI have left my self to all terrors and pass,\nAnd read not your chronicle to mark my days.\n  I find a complaint or sadness like it\n  After others o' the trees consigne thee,\n  But while poor Amphiaraus arose from thee,\n  And art fain of tale's tid",
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本通顺但存在语法错误，意象混乱缺乏古典美感，十四行诗结构完整但逻辑不连贯。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 5,
+        "raw_text": "O, from what power hast thou this powerful might\nWith insufficiency my heart to sway?\nTo make me give the lie to my true sight,\nWhat true love do lose? Suppose high theft,\nAll must be true be, should follow thee thine alone,\nThough sure a thousand could deceive thee well.\nAll thy walk I see is round pain round thee alone,\nWhat leads thine unfortunate love?\nMy sport I be fain but feel is always false,\nAs children wrong after cold lies deny their nurse.\nTo love a false beauty sickens me,\nFor sorrow undermines wretched treasure;\nAnd though of thine infallible face\nThat thought may signal my love get,\nWhy may no lie infaith make it?\n\n In brief",
+        "fluency_score": 60.0,
+        "coherence_score": 50.0,
+        "completeness_score": 70.0,
+        "reason": "语言流畅但部分句子不通顺，意象混乱缺乏古典美感，十四行诗结构基本完整。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 6,
+        "raw_text": "Love is too young to know what conscience is;\nYet who knows not conscience is born of love?\nThen, gentle cheater, urge not my amiss,\nSo painfully stay doing thy fare better.\nUnless there be lingering fear to trap eternal sight,\nAnd this looped spring with boy's soul existing,\nAfter a slow mis-used means, throwest feet upon\nThy sweet stores ? Perhaps today thou dryest thy lock,\nAnd stars shall raise little wretched stars;\nAnd worst may thou, recollections being altered,\nCast fire on thy inlet: by woe robbed of light \nWill thy stores drown more opprest,\nWhat e'er shall ground be truth, sweetness love's rebirth.\n\nFor thou the wide eye grows ever keen",
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 100.0,
+        "reason": "语言基本流畅但部分句子晦涩，意象跳跃缺乏连贯性，十四行诗完整。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 7,
+        "raw_text": "In loving thee thou know'st I am forsworn,\nBut thou art twice forsworn, to me love swearing;\nIn act thy bed-vow broke, and new faith torn from\nNot only thine own object of delight,\nBut thine blameless offspring thereof by thy vows,\nWhat forsworn man can stay, day or night,\nShall new, ne'er yield once to his throned birth?\nThe semblance gives woe, or imposture perpetual;\n But lover, like a state's wealth, gives form as thy.\"\n   I taste great yet, and more good than thee,\n  Then leaveth me hope of lasting bliss\n   When senses have been partly changed,\n  Yet I tend with them original love,",
+        "fluency_score": 65.0,
+        "coherence_score": 50.0,
+        "completeness_score": 80.0,
+        "reason": "语言基本通顺但部分句子晦涩，意象混乱缺乏古典美感，结构基本完整但逻辑断裂。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 8,
+        "raw_text": "Cupid laid by his brand and fell asleep.\nA maid of Dian's this advantage found,\nAnd his love-kindling fire did quickly steep .",
+        "fluency_score": 95.0,
+        "coherence_score": 90.0,
+        "completeness_score": 0.0,
+        "reason": "语言流畅，意象古典优美，但诗歌不完整"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 9,
+        "raw_text": "The little love-god, lying once asleep,\nLaid by his side his heart-inflaming brand,\nWhilst many nymphs that vowed chaste life to keep\nWith a lover trample at his head,\nTill being judged by laws of Nature\nTo partake of imprisonment left and place\nTo his unknown love who dead.\nYea, through holy craving of grief\nThe delicate heart rities played that did please\nTo earthly crime, indulging hence\nEach double vices may he blame.\nFor supple girls give a dress black and pliant\nAnd strong mighty creatures at one hundred\nWhere fasting to nature's grave makes no glory ;\nAnd the vain art that loseth only should caulda\nHer life for youth indulgently dream,\nIf she therein",
+        "fluency_score": 30.0,
+        "coherence_score": 20.0,
+        "completeness_score": 10.0,
+        "reason": "语法混乱，意象破碎，缺乏完整性和连贯性"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 10,
+        "raw_text": "When my love swears that she is made of truth,\nI do believe her, though I know she lies,\nThat she might think me some untutored youth,\n And noble she might be, and all uncleat,\nA youth that pursues his aid is mine;\nAnd were it child I did my heart lend\nIn possession of her soul, who cared not\nThis unschooled virtue upon some way,\nOf beasthood or spirit makes free,\nWhich her country's oppression forbids.\nFor in that innocent act I find\nThat virtue lies wheedle with life, That grave neglect thou too\nWalks by unfeigned mendacity;\nAnd cold love for his apt virtue deceives\nSo that he deceives, after love they lie.",
+        "fluency_score": 45.0,
+        "coherence_score": 30.0,
+        "completeness_score": 60.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯，诗意缺失。"
+    },
+    {
+        "model_strategy": "Large_SFT Baseline",
+        "sonnet_index": 11,
+        "raw_text": "Two loves I have, of comfort and despair,\nThat like two spirits do suggest me still.\nMy better angel is a man right fair,\nWho quells the state of treacheries:\nBut like me, if the fleet would by providence fly\nBy spirit or name to safety of thither,\nAnd yet it shall go with hilly stay:\nTo continue watching of my victory say,\nThe base only that believe me to be.\nHe ends our fears what things have sent\nHe distills we believe to love's song,\nAnd if waked I receive then so still,\nThat making conversation 't do suffer,\nThen scorn I should taste his plots now.\nEven it I doubt him I fear, by reason,",
+        "fluency_score": 30.0,
+        "coherence_score": 25.0,
+        "completeness_score": 80.0,
+        "reason": "语言混乱，意象破碎，逻辑不连贯，但结构完整。"
     }
 ]

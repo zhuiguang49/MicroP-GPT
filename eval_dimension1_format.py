@@ -127,7 +127,10 @@ if __name__ == "__main__":
         "Medium_SFT Baseline": "generated_sonnets_gpt2_medium.txt",
         "Medium_DPO (SFT Rejected)": "generated_sonnets_dpo_beta0.1_medium_SFTRejected.txt",
         "Medium_DPO (Destroyed PS)": "generated_sonnets_dpo_beta0.1_medium_DestroyPS.txt",
-        "Medium_DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_medium_DeepSeekR1.txt"
+        "Medium_DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_medium_DeepSeekR1.txt",
+
+        # === 组别 C: GPT-2 Large (774M) ===
+        "Large_SFT Baseline": "generated_sonnets_gpt2_large.txt"
     }
     final_report = []
 

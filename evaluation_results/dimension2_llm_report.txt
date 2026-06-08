@@ -1,12 +1,13 @@
 # 维度二：LLM-as-a-Judge 语言流利度与诗意评测报告（均分）
 
-| Model Strategy                    |   LLM Fluency Score (1-10) |   LLM Coherence Score (1-10) |
-|:----------------------------------|--------------------------:|----------------------------:|
-| Small_SFT Baseline                |                      2.92 |                        1.92 |
-| Small_DPO (SFT Rejected)          |                      3.17 |                        2.33 |
-| Small_DPO (Destroyed PS)          |                      3.58 |                        2.75 |
-| Small_DPO (DeepSeek-R1 Rejected)  |                      3    |                        2    |
-| Medium_SFT Baseline               |                      4    |                        3.17 |
-| Medium_DPO (SFT Rejected)         |                      5.25 |                        4.58 |
-| Medium_DPO (Destroyed PS)         |                      4.58 |                        3.75 |
-| Medium_DPO (DeepSeek-R1 Rejected) |                      4.75 |                        4    |
+| Model Strategy                    |   LLM Fluency Score (1-100) |   LLM Coherence Score (1-100) |   LLM Completeness Score (1-100) |
+|:----------------------------------|----------------------------:|------------------------------:|---------------------------------:|
+| Small_SFT Baseline                |                       36.25 |                         26.67 |                            55    |
+| Small_DPO (SFT Rejected)          |                       41.25 |                         30.83 |                            48.33 |
+| Small_DPO (Destroyed PS)          |                       46.25 |                         35.83 |                            66.67 |
+| Small_DPO (DeepSeek-R1 Rejected)  |                       34.58 |                         25    |                            31.67 |
+| Medium_SFT Baseline               |                       47.92 |                         35.83 |                            55    |
+| Medium_DPO (SFT Rejected)         |                       64.17 |                         53.33 |                            75    |
+| Medium_DPO (Destroyed PS)         |                       55.83 |                         45    |                            58.33 |
+| Medium_DPO (DeepSeek-R1 Rejected) |                       50.83 |                         41.25 |                            24.17 |
+| Large_SFT Baseline                |                       53.33 |                         42.08 |                            60.83 |

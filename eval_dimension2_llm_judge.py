@@ -8,15 +8,17 @@ import numpy as np
 
 
 JUDGE_SYSTEM_PROMPT = """你是一位精通莎士比亚十四行诗（Sonnet）的文学专家和语言学裁判。
-你需要客观地评估用户给出的诗歌片段。请从以下两个维度进行打分（每个维度 1-10 分，1分最差，10分完美），并且打分要有区间度：
+你需要客观地评估用户给出的十四行诗（前三行作为prompt，不计入评分）。请从以下两个维度进行打分（每个维度 1-100 分，1分最差，100分完美），并且打分要有区间度：
 
 1. Fluency (语言流利度)：句法是否通顺？是否存在乱码、拼写错误或无意义的词汇堆砌？
 2. Coherence & Poetry (连贯性与诗意)：上下文逻辑是否连贯？意象是否具有古典诗歌的美感与合理性？
+3. Completeness（完整性）：十四行诗是否完整？
 
 请严格按照以下 JSON 格式返回你的评价，不要输出任何额外的解释或散作：
 {
-    "fluency_score": (1-10的整数),
-    "coherence_score": (1-10的整数),
+    "fluency_score": (1-100的整数),
+    "coherence_score": (1-100的整数),
+    "completeness_score": (1-100的整数),
     "reason": "简短的中文评语（50字以内，指出具体好在哪里或为何崩溃）"
 }"""
 
@@ -49,6 +51,7 @@ def call_llm_judge(sonnet_text, api_key):
             return {
                 "fluency": float(scores.get("fluency_score", 1)),
                 "coherence": float(scores.get("coherence_score", 1)),
+                "completeness": float(scores.get("completeness_score", 1)), 
                 "reason": scores.get("reason", "未提供理由")
             }
         else:
@@ -73,6 +76,7 @@ def parse_and_evaluate_file(filepath, api_key, model_name, detailed_logs):
     
     fluency_scores = []
     coherence_scores = []
+    completeness_scores = []
     
     sonnet_index = 0
     for text in raw_sonnets:
@@ -85,6 +89,7 @@ def parse_and_evaluate_file(filepath, api_key, model_name, detailed_logs):
             if res:
                 fluency_scores.append(res["fluency"])
                 coherence_scores.append(res["coherence"])
+                completeness_scores.append(res["completeness"]) 
                 
                 detailed_logs.append({
                     "model_strategy": model_name,
@@ -92,6 +97,7 @@ def parse_and_evaluate_file(filepath, api_key, model_name, detailed_logs):
                     "raw_text": text_str,
                     "fluency_score": res["fluency"],
                     "coherence_score": res["coherence"],
+                    "completeness_score": res["completeness"], 
                     "reason": res["reason"]
                 })
             sonnet_index += 1
@@ -99,14 +105,13 @@ def parse_and_evaluate_file(filepath, api_key, model_name, detailed_logs):
     if not fluency_scores:
         return None
         
+
     return {
-        "LLM Fluency Score (1-5)": round(np.mean(fluency_scores), 2),
-        "LLM Coherence Score (1-5)": round(np.mean(coherence_scores), 2)
+        "LLM Fluency Score (1-100)": round(np.mean(fluency_scores), 2),
+        "LLM Coherence Score (1-100)": round(np.mean(coherence_scores), 2),
+        "LLM Completeness Score (1-100)": round(np.mean(completeness_scores), 2) 
     }
 
-# ==========================================
-# 3. 主执行流（已优化：轻量化 CSV 存储）
-# ==========================================
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="维度二：基于大模型裁判(LLM-as-a-Judge)并包含审核日志的评测脚本")
@@ -117,7 +122,6 @@ if __name__ == "__main__":
     OUTPUT_DIR = "evaluation_results"
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # 包含了 GPT-2 Small 和 GPT-2 Medium 的全量实验组
     experiments = {
         # === 组别 A: GPT-2 Small (124M) ===
         "Small_SFT Baseline": "generated_sonnets.txt",
@@ -129,7 +133,10 @@ if __name__ == "__main__":
         "Medium_SFT Baseline": "generated_sonnets_gpt2_medium.txt",
         "Medium_DPO (SFT Rejected)": "generated_sonnets_dpo_beta0.1_medium_SFTRejected.txt",
         "Medium_DPO (Destroyed PS)": "generated_sonnets_dpo_beta0.1_medium_DestroyPS.txt",
-        "Medium_DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_medium_DeepSeekR1.txt"
+        "Medium_DPO (DeepSeek-R1 Rejected)": "generated_sonnets_dpo_beta0.1_medium_DeepSeekR1.txt",
+
+        # === 组别 C: GPT-2 Large (774M) ===
+        "Large_SFT Baseline": "generated_sonnets_gpt2_large.txt" 
     }
 
     final_report = []
@@ -160,8 +167,8 @@ if __name__ == "__main__":
             f.write(markdown_table)
 
         log_df = pd.DataFrame(detailed_logs)
-        
-        light_csv_df = log_df[["model_strategy", "sonnet_index", "fluency_score", "coherence_score"]]
+
+        light_csv_df = log_df[["model_strategy", "sonnet_index", "fluency_score", "coherence_score", "completeness_score"]]
         
         csv_log_path = os.path.join(OUTPUT_DIR, "llm_judge_audit_details.csv")
         light_csv_df.to_csv(csv_log_path, index=False, encoding="utf-8")

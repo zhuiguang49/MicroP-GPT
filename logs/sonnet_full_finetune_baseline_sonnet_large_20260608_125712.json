@@ -1,0 +1,82 @@
+{
+  "experiment": {
+    "name": "baseline_sonnet_large",
+    "task": "sonnet",
+    "method": "full_finetune",
+    "timestamp": "2026-06-08T12:53:37.179315"
+  },
+  "config": {
+    "sonnet_path": "data/sonnets.txt",
+    "held_out_sonnet_path": "data/sonnets_held_out.txt",
+    "sonnet_out": "predictions/generated_sonnets_gpt2_large.txt",
+    "seed": 11711,
+    "epochs": 10,
+    "use_gpu": true,
+    "temperature": 1.2,
+    "top_p": 0.9,
+    "batch_size": 8,
+    "lr": 1e-05,
+    "model_size": "gpt2-large",
+    "exp_name": "baseline_sonnet_large",
+    "early_stopping_patience": 3,
+    "filepath": "10-1e-05-gpt2_large-sonnet.pt",
+    "d": 1280,
+    "l": 36,
+    "num_heads": 20
+  },
+  "model": {
+    "total_params": 775669760,
+    "trainable_params": 775669760,
+    "frozen_params": 0,
+    "trainable_ratio": 1.0,
+    "frozen_ratio": 0.0,
+    "param_size_mb": 2958.9453125
+  },
+  "metrics": [
+    {
+      "epoch": 0,
+      "epoch_time_sec": 70.06555390357971,
+      "train_loss": 4.045473884133732,
+      "dev_chrF": 41.230383827869176,
+      "best_chrF": 41.230383827869176,
+      "patience_counter": 0
+    },
+    {
+      "epoch": 1,
+      "epoch_time_sec": 46.00944185256958,
+      "train_loss": 3.635193768669577,
+      "dev_chrF": 39.09195754792049,
+      "best_chrF": 41.230383827869176,
+      "patience_counter": 1
+    },
+    {
+      "epoch": 2,
+      "epoch_time_sec": 49.69414734840393,
+      "train_loss": 3.472040709327249,
+      "dev_chrF": 40.879247612326424,
+      "best_chrF": 41.230383827869176,
+      "patience_counter": 2
+    },
+    {
+      "epoch": 3,
+      "epoch_time_sec": 49.453625440597534,
+      "train_loss": 3.2870368396534637,
+      "dev_chrF": 41.18840663121917,
+      "best_chrF": 41.230383827869176,
+      "patience_counter": 3
+    }
+  ],
+  "training": {
+    "total_time_sec": 215.2228147983551,
+    "avg_epoch_time_sec": 53.805703699588776,
+    "gpu_memory_peak_mb": 16361.82666015625,
+    "gpu_memory_current_mb": 12158.4111328125
+  },
+  "results": {
+    "best_chrF": 41.230383827869176,
+    "best_epoch": 0,
+    "final_chrF": 41.18840663121917,
+    "early_stopped": true
+  },
+  "notes": ""
+}

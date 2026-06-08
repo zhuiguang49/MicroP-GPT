@@ -7,3 +7,4 @@ Medium_SFT Baseline,12.8,33.33,5.71,0.0736
 Medium_DPO (SFT Rejected),14.5,16.67,3.49,0.0676
 Medium_DPO (Destroyed PS),12.3,25.0,4.25,0.0877
 Medium_DPO (DeepSeek-R1 Rejected),7.2,0.0,11.99,0.1571
+Large_SFT Baseline (Anchor),14.0,33.33,3.32,0.0591

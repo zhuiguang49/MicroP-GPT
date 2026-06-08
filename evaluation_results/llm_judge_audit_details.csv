@@ -1,97 +1,109 @@
-model_strategy,sonnet_index,fluency_score,coherence_score
-Small_SFT Baseline,0,2.0,1.0
-Small_SFT Baseline,1,3.0,2.0
-Small_SFT Baseline,2,3.0,2.0
-Small_SFT Baseline,3,3.0,2.0
-Small_SFT Baseline,4,3.0,2.0
-Small_SFT Baseline,5,4.0,3.0
-Small_SFT Baseline,6,3.0,2.0
-Small_SFT Baseline,7,3.0,2.0
-Small_SFT Baseline,8,3.0,2.0
-Small_SFT Baseline,9,2.0,1.0
-Small_SFT Baseline,10,3.0,2.0
-Small_SFT Baseline,11,3.0,2.0
-Small_DPO (SFT Rejected),0,3.0,2.0
-Small_DPO (SFT Rejected),1,3.0,2.0
-Small_DPO (SFT Rejected),2,3.0,2.0
-Small_DPO (SFT Rejected),3,2.0,1.0
-Small_DPO (SFT Rejected),4,3.0,2.0
-Small_DPO (SFT Rejected),5,3.0,2.0
-Small_DPO (SFT Rejected),6,6.0,5.0
-Small_DPO (SFT Rejected),7,3.0,2.0
-Small_DPO (SFT Rejected),8,3.0,2.0
-Small_DPO (SFT Rejected),9,3.0,2.0
-Small_DPO (SFT Rejected),10,3.0,2.0
-Small_DPO (SFT Rejected),11,3.0,4.0
-Small_DPO (Destroyed PS),0,6.0,5.0
-Small_DPO (Destroyed PS),1,4.0,3.0
-Small_DPO (Destroyed PS),2,3.0,2.0
-Small_DPO (Destroyed PS),3,4.0,3.0
-Small_DPO (Destroyed PS),4,4.0,3.0
-Small_DPO (Destroyed PS),5,3.0,2.0
-Small_DPO (Destroyed PS),6,3.0,2.0
-Small_DPO (Destroyed PS),7,3.0,2.0
-Small_DPO (Destroyed PS),8,3.0,4.0
-Small_DPO (Destroyed PS),9,3.0,2.0
-Small_DPO (Destroyed PS),10,4.0,3.0
-Small_DPO (Destroyed PS),11,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),0,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),1,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),2,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),3,4.0,3.0
-Small_DPO (DeepSeek-R1 Rejected),4,4.0,3.0
-Small_DPO (DeepSeek-R1 Rejected),5,2.0,1.0
-Small_DPO (DeepSeek-R1 Rejected),6,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),7,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),8,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),9,2.0,1.0
-Small_DPO (DeepSeek-R1 Rejected),10,3.0,2.0
-Small_DPO (DeepSeek-R1 Rejected),11,3.0,2.0
-Medium_SFT Baseline,0,3.0,4.0
-Medium_SFT Baseline,1,4.0,3.0
-Medium_SFT Baseline,2,4.0,3.0
-Medium_SFT Baseline,3,6.0,5.0
-Medium_SFT Baseline,4,6.0,5.0
-Medium_SFT Baseline,5,4.0,3.0
-Medium_SFT Baseline,6,6.0,5.0
-Medium_SFT Baseline,7,2.0,1.0
-Medium_SFT Baseline,8,4.0,3.0
-Medium_SFT Baseline,9,3.0,2.0
-Medium_SFT Baseline,10,3.0,2.0
-Medium_SFT Baseline,11,3.0,2.0
-Medium_DPO (SFT Rejected),0,6.0,7.0
-Medium_DPO (SFT Rejected),1,6.0,5.0
-Medium_DPO (SFT Rejected),2,8.0,7.0
-Medium_DPO (SFT Rejected),3,6.0,5.0
-Medium_DPO (SFT Rejected),4,3.0,4.0
-Medium_DPO (SFT Rejected),5,4.0,3.0
-Medium_DPO (SFT Rejected),6,7.0,6.0
-Medium_DPO (SFT Rejected),7,3.0,2.0
-Medium_DPO (SFT Rejected),8,4.0,3.0
-Medium_DPO (SFT Rejected),9,3.0,2.0
-Medium_DPO (SFT Rejected),10,8.0,7.0
-Medium_DPO (SFT Rejected),11,5.0,4.0
-Medium_DPO (Destroyed PS),0,4.0,3.0
-Medium_DPO (Destroyed PS),1,3.0,2.0
-Medium_DPO (Destroyed PS),2,4.0,3.0
-Medium_DPO (Destroyed PS),3,3.0,2.0
-Medium_DPO (Destroyed PS),4,6.0,5.0
-Medium_DPO (Destroyed PS),5,7.0,6.0
-Medium_DPO (Destroyed PS),6,4.0,3.0
-Medium_DPO (Destroyed PS),7,4.0,3.0
-Medium_DPO (Destroyed PS),8,4.0,3.0
-Medium_DPO (Destroyed PS),9,3.0,4.0
-Medium_DPO (Destroyed PS),10,4.0,3.0
-Medium_DPO (Destroyed PS),11,9.0,8.0
-Medium_DPO (DeepSeek-R1 Rejected),0,3.0,2.0
-Medium_DPO (DeepSeek-R1 Rejected),1,3.0,2.0
-Medium_DPO (DeepSeek-R1 Rejected),2,3.0,2.0
-Medium_DPO (DeepSeek-R1 Rejected),3,3.0,2.0
-Medium_DPO (DeepSeek-R1 Rejected),4,6.0,5.0
-Medium_DPO (DeepSeek-R1 Rejected),5,6.0,5.0
-Medium_DPO (DeepSeek-R1 Rejected),6,8.0,7.0
-Medium_DPO (DeepSeek-R1 Rejected),7,9.0,9.0
-Medium_DPO (DeepSeek-R1 Rejected),8,3.0,4.0
-Medium_DPO (DeepSeek-R1 Rejected),9,3.0,2.0
-Medium_DPO (DeepSeek-R1 Rejected),10,4.0,3.0
-Medium_DPO (DeepSeek-R1 Rejected),11,6.0,5.0
+model_strategy,sonnet_index,fluency_score,coherence_score,completeness_score
+Small_SFT Baseline,0,20.0,15.0,50.0
+Small_SFT Baseline,1,30.0,20.0,40.0
+Small_SFT Baseline,2,30.0,20.0,50.0
+Small_SFT Baseline,3,40.0,30.0,60.0
+Small_SFT Baseline,4,60.0,50.0,70.0
+Small_SFT Baseline,5,65.0,50.0,80.0
+Small_SFT Baseline,6,30.0,20.0,50.0
+Small_SFT Baseline,7,30.0,25.0,50.0
+Small_SFT Baseline,8,30.0,20.0,50.0
+Small_SFT Baseline,9,30.0,20.0,50.0
+Small_SFT Baseline,10,30.0,20.0,60.0
+Small_SFT Baseline,11,40.0,30.0,50.0
+Small_DPO (SFT Rejected),0,30.0,25.0,20.0
+Small_DPO (SFT Rejected),1,45.0,30.0,60.0
+Small_DPO (SFT Rejected),2,30.0,20.0,10.0
+Small_DPO (SFT Rejected),3,30.0,20.0,40.0
+Small_DPO (SFT Rejected),4,30.0,25.0,20.0
+Small_DPO (SFT Rejected),5,60.0,50.0,70.0
+Small_DPO (SFT Rejected),6,65.0,50.0,80.0
+Small_DPO (SFT Rejected),7,30.0,20.0,50.0
+Small_DPO (SFT Rejected),8,40.0,30.0,50.0
+Small_DPO (SFT Rejected),9,30.0,20.0,50.0
+Small_DPO (SFT Rejected),10,40.0,30.0,50.0
+Small_DPO (SFT Rejected),11,65.0,50.0,80.0
+Small_DPO (Destroyed PS),0,65.0,50.0,80.0
+Small_DPO (Destroyed PS),1,30.0,25.0,20.0
+Small_DPO (Destroyed PS),2,30.0,20.0,80.0
+Small_DPO (Destroyed PS),3,65.0,50.0,80.0
+Small_DPO (Destroyed PS),4,40.0,30.0,50.0
+Small_DPO (Destroyed PS),5,45.0,30.0,100.0
+Small_DPO (Destroyed PS),6,30.0,20.0,50.0
+Small_DPO (Destroyed PS),7,40.0,35.0,60.0
+Small_DPO (Destroyed PS),8,60.0,50.0,80.0
+Small_DPO (Destroyed PS),9,30.0,20.0,40.0
+Small_DPO (Destroyed PS),10,60.0,50.0,80.0
+Small_DPO (Destroyed PS),11,60.0,50.0,80.0
+Small_DPO (DeepSeek-R1 Rejected),0,40.0,30.0,50.0
+Small_DPO (DeepSeek-R1 Rejected),1,40.0,30.0,20.0
+Small_DPO (DeepSeek-R1 Rejected),2,30.0,20.0,10.0
+Small_DPO (DeepSeek-R1 Rejected),3,30.0,25.0,20.0
+Small_DPO (DeepSeek-R1 Rejected),4,45.0,30.0,60.0
+Small_DPO (DeepSeek-R1 Rejected),5,30.0,20.0,50.0
+Small_DPO (DeepSeek-R1 Rejected),6,30.0,20.0,10.0
+Small_DPO (DeepSeek-R1 Rejected),7,30.0,25.0,20.0
+Small_DPO (DeepSeek-R1 Rejected),8,30.0,20.0,50.0
+Small_DPO (DeepSeek-R1 Rejected),9,30.0,20.0,10.0
+Small_DPO (DeepSeek-R1 Rejected),10,40.0,30.0,20.0
+Small_DPO (DeepSeek-R1 Rejected),11,40.0,30.0,60.0
+Medium_SFT Baseline,0,45.0,30.0,80.0
+Medium_SFT Baseline,1,65.0,50.0,80.0
+Medium_SFT Baseline,2,40.0,30.0,50.0
+Medium_SFT Baseline,3,65.0,50.0,60.0
+Medium_SFT Baseline,4,70.0,60.0,50.0
+Medium_SFT Baseline,5,65.0,50.0,80.0
+Medium_SFT Baseline,6,65.0,50.0,100.0
+Medium_SFT Baseline,7,30.0,20.0,10.0
+Medium_SFT Baseline,8,40.0,30.0,20.0
+Medium_SFT Baseline,9,30.0,20.0,10.0
+Medium_SFT Baseline,10,30.0,20.0,40.0
+Medium_SFT Baseline,11,30.0,20.0,80.0
+Medium_DPO (SFT Rejected),0,65.0,50.0,80.0
+Medium_DPO (SFT Rejected),1,85.0,70.0,60.0
+Medium_DPO (SFT Rejected),2,85.0,80.0,90.0
+Medium_DPO (SFT Rejected),3,65.0,50.0,100.0
+Medium_DPO (SFT Rejected),4,40.0,30.0,50.0
+Medium_DPO (SFT Rejected),5,70.0,65.0,80.0
+Medium_DPO (SFT Rejected),6,60.0,50.0,80.0
+Medium_DPO (SFT Rejected),7,65.0,50.0,80.0
+Medium_DPO (SFT Rejected),8,60.0,50.0,70.0
+Medium_DPO (SFT Rejected),9,30.0,20.0,50.0
+Medium_DPO (SFT Rejected),10,85.0,75.0,90.0
+Medium_DPO (SFT Rejected),11,60.0,50.0,70.0
+Medium_DPO (Destroyed PS),0,60.0,50.0,70.0
+Medium_DPO (Destroyed PS),1,30.0,20.0,50.0
+Medium_DPO (Destroyed PS),2,65.0,50.0,70.0
+Medium_DPO (Destroyed PS),3,40.0,30.0,20.0
+Medium_DPO (Destroyed PS),4,70.0,65.0,80.0
+Medium_DPO (Destroyed PS),5,65.0,60.0,70.0
+Medium_DPO (Destroyed PS),6,60.0,50.0,100.0
+Medium_DPO (Destroyed PS),7,45.0,30.0,60.0
+Medium_DPO (Destroyed PS),8,45.0,30.0,60.0
+Medium_DPO (Destroyed PS),9,40.0,30.0,0.0
+Medium_DPO (Destroyed PS),10,65.0,50.0,60.0
+Medium_DPO (Destroyed PS),11,85.0,75.0,60.0
+Medium_DPO (DeepSeek-R1 Rejected),0,30.0,20.0,0.0
+Medium_DPO (DeepSeek-R1 Rejected),1,40.0,30.0,20.0
+Medium_DPO (DeepSeek-R1 Rejected),2,30.0,20.0,10.0
+Medium_DPO (DeepSeek-R1 Rejected),3,40.0,30.0,20.0
+Medium_DPO (DeepSeek-R1 Rejected),4,60.0,50.0,30.0
+Medium_DPO (DeepSeek-R1 Rejected),5,70.0,60.0,50.0
+Medium_DPO (DeepSeek-R1 Rejected),6,85.0,75.0,60.0
+Medium_DPO (DeepSeek-R1 Rejected),7,95.0,90.0,30.0
+Medium_DPO (DeepSeek-R1 Rejected),8,30.0,20.0,0.0
+Medium_DPO (DeepSeek-R1 Rejected),9,30.0,20.0,10.0
+Medium_DPO (DeepSeek-R1 Rejected),10,40.0,30.0,20.0
+Medium_DPO (DeepSeek-R1 Rejected),11,60.0,50.0,40.0
+Large_SFT Baseline,0,30.0,20.0,40.0
+Large_SFT Baseline,1,65.0,50.0,80.0
+Large_SFT Baseline,2,60.0,50.0,80.0
+Large_SFT Baseline,3,30.0,20.0,50.0
+Large_SFT Baseline,4,65.0,50.0,80.0
+Large_SFT Baseline,5,60.0,50.0,70.0
+Large_SFT Baseline,6,65.0,50.0,100.0
+Large_SFT Baseline,7,65.0,50.0,80.0
+Large_SFT Baseline,8,95.0,90.0,0.0
+Large_SFT Baseline,9,30.0,20.0,10.0
+Large_SFT Baseline,10,45.0,30.0,60.0
+Large_SFT Baseline,11,30.0,25.0,80.0
