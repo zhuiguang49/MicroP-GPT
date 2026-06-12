@@ -16,7 +16,7 @@ This project presents a **from-scratch implementation of GPT-2** with advanced p
 - **SFT-Generated Rejection**: Utilizing the fine-tuned model with elevated temperature to generate distribution-aligned hard negatives
 - **LLM-API Generation**: Leveraging DeepSeek-R1 to craft grammatically correct but stylistically degraded sonnets
 
-**Key Findings**: We discover that chrF exhibits **negative correlation with LLM-as-Judge quality ratings** across model scales—Medium and Large achieve 31-51% higher LLM-as Judge scores despite marginally lower chrF scores. On the Medium model, DPO with SFT-generated rejection achieves **40% LLM score improvement** over baseline, revealing that optimal negative sampling depends on base model capacity. This work highlights fundamental limitations of automatic evaluation metrics for creative writing tasks.
+**Key Findings**: We discover that chrF scores remain flat while LLM-as-Judge scores significantly increase with model size, indicating that chrF fails to capture qualitative improvements. This work highlights fundamental limitations of automatic evaluation metrics for creative writing tasks.
 
 ---
 
@@ -170,21 +170,27 @@ Use a large-scale reasoning model (DeepSeek-R1) to generate alternative completi
 
 | Strategy | Reward Margin | chrF Score | LLM Total Score |
 |----------|--------------|------------|-----------------|
-| DestroyPS | 2.79 | **42.00** | 82.3 |
-| SFT Rejected | 6.23 | 41.62 | 71.5 |
-| DeepSeek-R1 | 16.39 | 41.12 | 58.3 |
+| DestroyPS | 2.79 | **42.00** | 148.75 |
+| SFT Rejected | 6.23 | 41.62 | 120.41 |
+| DeepSeek-R1 | 16.39 | 41.12 | 91.25 |
 
-**Finding on Small**: DestroyPS strategy yields best chrF improvement but not best LLM score, suggesting reward hacking—the model optimizes for the metric without improving perceptual quality.
+**Finding on Small**: DestroyPS strategy yields best performance across all metrics
+(chrF 42.00, LLM total score 148.75), while DeepSeek-R1 (reward margin 16.39) shows
+the highest reward margin but worst LLM quality (91.25), suggesting that large reward
+margins may lead to over-optimization without perceptual quality gains.
+
 
 #### Medium Model (355M)
 
 | Strategy | Reward Margin | chrF Score | LLM Total Score |
 |----------|--------------|------------|-----------------|
-| DestroyPS | - | 38.69 | 83.3 |
-| SFT Rejected | - | **42.11** | **117.5** |
-| DeepSeek-R1 | - | 34.56 | 75.4 |
+| DestroyPS | 4.99 | 38.69 | 159.16 |
+| SFT Rejected | 10.18 | **42.11** | **192.5** |
+| DeepSeek-R1 | 16.39 | 34.56 | 116.25 |
 
-**Finding on Medium**: SFT Rejected strategy dominates across all metrics (42.11 chrF, 117.5 LLM), representing a **40% improvement over baseline** in LLM-as-Judge scores. This reversal suggests that optimal negative sampling strategy depends on base model capacity—larger models benefit more from distribution-aligned negatives (SFT-generated) than synthetic perturbations.
+**Finding on Medium**: SFT Rejected strategy dominates across all metrics (42.11 chrF, 192.5 LLM), representing a **39% improvement over baseline** in LLM-as-Judge scores. While the DeepSeek-R1 strategy has a larger reward margin (16.39), it still performs poorly compared to SFT Rejected (10.18).This suggests that an excessively large reward margin may lead to over-optimization and compromise the quality of the generated output. In addition, the optimal strategy differs from the Small model (where DestroyPS performed best). This **suggests** that negative sampling strategy effectiveness may vary with base model capacity, though we acknowledge this observation is based on limited experiments and requires further investigation.
+
+
 
 > Due to GPU memory constraints (24GB), DPO on Large model was not feasible even with `batch_size=1`. This highlights a practical challenge of DPO alignment for larger models.
 
@@ -220,19 +226,19 @@ Use a large-scale reasoning model (DeepSeek-R1) to generate alternative completi
 
 #### DPO on Medium Model (chrF Score)
 
-| Strategy | chrF Score | vs SFT | LLM Fluency | LLM Coherence | LLM Completeness |
-|----------|------------|--------|-------------|---------------|------------------|
-| SFT Baseline | 41.18 | - | 47.92 | 35.83 | 55.00 |
-| DPO (SFT Rejected) | **42.11** | +0.93 | **64.17** | **53.33** | **75.00** |
-| DPO (DestroyPS) | 38.69 | -2.49 | 55.83 | 45.00 | 58.33 |
-| DPO (DeepSeek-R1) | 34.56 | -6.62 | 50.83 | 41.25 | 24.17 |
+| Strategy | chrF Score | vs SFT | LLM Fluency | LLM Coherence | LLM Completeness | LLM Total Score |
+|----------|------------|--------|-------------|---------------|------------------|-----------------|
+| SFT Baseline | 41.18 | - | 47.92 | 35.83 | 55.00 | 138.75 |
+| DPO (SFT Rejected) | **42.11** | +0.93 | **64.17** | **53.33** | **75.00** | **192.5** |
+| DPO (DestroyPS) | 38.69 | -2.49 | 55.83 | 45.00 | 58.33 | 159.16 |
+| DPO (DeepSeek-R1) | 34.56 | -6.62 | 50.83 | 41.25 | 24.17 | 116.25 |
 
 
 #### Key Findings
 
-1. **Model Scale Improves LLM-based Quality**: While chrF remains flat across model sizes (41.18-41.78), LLM-as-Judge scores show significant improvement (Small: 63.9 → Medium: 83.8 → Large: 96.3), indicating that chrF fails to capture qualitative improvements in generation.
+1. **Model Scale Improves LLM-based Quality**: While chrF remains flat across model sizes (41.18-41.78), LLM-as-Judge scores show significant improvement (Small: 117.92 → Medium: 138.75 → Large: 156.25), indicating that chrF fails to capture qualitative improvements in generation.
 
-2. **SFT Rejected Strategy Dominates on Medium**: Unlike Small where DestroyPS was optimal, Medium model achieves best results with SFT Rejected strategy (chrF 42.11, LLM 117.5), suggesting that negative sampling strategy effectiveness depends on base model capacity.
+2. **SFT Rejected Strategy Dominates on Medium**: Unlike Small where DestroyPS was optimal, Medium model achieves best results with SFT Rejected strategy (chrF 42.11, LLM 192.5), suggesting that negative sampling strategy effectiveness might depend on base model capacity.
 
 3. **DPO Improves All LLM Dimensions**: Medium + DPO (SFT Rejected) achieves 34% higher fluency, 49% higher coherence, and 36% higher completeness compared to Medium SFT baseline. 
 
@@ -255,11 +261,11 @@ We observe a critical divergence between automatic metrics and human perceptual 
 
 | Model | chrF Score | LLM Total Score | chrF vs LLM Correlation |
 |-------|------------|-----------------|-------------------------|
-| Small (124M) | 41.78 | 63.9 | Baseline |
-| Medium (355M) | 41.18 | 83.8 | **Negative** (-0.6 chrF, +20 LLM) |
-| Large (774M) | 41.23 | 96.3 | **Flat** (-0.55 chrF, +32 LLM) |
+| Small (124M) | 41.78 | 117.92 | Baseline |
+| Medium (355M) | 41.18 | 138.75 | -0.6 chrF, +20.83 LLM |
+| Large (774M) | 41.23 | 156.25 | -0.55 chrF, +38.33 LLM |
 
-**Key Insight**: Despite achieving marginally lower chrF scores, Medium and Large models receive substantially higher LLM-as-Judge evaluations (31% and 51% improvement respectively). This suggests that chrF rewards over-fitting to training data while penalizing creative variation—a fundamental limitation for creative writing tasks.
+**Key Insight**: Despite achieving marginally lower chrF scores, Medium and Large models receive substantially higher LLM-as-Judge evaluations (17.7% and 32.5% improvement respectively). This suggests that chrF rewards over-fitting to training data while penalizing creative variation—a fundamental limitation for creative writing tasks.
 
 ### Why chrF Fails
 
@@ -276,7 +282,7 @@ chrF = F_score(character_ngrams(generated), character_ngrams(reference))
 
 ### LLM-as-Judge Advantages
 
-Our evaluation uses deepseek-v3 flash model to rate three dimensions (1-100 scale):
+Our evaluation uses deepseek-v3 flash model to rate three dimensions, each dimension is scored from 1 to 100 points, and the average of the 12 poems is the final score:
 - **Fluency**: Grammatical correctness and natural language flow
 - **Coherence**: Thematic consistency and logical structure
 - **Completeness**: Poetic structure and line count compliance
@@ -330,8 +336,8 @@ Our experiments reveal a fundamental limitation of chrF for creative writing eva
 
 | Model Scale | chrF Δ | LLM Score Δ | Interpretation |
 |-------------|--------|-------------|----------------|
-| Small → Medium | -0.6 | +20 | Higher quality, lower chrF |
-| Small → Large | -0.55 | +32 | Much higher quality, same chrF |
+| Small → Medium | -0.6 | +20.83 | Higher quality, lower chrF |
+| Small → Large | -0.55 | +38.33 | Much higher quality, same chrF |
 
 **Conclusion**: chrF correlates poorly with human-perceptible quality in poetry generation. Relying solely on chrF can lead to incorrect conclusions about model performance.
 
@@ -357,8 +363,8 @@ Our experiments reveal that optimal negative sampling strategy depends on base m
 
 | Model Scale | Optimal Strategy | chrF Improvement | LLM Improvement |
 |-------------|------------------|------------------|-----------------|
-| Small (124M) | DestroyPS | +0.22 | +18.4 |
-| Medium (355M) | SFT Rejected | +0.93 | +33.7 |
+| Small (124M) | DestroyPS | +0.22 | +26.2% |
+| Medium (355M) | SFT Rejected | +0.93 | +38.7% |
 
 **Insight**: Small models benefit from explicit structural constraints (perturbation), while larger models benefit from distribution-aligned negatives. This suggests a **capacity-aware negative sampling strategy** could improve DPO effectiveness.
 
@@ -470,4 +476,4 @@ Guang Zhang | Zhejiang University, School of Mathematical Sciences
 
 ## License
 
-This project is licensed under the Apache License 2.0 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
