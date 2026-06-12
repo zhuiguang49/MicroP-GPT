@@ -170,7 +170,7 @@ Use a large-scale reasoning model (DeepSeek-R1) to generate alternative completi
 
 | Strategy | Reward Margin | chrF Score | LLM Total Score |
 |----------|--------------|------------|-----------------|
-| DestroyPS | 2.79 | **42.00** | 148.75 |
+| DestroyPS | 2.79 | **42.00** | **148.75** |
 | SFT Rejected | 6.23 | 41.62 | 120.41 |
 | DeepSeek-R1 | 16.39 | 41.12 | 91.25 |
 
